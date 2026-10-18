@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexphic IT Institute: Video Editing, Content Creation, Graphic Design, YouTube AI Automation, Freelancing ও Web Development। PC ও Mobile মিলিয়ে ৮টি কোর্স এবং ৫ ধাপে ভর্তি প্রক্রিয়া।">
+  <meta name="theme-color" content="#09070e">
+  <!-- package-lock.json is too large to keep as readable text here; the build embeds this file into dist/index.html. -->
+  <link rel="alternate" type="application/json" href="./package-lock.json" data-filename="package-lock.json" data-order="2">
+  <title>Nexphic IT Institute</title>
+  <!-- Single-file edition: open this file directly in a browser. No build, React, or server is required.
+       All site CSS, SVG icons, and JavaScript are embedded. Original photos, logo, and font files use online URLs.
+       Contact settings, the course list and the optional admission endpoint are in the script at the end.
+       Admission details are sent only to that endpoint (if set) or by WhatsApp when the student chooses.
+       The certificate image is assets/nexphic-certificate.jpg; the build inlines it into dist/index.html. -->
+  <style>
+    @font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url('https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf') format('truetype')}
+    @font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url('https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf') format('truetype')}
+    @font-face{font-family:Inter;font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf') format('truetype')}
+    @font-face{font-family:Inter;font-style:normal;font-weight:800;font-display:swap;src:url('https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf') format('truetype')}
+    @font-face{font-family:Inter;font-style:normal;font-weight:900;font-display:swap;src:url('https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYMZg.ttf') format('truetype')}
+    @font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:400;font-display:swap;src:url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwTs5juQtsyLLR5jN4cxBEofJs.ttf') format('truetype')}
+    @font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:600;font-display:swap;src:url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwOs5juQtsyLLR5jN4cxBEoREP-4uE.ttf') format('truetype')}
+    @font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwOs5juQtsyLLR5jN4cxBEoRCf_4uE.ttf') format('truetype')}
+
+    :root{--primary:#7c3aed;--light:#a855f7;--lilac:#c4a0f5;--dark:#3b0764;--bg:#050505;--surface:rgba(20,20,30,.65);--muted:#a1a1aa;--dim:#807987;--border:rgba(255,255,255,.09);--red:#ef4444;--green:#22c55e;--font:Inter,'Hind Siliguri','Segoe UI',sans-serif;--bangla:'Hind Siliguri',Inter,sans-serif}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;color-scheme:dark}
+    body{margin:0;background:var(--bg);color:#fff;font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    h1,h2,h3,h4,p,ul,ol,figure{margin:0;padding:0}
+    ul,ol{list-style:none}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    img{display:block;max-width:100%;height:auto}
+    svg{flex-shrink:0}
+    [hidden]{display:none!important}
+    :where(a,button,input,select,textarea,summary):focus-visible{outline:2px solid var(--lilac);outline-offset:5px}
+    ::selection{background:var(--primary);color:#fff}
+    ::-webkit-scrollbar{width:9px;height:7px}
+    ::-webkit-scrollbar-track{background:#0a0a0a}
+    ::-webkit-scrollbar-thumb{background:#5f2c9e;border-radius:20px}
+    .container{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
+    .narrow{max-width:860px}.medium{max-width:1100px}
+    .bn{font-family:var(--bangla)}
+    .muted{color:var(--muted)}.lilac{color:var(--lilac)}.red{color:var(--red)}.green{color:var(--green)}
+    .gradient-text{background:linear-gradient(100deg,#fff 10%,#c084fc 55%,#7c3aed 95%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+    .icon{display:inline-block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.15em}
+    .icon-lg{width:30px;height:30px}.icon-sm{width:15px;height:15px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip-link{position:fixed;top:-100px;left:20px;z-index:3000;background:#fff;color:#381463;padding:12px 18px;border-radius:8px}
+    .skip-link:focus{top:12px}
+    section{position:relative;padding:90px 0}section[id],form[id]{scroll-margin-top:100px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .section-head{text-align:center;margin:0 auto 44px;max-width:850px}
+    .eyebrow{display:block;color:var(--light);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+    .section-head h2{font-size:clamp(1.85rem,3.5vw,2.6rem);line-height:1.22;letter-spacing:-.5px;font-weight:900}
+    .section-head p{color:var(--muted);font-family:var(--bangla);margin:14px auto 0;font-size:1rem;line-height:1.8}
+    .section-head::after{content:'';display:block;margin:16px auto 0;width:65px;height:3px;border-radius:3px;background:linear-gradient(90deg,#a855f7,#6d28d9)}
+    .body-heading{font-size:clamp(1.7rem,3.2vw,2.35rem);font-weight:900;line-height:1.25;letter-spacing:-.5px;margin-bottom:16px}
+    .body-copy{color:var(--muted);line-height:1.9}
+    .actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .actions.center{justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 24px;border:1px solid transparent;border-radius:999px;background:linear-gradient(135deg,#8b5cf6,#4c1d95);box-shadow:0 8px 24px rgba(124,58,237,.3);color:white;font-weight:700;font-size:.92rem;line-height:1.35;transition:transform .28s,filter .28s,box-shadow .28s}
+    .btn.large{padding:14px 30px;font-size:1rem}.btn.full{width:100%}.btn.small{padding:8px 20px;font-size:.82rem}
+    .btn.outline{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.2);box-shadow:none}
+    .btn.white{background:#fff;color:#4c1d95;box-shadow:none}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+    .text-link{color:var(--lilac);text-underline-offset:5px}.text-link:hover{text-decoration:underline}
+    .icon-button{display:inline-grid;place-items:center;width:42px;height:42px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.05);color:#e9dcfa;transition:background .25s,border-color .25s}
+    .icon-button:hover{background:#251633;border-color:#9a63cf}
+    .panel{background:var(--surface);border:1px solid var(--border);border-radius:18px;backdrop-filter:blur(10px)}
+    .hover-box{transition:transform .32s,border-color .32s,box-shadow .32s}
+    .hover-box:hover{transform:translateY(-6px);border-color:rgba(168,85,247,.5);box-shadow:0 20px 44px rgba(88,28,135,.25)}
+    .icon-box{display:inline-grid;place-items:center;width:60px;height:60px;border-radius:17px;color:#cba1f1;background:linear-gradient(135deg,rgba(168,85,247,.3),rgba(76,29,149,.5));box-shadow:0 0 25px rgba(168,85,247,.18)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;font-size:.69rem;color:#d4cadf;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:7px}
+    .chips{display:flex;gap:7px;flex-wrap:wrap}.check-list{display:grid;gap:10px}
+    .check-list li{display:flex;align-items:flex-start;gap:9px;font-size:.9rem;color:#d4d4d8}.check-list .icon{color:var(--light);width:16px;height:16px;margin-top:3px}
+    .glow-section{background:radial-gradient(ellipse at 50% 55%,rgba(76,29,149,.23),transparent 68%)}
+    .photo-frame{position:relative;overflow:hidden;border:1px solid rgba(168,85,247,.4);border-radius:20px;background:#0c0912;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+    .photo-frame>img{width:100%;height:360px;object-fit:cover}
+    .photo-button{position:relative;display:block;width:100%;padding:0;overflow:hidden;border:1px solid rgba(168,85,247,.3);border-radius:14px;background:#100b19;color:#fff;text-align:left}
+    .photo-button img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+    .photo-button:hover img{transform:scale(1.06)}
+    .photo-button .caption{position:absolute;inset:auto 0 0;padding:32px 14px 13px;background:linear-gradient(transparent,rgba(8,5,13,.9));font-size:.8rem;font-weight:700}
+    .play-button{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#6d28d9);box-shadow:0 0 0 9px rgba(168,85,247,.2),0 14px 30px #0005;color:white}
+    .play-button .icon{fill:currentColor;width:24px;height:24px;stroke-width:1}
+
+    /* Shared header and logo. */
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;background:rgba(5,5,8,.55);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:padding .3s,background .3s}
+    .site-header.scrolled{padding:10px 0;background:rgba(5,5,8,.92);border-color:rgba(139,92,246,.18)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .logo{display:inline-flex;width:172px;aspect-ratio:3.32 / 1;max-width:100%;flex-shrink:0;vertical-align:middle}
+    .logo img{width:100%;height:100%;object-fit:contain}.logo.large{width:248px}.logo.small{width:136px}
+    .desktop-nav{display:flex;align-items:center;gap:22px}.desktop-nav a{color:var(--muted);font-size:.91rem;position:relative;padding:8px 0}
+    .desktop-nav a:hover{color:#c084fc}.desktop-nav a[aria-current=page]{color:#fff;font-weight:700}
+    .desktop-nav a[aria-current=page]::after{content:'';position:absolute;bottom:1px;left:0;right:0;height:2px;background:linear-gradient(90deg,#a855f7,#6d28d9);border-radius:2px}
+    .menu-toggle{display:none}.mobile-nav{position:absolute;top:100%;left:0;right:0;padding:12px 20px 24px;background:#0c0815;border-bottom:1px solid #2e1b42}
+    .mobile-nav a{display:block;padding:13px 0;border-bottom:1px solid var(--border);font-weight:700}.mobile-nav a[aria-current=page]{color:#c084fc}.mobile-nav a.btn{margin-top:16px;padding:13px}
+
+    /* Home hero and animated counters. */
+    .hero{padding:150px 0 90px;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-200px;right:-150px;width:680px;height:680px;background:radial-gradient(circle,rgba(124,58,237,.36),transparent 70%);pointer-events:none;filter:blur(25px)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .hero h1{font-family:var(--bangla);font-size:3.6rem;line-height:1.12;letter-spacing:-1.5px;font-weight:700;margin:20px 0 16px}
+    .hero .subtitle{font-size:1.12rem;color:var(--muted);max-width:560px;font-family:var(--bangla)}
+    .hero .subtitle b{color:#e9d5ff}.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(139,92,246,.28);border-radius:999px;background:rgba(139,92,246,.12);padding:6px 16px;font-size:.73rem;letter-spacing:1px;color:#b77be8}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2.5s ease infinite}
+    .hero-art{position:relative}.monitor-shell{padding:10px;border-radius:22px;background:linear-gradient(145deg,rgba(168,85,247,.5),rgba(255,255,255,.05) 45%,rgba(59,7,100,.5));box-shadow:0 30px 80px #0009}
+    .monitor-screen{position:relative;overflow:hidden;border-radius:16px;background:#000}
+    .monitor-screen>img{width:100%;height:360px;object-fit:cover;opacity:.85}.monitor-screen::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,10,.88),transparent 60%);pointer-events:none}
+    .timeline-bars{position:absolute;bottom:16px;left:16px;right:16px;height:44px;display:flex;align-items:flex-end;gap:4px;z-index:1}
+    .timeline-bars span{flex:1;background:linear-gradient(#b165f2,#4c1d95);border-radius:2px;transform-origin:bottom;animation:bars 1.4s ease-in-out alternate infinite}
+    .live-tag{position:absolute;z-index:2;top:14px;left:14px;padding:5px 12px;display:flex;align-items:center;gap:7px;background:#ef4444;border-radius:999px;font-size:.68rem;letter-spacing:1px;font-weight:800}
+    .floating-badge{position:absolute;background:rgba(18,16,28,.93);border:1px solid rgba(168,85,247,.35);border-radius:14px;padding:12px 18px;box-shadow:0 16px 40px #0008;animation:float 6s ease-in-out infinite}
+    .floating-badge b{display:block;color:#ba7def;font-size:1.15rem}.floating-badge small{font-size:.72rem;color:var(--muted)}.floating-badge.first{top:14%;right:-24px}.floating-badge.second{bottom:12%;left:-26px;animation-delay:1.4s;border-color:#22c55e55}.floating-badge.second b{color:#22c55e}
+    .trust-row{display:flex;gap:14px;align-items:center;margin-top:30px;color:var(--muted);font-size:.85rem}
+    .avatar-stack{display:flex}.avatar-stack img{width:38px;height:38px;object-fit:cover;border-radius:50%;border:2px solid #0a0a12}.avatar-stack img+img{margin-left:-12px}.stars{display:flex;gap:3px;color:#facc15}.stars .icon{width:14px;height:14px;fill:currentColor;stroke:none}
+    .counter-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:70px}
+    .counter-box{position:relative;isolation:isolate;overflow:hidden;border-radius:18px;background:linear-gradient(145deg,rgba(35,29,48,.6),rgba(14,12,22,.82));border:1px solid rgba(174,142,222,.16);text-align:center;padding:24px 18px;height:100%;transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s}
+    .counter-box::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 120%,rgba(139,92,246,.38),transparent 72%);opacity:0;transition:opacity .35s}
+    .counter-box::after{content:'';position:absolute;inset:-70% -90%;z-index:-1;pointer-events:none;background:linear-gradient(110deg,transparent 43%,rgba(222,198,255,.1) 50%,transparent 57%);transform:translateX(-70%);transition:transform .8s cubic-bezier(.22,1,.36,1)}
+    .counter-value{display:block;font-size:1.9rem;font-weight:900;letter-spacing:-1px;font-variant-numeric:tabular-nums;transition:transform .35s,filter .35s}.counter-label{font-size:.8rem;color:var(--muted);margin-top:3px}
+    .marquee{overflow:hidden;padding:14px 0;border-top:1px solid #8b5cf62d;border-bottom:1px solid #8b5cf62d;background:linear-gradient(90deg,#4c1d9548,#0a081a99)}
+    .marquee-track{display:flex;width:max-content;gap:40px;animation:marquee 32s linear infinite}.marquee span{display:flex;align-items:center;gap:14px;color:#c8b6db;font-weight:700;font-size:.92rem;white-space:nowrap}.marquee .icon{width:13px;color:var(--light)}.marquee:hover .marquee-track{animation-play-state:paused}
+
+    /* Course catalogue, comparisons, and native accordions. */
+    .home-course-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.course-card{display:flex;flex-direction:column;overflow:hidden;height:100%;text-align:left}
+    .course-card img{width:100%;height:180px;object-fit:cover}.course-body{padding:23px;display:flex;flex-direction:column;flex:1}.course-body h3{font-size:1.15rem;font-weight:800;line-height:1.4;margin:5px 0 12px}
+    .course-body p{font-size:.9rem;color:var(--muted);line-height:1.85;margin:10px 0 15px}.course-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.course-bottom{margin-top:auto;padding-top:18px;border-top:1px solid var(--border)}
+    .price-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:15px}.price{font-weight:900;font-size:1.15rem}.old-price{font-size:.74rem;color:#ef7b85;text-decoration:line-through}.instructor-mini{display:flex;gap:8px;align-items:center;font-size:.75rem}
+    .initials{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:.68rem;background:linear-gradient(135deg,#a855f7,#4c1d95);font-weight:800}.instructor-mini small{display:block;color:var(--dim)}
+    .slider-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px}.slider-dots{display:flex;gap:8px}.slider-dots button{width:10px;height:10px;padding:0;border:0;border-radius:999px;background:#30243e;transition:width .3s,background .3s}.slider-dots button[aria-pressed=true]{width:28px;background:linear-gradient(90deg,#a855f7,#6d28d9)}
+    .feature-box{padding:28px}.feature-box h3{margin:16px 0 10px;font-size:1.05rem}.feature-box p{font-family:var(--bangla);font-size:.88rem;color:var(--muted);line-height:1.9}
+    .page-hero{padding:150px 0 70px;position:relative;overflow:hidden;text-align:center}.page-hero::before{content:'';position:absolute;left:50%;top:-180px;transform:translateX(-50%);width:950px;height:560px;background:radial-gradient(ellipse,rgba(124,58,237,.38),rgba(88,28,135,.12) 48%,transparent 72%);filter:blur(24px);pointer-events:none}
+    .page-hero .container{position:relative}.page-hero h1{font-size:3.8rem;font-weight:900;line-height:1.1;letter-spacing:-1.5px}.page-hero p{color:var(--muted);font-size:1.1rem;max-width:660px;margin:17px auto 0}
+    .page-hero.course-hero{text-align:left}.course-hero p{margin-left:0}.breadcrumb{font-size:.8rem;color:var(--muted);display:flex;gap:9px;margin-bottom:17px}.breadcrumb span:last-child{color:var(--lilac)}
+    .floating-tiles{height:310px;position:relative;display:flex;align-items:center;justify-content:center}.tile-position{position:absolute}.tile-position:nth-child(1){left:12%;top:38%;transform:rotate(-8deg)}.tile-position:nth-child(2){left:44%;top:9%;transform:rotate(8deg)}.tile-position:nth-child(3){right:6%;bottom:6%;transform:rotate(-5deg)}
+    .creative-tile{width:124px;height:124px;display:grid;place-items:center;border-radius:28px;background:linear-gradient(145deg,#a855f7db,#4c1d95);border:1px solid #eee4ff55;box-shadow:0 24px 60px #581c8780,inset 0 2px 10px #ffffff50;animation:float 6s ease-in-out infinite}.creative-tile .icon{width:48px;height:48px;stroke-width:1.5}
+    .filter-tabs{display:flex;gap:11px;justify-content:center;overflow-x:auto;scrollbar-width:none;padding:12px 0 22px;margin-bottom:28px}.filter-tabs button{flex-shrink:0;border:1px solid rgba(168,85,247,.38);border-radius:999px;background:rgba(255,255,255,.025);color:#d9cbe8;font-size:.88rem;font-weight:700;padding:10px 21px;transition:background .3s,box-shadow .3s}
+    .filter-tabs button[aria-pressed=true]{background:linear-gradient(135deg,#8b5cf6,#5b21b6);color:white;box-shadow:0 8px 22px #7c3aed55;border-color:#9764da}.filter-result{font-size:.8rem;color:var(--muted);margin:-12px 0 22px;text-align:center}
+    .detail-course{padding:44px 0}.detail-course:nth-child(even) .detail-visual{order:2}.detail-meta{padding:16px;margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.detail-meta small{display:block;color:var(--dim);font-size:.64rem}.detail-meta strong{font-size:.78rem}.detail-meta .icon{color:var(--light);width:17px;height:17px}
+    .detail-price{padding:12px 20px;border-color:#a855f765}.detail-price strong{font-size:1.5rem}.detail-price small{display:block;color:#f18c93;font-size:.69rem}.table-scroll{overflow-x:auto;padding-top:14px}.compare-table{width:100%;min-width:660px;border-collapse:separate;border-spacing:0;text-align:center;overflow:hidden}
+    .compare-table th,.compare-table td{padding:13px 17px;border-bottom:1px solid rgba(255,255,255,.06);font-size:.84rem}.compare-table th{padding-top:22px;font-size:.88rem}.compare-table th:first-child,.compare-table td:first-child{text-align:left;color:var(--muted)}
+    .compare-table th:nth-child(3),.compare-table td:nth-child(3){background:rgba(124,58,237,.12)}.compare-table .icon{color:var(--light);width:17px;height:17px}.compare-table .no{color:#ef7676}
+    .accordion{display:grid;gap:12px}.accordion details{border:1px solid var(--border);border-radius:15px;background:var(--surface);overflow:hidden}.accordion details[open]{border-color:rgba(168,85,247,.5);box-shadow:0 10px 30px #581c8724}
+    .accordion summary{display:flex;gap:14px;align-items:center;list-style:none;padding:17px 20px;color:#f4effa;cursor:pointer;font-weight:700;font-size:.94rem}.accordion summary::-webkit-details-marker{display:none}.accordion summary::after{content:'';width:8px;height:8px;flex-shrink:0;border-right:1.7px solid #b887e5;border-bottom:1.7px solid #b887e5;transform:rotate(45deg);margin-left:auto;transition:transform .3s}.accordion details[open] summary::after{transform:rotate(225deg)}
+    .accordion .answer{padding:0 20px 20px;font-family:var(--bangla);font-size:.92rem;color:var(--muted);line-height:1.9}.module-number{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#a855f7,#6d28d9);font-size:.8rem}.lesson-list{display:grid;gap:8px;padding:0 20px 20px 68px;font-size:.83rem;color:var(--muted)}.lesson-list li{display:flex;justify-content:space-between;gap:12px}
+
+    /* Community, testimonials, and certificates. */
+    .earner{overflow:hidden;background:#0d0d15}.browser-strip{background:white;padding:10px}.browser-dots{display:flex;gap:5px;margin-bottom:8px}.browser-dots i{width:8px;height:8px;border-radius:50%;background:#ff5f56}.browser-dots i:nth-child(2){background:#ffbd2e}.browser-dots i:nth-child(3){background:#27ca40}
+    .earnings-display{padding:14px;background:#f4f6fa;border-radius:8px;color:#151929;min-height:122px}.earnings-display small{font-size:.63rem;color:#798194;font-weight:700}.earnings-display strong{display:block;font-size:1.45rem;font-weight:900}.earnings-bars{display:flex;align-items:flex-end;height:42px;gap:5px;margin-top:4px}.earnings-bars i{flex:1;background:#d7dce5;border-radius:3px 3px 0 0}.earner-profile{text-align:center;padding:0 20px 23px}.earner-profile img{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:-30px auto 12px;border:3px solid #0d0d15;position:relative;outline:2px solid var(--accent,#a855f7)}.earner-profile strong{display:block}.earner-profile small{display:block;color:var(--muted);margin-top:4px}.earner-profile .amount{font-size:1.25rem;color:var(--accent,#a855f7);font-weight:900;margin:8px 0}
+    .review-shell{text-align:center;max-width:860px;margin:auto}.review-panel{padding:42px 46px;background:linear-gradient(160deg,rgba(40,25,70,.55),rgba(15,13,24,.7))}.review-quote{font-family:var(--bangla);font-size:1.18rem;line-height:1.9;min-height:115px}.review-panel .avatar{width:64px;height:64px;border:2px solid #a855f7aa;border-radius:50%;object-fit:cover;margin:14px auto 10px}.review-panel .stars{justify-content:center;margin-top:18px}.review-panel small{font-size:.76rem;color:var(--light);display:block;margin-top:3px}
+    .team-card{overflow:hidden;text-align:center}.team-card>img{height:270px;width:100%;object-fit:cover}.team-card .team-info{padding:20px}.team-info small{display:block;color:var(--light);margin-top:6px}.milestone-line{display:flex;justify-content:space-between;gap:12px;position:relative;margin-top:30px}.milestone-line::before{content:'';position:absolute;top:17px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,transparent,#a855f7,transparent)}.milestone{text-align:center;position:relative;flex:1}.milestone .year{display:inline-block;padding:5px 16px;background:#43216f;border:1px solid #a855f788;border-radius:999px;font-weight:800}.milestone small{display:block;color:var(--muted);font-size:.75rem;margin-top:9px}
+    .people-grid{display:grid;grid-template-columns:.75fr 1.1fr .75fr;gap:20px;align-items:center;max-width:1000px;margin:auto}.person-card{text-align:center;padding:24px}.person-card img{width:74px;height:74px;margin:0 auto 13px;border-radius:50%;object-fit:cover;border:2px solid #9c60d2}.person-card small{color:var(--light);display:block;font-size:.74rem;margin:4px 0 12px}.person-card p{font-size:.82rem;line-height:1.8;color:var(--muted)}.person-card.founder{padding:30px;border-color:#a855f788;background:linear-gradient(165deg,rgba(60,30,110,.5),rgba(15,12,24,.8));box-shadow:0 24px 60px #581c8740}.person-card.founder img{width:120px;height:120px;border-width:3px;box-shadow:0 0 30px #a855f750}
+    .community-ring{position:relative;width:380px;height:380px;max-width:100%;margin:auto}.orbit-avatar{position:absolute;left:50%;top:50%;width:60px;height:60px;border-radius:50%;border:2px solid #a855f7;object-fit:cover;transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-150px) rotate(calc(-1 * var(--angle)))}.ring-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:170px;height:170px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 25%,#6d28d9,#2e1065);border:1px solid #a855f780;box-shadow:0 0 50px #a855f755}.ring-center strong{font-size:2rem;font-weight:900}.ring-center small{font-size:.74rem;color:#d4c6e8}
+    .certificate{background:linear-gradient(135deg,#a855f7,#3b0764);padding:8px;border-radius:14px;box-shadow:0 20px 50px #0008}.certificate-inner{padding:27px 20px;border:1px solid #a855f760;border-radius:8px;background:linear-gradient(160deg,#0f0c18,#181022);text-align:center}.certificate-heading{font:italic 1.4rem Georgia,serif;margin:22px 0 12px}.certificate-name{font:700 1.35rem Georgia,serif;color:#dbb7fc;margin:12px 0 7px}.certificate-inner small{color:var(--muted);font-size:.66rem}.certificate-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px dashed #a855f740;margin-top:20px;padding-top:13px;color:var(--muted);font-size:.61rem}.certificate-seal{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#a855f7,#4c1d95);color:#ecd4ff;box-shadow:0 0 20px #a855f750}
+    .certificate-fan{display:flex;align-items:center;justify-content:center;padding:30px 0 40px;overflow:visible}.certificate-fan .certificate{flex-shrink:0;width:250px;position:relative}.certificate-fan .certificate:nth-child(1){transform:rotate(-12deg) translateY(36px);z-index:1}.certificate-fan .certificate:nth-child(2){transform:rotate(-6deg) translateY(18px);margin-left:-65px;z-index:2}.certificate-fan .certificate:nth-child(3){width:320px;margin-left:-30px;z-index:3;box-shadow:0 24px 60px #7c3aed55}.certificate-fan .certificate:nth-child(4){transform:rotate(6deg) translateY(18px);margin-left:-30px;z-index:2}.certificate-fan .certificate:nth-child(5){transform:rotate(12deg) translateY(36px);margin-left:-65px;z-index:1}
+
+    /* Five-step admission poster from the supplied reference. */
+    .admission-section{padding:76px 0}.admission-section.standalone{padding-top:126px;padding-bottom:54px}
+    .admission-poster{position:relative;isolation:isolate;overflow:hidden;border:1px solid #3d354c;border-radius:28px;background:radial-gradient(ellipse at 50% -5%,rgba(116,74,188,.64),rgba(58,29,98,.3) 27%,transparent 48%),#09090b;padding:44px 58px 38px;max-width:1140px;margin:auto}
+    .admission-poster::before{content:'';position:absolute;inset:17px;border:1px solid rgba(163,140,197,.24);border-radius:20px;pointer-events:none;z-index:-1}.hex-decoration{position:absolute;top:26px;left:19px;width:230px;height:390px;color:#b28ddd;opacity:.13;pointer-events:none}.hex-decoration.right{left:auto;right:19px;transform:scaleX(-1)}
+    .admission-header{position:relative;text-align:center}.admission-brand{font-size:clamp(21px,4.1vw,50px);line-height:1.2;letter-spacing:-.025em;font-weight:800;color:#e9e0ff;margin-top:34px}.admission-title{font-family:var(--bangla);color:#cdb9f4;font-size:49px;line-height:1.35;font-weight:700;display:flex;justify-content:center;align-items:center;gap:15px;margin:12px 0 9px}.admission-title .icon{width:45px;height:45px;stroke-width:1.5}.admission-intro{font-family:var(--bangla);font-size:23px;line-height:1.6;color:#bcb5c8;max-width:870px;margin:auto}
+    .admission-timeline{list-style:none;display:grid;gap:18px;position:relative;max-width:860px;padding:0;margin:34px auto 0}.admission-step{position:relative;padding-left:54px;min-width:0}.admission-step::before{content:'';position:absolute;left:11px;top:-18px;bottom:-18px;width:2px;background:#6b508b;pointer-events:none}.admission-step:first-child::before{top:50%}.admission-step:last-child::before{bottom:50%}.admission-dot{position:absolute;top:50%;left:2px;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;background:#9470be;box-shadow:0 0 17px #7e55b32e}
+    .admission-step-box{position:relative;padding:19px 34px 21px 23px;min-height:106px;border:1px solid #4e445e;border-right-color:#28222f;border-radius:19px 90px 90px 19px;background:linear-gradient(100deg,rgba(29,27,34,.96),rgba(24,23,28,.91));transition:border-color .3s,box-shadow .3s}.admission-step-box h3{display:flex;flex-wrap:wrap;align-items:center;gap:7px 9px;font-size:clamp(17px,2.05vw,24px);font-weight:800;line-height:1.4;color:#c4b0e6;letter-spacing:-.02em}.admission-step-box h3 .dash{width:20px;height:2px;background:currentColor;opacity:.8;flex-shrink:0}.admission-step-box p{font-family:var(--bangla);font-size:clamp(17px,1.85vw,22px);line-height:1.55;color:#cecad3;margin-top:5px}.admission-step-box p>.icon{color:#c7abde;margin-right:8px}.admission-step-box a{text-decoration:underline;text-decoration-color:#655072;text-underline-offset:5px}.admission-step-box a:hover{color:#e0c2ff}.admission-footer{text-align:center;position:relative;margin-top:32px;color:#a49cad}.admission-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:22px;color:#d0cbd8;min-height:44px}.admission-whatsapp .icon{width:29px;height:29px;color:#55d586}.admission-tagline{font-family:var(--bangla);font-size:20px;line-height:1.6;margin-top:8px}
+
+    /* Gallery, contact, registration, and footer. */
+    .gallery-masonry{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:165px;gap:14px}.gallery-masonry .wide{grid-column:span 2}.gallery-group{padding:44px 0 60px}.gallery-item{height:200px}.gallery-group .wide-banner{grid-column:1 / -1;height:260px}.portfolio-item{padding:8px;overflow:hidden}.portfolio-item .photo-button{height:170px;border:0;border-radius:10px}.portfolio-meta{padding:13px 8px 8px;display:flex;gap:9px;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:.82rem;font-weight:700}.video-item{height:185px}.video-item .play-button{width:50px;height:50px;background:linear-gradient(135deg,#ef4444,#b91c1c);box-shadow:0 0 0 8px #ef444433}.video-item .caption{padding-right:55px}.video-duration{position:absolute;bottom:11px;right:9px;background:#000b;border-radius:5px;padding:2px 6px;font-size:.66rem}
+    .cta-section{padding:30px 0 90px}.cta-banner{position:relative;overflow:hidden;border-radius:26px;padding:60px 42px;text-align:center;background:radial-gradient(circle at 15% 20%,#ffffff22,transparent 42%),linear-gradient(120deg,#4c1d95,#7c3aed 55%,#a855f7);box-shadow:0 28px 70px #581c8750}.cta-banner h2{font-size:clamp(1.5rem,3vw,2.35rem);line-height:1.3;font-weight:900}.cta-banner p{color:#e8d9f7;margin-top:12px}.cta-banner .btn.outline{border-color:#ffffff90}.contact-layout{display:grid;grid-template-columns:1.4fr .9fr;gap:28px;align-items:start}.form-panel{padding:26px;display:grid;gap:14px}.form-panel h3{font-family:var(--bangla);font-size:1.22rem;margin-bottom:5px}
+    label.field{display:grid;gap:8px;color:#d5cce2;font-size:.86rem;font-weight:500}input,select,textarea{width:100%;color:#f4f0fa;background:#121017;border:1px solid #393044;border-radius:10px;padding:13px 15px;font-size:.94rem}textarea{resize:vertical}input::placeholder,textarea::placeholder{color:#83788e}.form-note{font-size:.78rem;color:var(--muted);line-height:1.8}.form-error{color:#fca5a5;font-size:.9rem}.registration{padding:24px 0 90px}.registration .container{max-width:800px}.registration-intro{margin-bottom:30px}.registration-intro h2{font-size:36px;font-weight:800;line-height:1.2;margin:10px 0 12px}.registration-form{display:grid;gap:22px}.registration-review{border:1px solid #544166;background:#121017;border-radius:16px;padding:30px}.registration-review dl{display:grid;grid-template-columns:130px 1fr;gap:8px 20px;margin:24px 0;overflow-wrap:anywhere}.registration-review dt{color:var(--muted);font-size:.87rem}.registration-review dd{margin:0;color:#ede5f8;font-size:.92rem}.safety-note{display:flex;gap:10px;align-items:flex-start;border-top:1px solid #282130;padding-top:20px;margin-top:30px;color:#9e95aa;line-height:1.7;font-size:.8rem}
+    .footer{background:#08080c;border-top:1px solid rgba(255,255,255,.06);padding:62px 0 0}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:36px;padding-bottom:44px}.footer h4{color:var(--light);font-size:.95rem;margin-bottom:16px}.footer p{color:var(--dim);font-size:.88rem;line-height:1.85;margin-top:16px;max-width:320px}.footer ul{display:grid;gap:11px}.footer li{font-size:.88rem;color:var(--muted)}.footer a:hover{color:#cba1f1}.footer-social{display:flex;gap:10px;margin-top:18px}.footer-bottom{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;border-top:1px solid var(--border);padding:20px 0 26px;color:#8b8194;font-size:.76rem}
+    .back-top{position:fixed;bottom:22px;right:20px;z-index:800;border:1px solid #a855f780;border-radius:50%;width:46px;height:46px;display:grid;place-items:center;background:linear-gradient(135deg,#7c3aed,#3b0764);color:white;box-shadow:0 12px 28px #0008}.dialog{width:min(960px,calc(100% - 30px));max-height:90vh;overflow:auto;border:1px solid #8b5cf677;border-radius:20px;background:#100b19;color:#fff;padding:24px;box-shadow:0 35px 120px #000b}.dialog::backdrop{background:rgba(4,2,8,.88);backdrop-filter:blur(9px)}.dialog-top{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:18px}.dialog-image{width:100%;max-height:60vh;object-fit:contain;border-radius:10px;background:#09070e}.dialog-navigation{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:20px}.preview-message{color:var(--muted);font-size:.9rem;line-height:1.85;margin-top:15px}
+    .detail-visual>.photo-button{height:300px}
+    .compare-table tbody th{padding:13px 17px;font-weight:400}
+    .project-files{margin-bottom:24px;font-size:.8rem;color:var(--dim)}
+    .project-files summary{cursor:pointer;color:#c9b2e2;font-weight:700;margin-bottom:11px}
+    .project-files summary::marker{color:#8b5cf6}
+    .project-files .chip{cursor:pointer;transition:border-color .25s,color .25s}
+    .project-files .chip:hover{border-color:#a855f7;color:#eadbff}
+    .course-media{position:relative}.course-card .course-media>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#0d0a18}
+    .device-badge{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;background:rgba(10,7,16,.82);border:1px solid rgba(196,160,245,.45);color:#eadbff;font-size:.7rem;font-weight:800;letter-spacing:.4px;backdrop-filter:blur(6px)}
+    .team-photo{position:relative;height:270px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 30% 18%,rgba(168,85,247,.42),transparent 58%),linear-gradient(160deg,#1c1230,#0c0a13)}
+    .team-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(12,10,20,.8),transparent 45%);pointer-events:none}
+    .team-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .team-initials{position:relative;z-index:1;display:grid;place-items:center;width:118px;height:118px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#4c1d95);box-shadow:0 0 0 8px rgba(168,85,247,.14),0 20px 40px rgba(0,0,0,.45);color:#fff;font-size:2.3rem;font-weight:900;letter-spacing:1px}
+    .team-card .team-info h3{font-size:1.05rem}
+    .team-card.featured{border-color:rgba(168,85,247,.6);box-shadow:0 18px 50px rgba(88,28,135,.35)}
+    .team-card.large .team-photo{height:380px}
+    .team-card.large .team-initials{width:150px;height:150px;font-size:3rem}
+    .team-feature{max-width:380px;width:100%;margin:auto}
+    .compare-table{min-width:780px}
+    .compare-table th:nth-child(3),.compare-table td:nth-child(3){background:transparent}
+    .compare-table tbody th:first-child{color:#f1e9fb;font-weight:600;font-size:.86rem;padding-top:13px}
+    .compare-table td.fee{color:#dcc0ff;font-weight:800;white-space:nowrap}
+    @media(max-width:599px){.grid-3.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.team-grid .team-photo{height:170px}.team-grid .team-initials{width:74px;height:74px;font-size:1.45rem;box-shadow:0 0 0 6px rgba(168,85,247,.14)}.team-grid .team-info{padding:14px 10px}.team-grid .team-info h3{font-size:.9rem}.team-card.large .team-photo{height:300px}}
+    .certificate-showcase{max-width:860px;margin:0 auto}
+    .certificate-frame{position:relative;display:block;width:100%;padding:10px;border:0;border-radius:18px;background:linear-gradient(135deg,#a855f7,#3b0764);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 50px rgba(124,58,237,.22);cursor:zoom-in;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+    .certificate-frame img{width:100%;height:auto;border-radius:10px;background:#0f0c18}
+    .certificate-zoom{position:absolute;right:22px;bottom:22px;display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:rgba(10,7,16,.82);border:1px solid rgba(196,160,245,.45);color:#eadbff;font-size:.78rem;font-weight:700;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+    .certificate-frame:hover,.certificate-frame:focus-visible{transform:translateY(-6px);box-shadow:0 36px 80px rgba(0,0,0,.6),0 0 64px rgba(124,58,237,.35)}
+    .certificate-frame:hover .certificate-zoom,.certificate-frame:focus-visible .certificate-zoom{opacity:1;transform:none}
+    @media(hover:none){.certificate-zoom{opacity:1;transform:none}}
+    .certificate-showcase figcaption{text-align:center;color:var(--muted);font-size:.92rem;line-height:1.8;margin-top:18px}
+    .admission-form-panel{padding:30px;display:grid;gap:22px}
+    .form-section-title{display:flex;align-items:center;gap:12px;font-size:.95rem;font-weight:700;color:#d9c3f7}
+    .form-section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(168,85,247,.4),transparent)}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+    .form-grid .span-2{grid-column:1 / -1}
+    .required{color:#e9a8ff}
+    .optional{color:var(--dim);font-weight:400;font-size:.76rem}
+    .course-summary{display:flex;flex-wrap:wrap;gap:8px}
+    .course-summary .fee-chip{color:#e3c9ff;border-color:rgba(168,85,247,.45)}
+    .check-field{display:flex;align-items:flex-start;gap:11px;color:#dccfeb;font-size:.9rem;line-height:1.6;cursor:pointer}
+    .check-field input{width:19px;height:19px;flex-shrink:0;margin-top:2px;padding:0;accent-color:#8b5cf6}
+    #admission-submit[disabled]{opacity:.7;cursor:progress;transform:none}
+    .admission-slip{display:grid;gap:18px}
+    .slip-sync{padding:13px 16px;border-radius:12px;font-family:var(--bangla);font-size:.9rem;line-height:1.7}
+    .slip-sync.ok{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);color:#bbf7d0}
+    .slip-sync.info{background:rgba(124,58,237,.12);border:1px solid rgba(168,85,247,.4);color:#e2cffb}
+    .slip-sync.warn{background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.4);color:#fde68a}
+    .slip-card{position:relative;overflow:hidden;border:1px solid #5b4775;border-radius:20px;background:radial-gradient(circle at 88% -12%,rgba(124,58,237,.32),transparent 46%),linear-gradient(160deg,#151021,#0d0a14);padding:30px}
+    .slip-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px dashed rgba(196,160,245,.3)}
+    .slip-head .logo{width:160px}
+    .slip-title{text-align:right}
+    .slip-title h3{font-size:1rem;letter-spacing:3px;font-weight:800}
+    .slip-title span{color:var(--muted);font-size:.85rem}
+    .slip-id-block{margin:22px 0;padding:20px;border-radius:16px;text-align:center;background:linear-gradient(135deg,rgba(124,58,237,.22),rgba(76,29,149,.1));border:1px solid rgba(168,85,247,.45)}
+    .slip-id-block small{display:block;color:#cdb9f4;font-size:.85rem}
+    .slip-id{display:block;margin:6px 0 12px;font-size:clamp(1.6rem,5vw,2.4rem);font-weight:900;letter-spacing:3px;color:#fff;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+    .status-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:999px;background:rgba(234,179,8,.12);border:1px solid rgba(234,179,8,.45);color:#fde68a;font-size:.76rem;font-weight:700}
+    .slip-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 26px;margin:0}
+    .slip-details div{min-width:0}
+    .slip-details .wide{grid-column:1 / -1}
+    .slip-details dt{color:var(--muted);font-size:.74rem}
+    .slip-details dd{margin:2px 0 0;color:#f1e9fb;font-size:.92rem;font-weight:600;overflow-wrap:anywhere}
+    .slip-steps{margin-top:22px;padding-top:18px;border-top:1px dashed rgba(196,160,245,.3)}
+    .slip-steps h4{font-size:.95rem;margin-bottom:12px}
+    .slip-steps ol{display:grid;gap:9px}
+    .slip-steps li{display:flex;gap:12px;font-family:var(--bangla);font-size:.88rem;line-height:1.7;color:#d4cadf}
+    .slip-steps li b{flex-shrink:0;color:#cdb9f4;font-family:var(--font);font-size:.72rem;letter-spacing:.5px;padding-top:3px}
+    .slip-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.07);color:var(--dim);font-size:.74rem}
+    #print-root{display:none}
+    @media(max-width:599px){.admission-form-panel,.slip-card{padding:20px}.form-grid,.slip-details{grid-template-columns:1fr}.slip-title{text-align:left}.certificate-frame{padding:6px;border-radius:14px}.certificate-zoom{right:14px;bottom:14px}}
+    @media print{
+      body.print-slip>:not(#print-root):not(#icon-sprite){display:none!important}
+      body.print-slip #print-root{display:block}
+      body.print-slip .slip-card{background:#fff;border:1.5px solid #6b4fa0;color:#1b1424;break-inside:avoid}
+      body.print-slip .slip-card *{color:#1b1424}
+      body.print-slip .slip-head{margin:-30px -30px 0;padding:18px 30px;background:#120c1c;border-bottom:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      body.print-slip .slip-head *{color:#fff}
+      body.print-slip .slip-id-block{background:#f6f1ff;border-color:#b79be6}
+      body.print-slip .slip-id{color:#4c1d95}
+      body.print-slip .status-badge{background:#fff7d6;border-color:#d4a72c}
+      body.print-slip .slip-details dt,body.print-slip .slip-foot{color:#5d5368}
+    }
+    .course-icon{display:grid;place-items:center;height:180px;background:#fff}
+    .course-icon .glyph{display:grid;place-items:center;width:116px;height:116px;border-radius:50%;background:#f3ebff;color:#6d28d9}
+    .course-icon .icon{width:60px;height:60px;stroke-width:1.5}
+    .detail-visual>.detail-banner{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid rgba(168,85,247,.3)}.course-icon.detail-icon{height:300px;border-radius:14px;border:1px solid rgba(168,85,247,.3)}
+    .course-icon.detail-icon .glyph{width:170px;height:170px}.course-icon.detail-icon .icon{width:92px;height:92px}
+    .off-badge{display:inline-block;margin-left:6px;padding:2px 9px;border-radius:999px;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.5);color:#86efac;font-size:.68rem;font-weight:800;letter-spacing:.3px;white-space:nowrap;vertical-align:middle}
+    @media(max-width:599px){.course-icon.detail-icon{height:230px}.course-icon.detail-icon .glyph{width:140px;height:140px}}
+    .page-enter{animation:pageIn .45s ease both}
+    @keyframes pageIn{from{opacity:.5;transform:translateY(10px)}to{opacity:1;transform:none}}
+    @keyframes float{0%,100%{translate:0 0}50%{translate:0 -14px}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+    @keyframes bars{from{scale:1 .3}to{scale:1 1}}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media(hover:hover) and (pointer:fine){.counter-box:hover{transform:translateY(-7px);border-color:rgba(183,140,255,.75);box-shadow:0 18px 42px rgba(88,28,135,.3),inset 0 1px 0 #e4cbff1f}.counter-box:hover::before{opacity:1}.counter-box:hover::after{transform:translateX(70%)}.counter-box:hover .counter-value{transform:scale(1.04);filter:drop-shadow(0 0 12px #b78cff55)}.admission-step:hover .admission-step-box{border-color:#8e6faf;box-shadow:0 8px 28px #4f23782e}}
+    @media(max-width:1099px){.hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}.hero h1{font-size:3rem}.hero .subtitle{margin:auto}.hero .actions,.trust-row{justify-content:center}.hero-art{max-width:700px;width:100%;margin:auto}.split{gap:35px}.contact-layout{grid-template-columns:1fr}.desktop-nav{gap:17px}.home-course-track{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-grid{grid-template-columns:1fr 1fr}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-meta{grid-template-columns:1fr 1fr}.detail-course .split{grid-template-columns:1fr}.detail-course:nth-child(even) .detail-visual{order:0}}
+    @media(max-width:899px){section{padding:56px 0}.site-header{padding:15px 0}.site-header .logo{width:148px}.desktop-nav,.desktop-enroll{display:none}.menu-toggle{display:inline-grid}.hero{padding:110px 0 56px}.hero h1{font-size:2.4rem}.hero .subtitle{font-size:1rem}.floating-badge{display:none}.monitor-screen>img{height:290px}.counter-grid{grid-template-columns:1fr 1fr;margin-top:44px}.counter-value{font-size:1.75rem}.page-hero{padding:120px 0 52px}.page-hero h1{font-size:2.7rem}.page-hero p{font-size:1rem}.split{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.floating-tiles{height:255px;width:360px;max-width:100%;margin:auto}.course-hero{text-align:center!important}.breadcrumb{justify-content:center}.course-hero p{margin-left:auto}.filter-tabs{justify-content:flex-start}.people-grid{grid-template-columns:1fr 1fr;max-width:650px}.person-card.founder{grid-column:1 / -1;grid-row:1}.gallery-masonry{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.cta-section{padding:20px 0 65px}.cta-banner{padding:40px 26px}.review-panel{padding:30px 24px}.admission-section.standalone{padding-top:112px}.admission-poster{padding:40px 32px 34px}.admission-title{font-size:42px}.admission-intro{font-size:20px}.admission-brand{font-size:clamp(25px,5vw,40px)}.certificate-fan .certificate{width:205px}.certificate-fan .certificate:nth-child(3){width:260px}}
+    @media(max-width:599px){.container{padding:0 18px}.hero h1{font-size:2.2rem}.hero-eyebrow{font-size:.65rem;padding:6px 12px}.hero .actions .btn{padding:12px 19px;font-size:.9rem}.monitor-screen>img{height:240px}.grid-2,.grid-3,.home-course-track{grid-template-columns:1fr}.grid-4{gap:13px}.counter-box{padding:21px 10px}.counter-value{font-size:1.65rem}.counter-label{font-size:.7rem}.page-hero h1{font-size:2.3rem}.page-hero .grid-3{grid-template-columns:1fr}.photo-frame>img{height:260px}.feature-box{padding:24px}.people-grid{grid-template-columns:1fr}.person-card.founder{grid-column:auto}.gallery-masonry{grid-auto-rows:125px;gap:10px}.gallery-item{height:210px}.gallery-group .wide-banner{height:220px}.course-body{padding:21px}.detail-course{padding:30px 0}.detail-meta{grid-template-columns:1fr 1fr}.filter-tabs button{font-size:.79rem;padding:9px 16px}.review-quote{font-size:1rem;min-height:150px}.footer-grid{grid-template-columns:1fr;gap:30px}.section-head{margin-bottom:30px}.accordion summary{font-size:.84rem;padding:16px;gap:10px}.lesson-list{padding-left:24px}.accordion .lesson-count{display:none}.community-ring{width:300px;height:300px}.orbit-avatar{width:48px;height:48px;transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-118px) rotate(calc(-1 * var(--angle)))}.ring-center{width:130px;height:130px}.ring-center strong{font-size:1.6rem}.certificate-fan{padding-top:10px}.certificate-fan .certificate{width:160px}.certificate-fan .certificate:nth-child(3){width:230px}.certificate-fan .certificate:nth-child(1),.certificate-fan .certificate:nth-child(5){display:none}.certificate-fan .certificate:nth-child(2){margin-left:0}.certificate-fan .certificate-inner{padding:20px 10px}.certificate-fan .certificate-heading{font-size:.86rem}.certificate-fan .certificate-name{font-size:1.1rem}.certificate-fan .certificate .logo{width:100px}.admission-section{padding:46px 0}.admission-section.standalone{padding:108px 0 44px}.admission-poster{padding:40px 18px 34px;border-radius:22px}.admission-poster::before{inset:9px;border-radius:15px}.admission-poster .logo{width:190px}.admission-brand{font-size:clamp(20px,5vw,28px);margin-top:28px}.admission-title{font-size:36px;gap:10px}.admission-title .icon{width:35px;height:35px}.admission-intro{font-size:17px}.admission-timeline{gap:14px;margin-top:26px}.admission-step{padding-left:27px}.admission-step::before{left:7px;top:-14px;bottom:-14px}.admission-dot{left:1px;width:14px;height:14px}.admission-step-box{padding:17px 18px 18px 17px;border-radius:15px 35px 35px 15px}.admission-step-box h3{font-size:14px;gap:4px 6px}.admission-step-box p{font-size:17px;margin-top:7px}.admission-whatsapp{font-size:16px}.admission-tagline{font-size:15px}.registration-intro h2{font-size:28px}.registration-review{padding:22px}.registration-review dl{grid-template-columns:1fr;gap:5px}.registration-review dd{margin-bottom:8px}.dialog{padding:17px}.dialog-top h2{font-size:1.1rem}}
+    @media(max-width:599px){.detail-visual>.photo-button{height:230px}#achievements,#instructor-counters{grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0ms!important}.counter-box:hover,.counter-box:hover .counter-value,.hover-box:hover{transform:none}}
+    @media print{.site-header,.footer,.back-top,.filter-tabs,.slider-controls,.actions,dialog{display:none!important}body{background:white;color:black}[data-page]:not([hidden]){display:block}section{padding:20px 0}.panel,.counter-box,.admission-poster,.admission-step-box{break-inside:avoid;box-shadow:none}a{color:inherit}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link" data-skip>Skip to content</a>
+  <svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="m16 10 6-4v12l-6-4"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3Zm6-6-1.5-7.5L2 2l3.5 14.5L13 18l5-5ZM2 2l7.5 7.5"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path d="m2 9 10-6 10 6-10 6L2 9Zm4 3v6c4 3 8 3 12 0v-6m4-3v8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-3a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v3m1-18a4 4 0 0 1 0 8m2 3a4 4 0 0 1 3 4v3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.4 7.1 1-5.1 5 1.2 7.1-6.3-3.3-6.3 3.3 1.2-7.1-5.1-5 7.1-1Z"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="m8 13-1 9 5-3 5 3-1-9"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 3h10v9a5 5 0 0 1-10 0V3Zm0 2H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Zm-4 10 3 3 5-6"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6m-5 4h4m-6-8a7 7 0 1 1 8 0l-1 4H9l-1-4Z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m12 12 9-9M17 3h4v4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-7-2-10-1v15c4-1 7-1 10 1m0-15c3-2 7-2 10-1v15c-4-1-7-1-10 1V5Z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m2 18 7-7 4 4 9-10m-6 0h6v6"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V3h8v4M2 12a24 24 0 0 0 20 0m-10-1v4"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14v-3a9 9 0 0 1 18 0v8a3 3 0 0 1-3 3h-4"/><rect x="3" y="11" width="4" height="8" rx="2"/><rect x="17" y="11" width="4" height="8" rx="2"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 11h6m-6 4h6m-6 4h4"/></symbol>
+    <symbol id="i-credit" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 15h5"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M8 5 9 2h6l1 3h4a2 2 0 0 1 2 2v13H2V7a2 2 0 0 1 2-2h4Z"/><circle cx="12" cy="12" r="4"/></symbol>
+    <symbol id="i-messages" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H5l-4 3 2-7a8 8 0 1 1 18-4Z"/><path d="M7 11h.01M12 11h.01M17 11h.01" stroke-width="3"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m7 2 3 5-3 3a18 18 0 0 0 7 7l3-3 5 3v3a2 2 0 0 1-2 2A20 20 0 0 1 2 4a2 2 0 0 1 2-2h3Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 5 10 8L22 5"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 6 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="4"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/><path d="m8 7 2 3-1 1a9 9 0 0 0 4 4l1-1 3 1c-1 4-6 1-8-1S5 8 8 7Z"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+      <a href="#/" aria-label="Nexphic IT Institute home" class="logo"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="172" height="52" alt="Nexphic IT Institute"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#/" data-nav="home" aria-current="page">Home</a><a href="#/courses" data-nav="courses">Courses</a><a href="#/about" data-nav="about">About</a><a href="#/gallery" data-nav="gallery">Gallery</a><a href="#/admission" data-nav="admission">Admission</a><a href="#/?section=contact">Contact</a>
+      </nav>
+      <a href="#/admission" class="btn desktop-enroll">Enroll Now <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button type="button" class="icon-button menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#/" data-nav="home">Home</a><a href="#/courses" data-nav="courses">Courses</a><a href="#/about" data-nav="about">About</a><a href="#/gallery" data-nav="gallery">Gallery</a><a href="#/admission" data-nav="admission">Admission</a><a href="#/?section=contact">Contact</a><a href="#/admission" class="btn">Enroll Now</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HOME PAGE -->
+    <div id="page-home" data-page="home">
+      <section class="hero" aria-labelledby="home-title">
+        <div class="container hero-grid">
+          <div>
+            <span class="hero-eyebrow"><span class="live-dot" aria-hidden="true"></span> Bangladesh's Trusted IT Institute</span>
+            <h1 id="home-title">স্বপ্নের <span class="gradient-text">Freelancing Career</span><br>শুরু হোক আজ থেকেই</h1>
+            <p class="subtitle">PC ও Mobile মিলিয়ে <b>৮টি Skill-based Course</b>: <b>Video Editing</b>, <b>Graphic Design</b>, <b>YouTube AI Automation</b>, <b>Freelancing</b> ও <b>Web Development</b>, যা আপনার জীবন বদলে দেবে।</p>
+            <div class="actions"><a href="#/courses" class="btn large">Courses দেখুন <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="#/?section=contact" class="btn large outline"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg> ফ্রি কাউন্সিলিং</a></div>
+            <div class="trust-row">
+              <div class="avatar-stack" aria-hidden="true"><img src="./assets/student-1.jpg" width="38" height="38" alt=""><img src="./assets/student-2.jpg" width="38" height="38" alt=""><img src="./assets/student-3.jpg" width="38" height="38" alt=""><img src="./assets/student-4.jpg" width="38" height="38" alt=""></div>
+              <div><span class="stars" data-stars aria-label="5 stars"></span><span class="bn">১২,০০০+ শিক্ষার্থীর আস্থা</span></div>
+            </div>
+          </div>
+          <div class="hero-art">
+            <div class="monitor-shell"><div class="monitor-screen"><img src="./assets/hero-presentation.jpg" width="1400" height="1044" alt="Nexphic IT Institute-এর ইনস্ট্রাক্টর ক্লাসে শিক্ষার্থীদের সামনে কথা বলছেন"><span class="live-tag"><span class="live-dot" style="background:white" aria-hidden="true"></span> LIVE CLASS</span><div class="timeline-bars" id="hero-timeline" aria-hidden="true"></div></div></div>
+            <div class="floating-badge first"><b>12,000+</b><small>Happy Students</small></div><div class="floating-badge second"><b>98%</b><small>Success Rate</small></div>
+          </div>
+        </div>
+        <div class="container counter-grid" aria-label="Nexphic in numbers">
+          <div class="counter-box" role="group" aria-label="12,000 plus Successful Students"><strong class="counter-value gradient-text" data-count="12000" data-suffix="+" aria-hidden="true">12,000+</strong><div class="counter-label" aria-hidden="true">Successful Students</div></div>
+          <div class="counter-box" role="group" aria-label="98 percent Success Rate"><strong class="counter-value gradient-text" data-count="98" data-suffix="%" aria-hidden="true">98%</strong><div class="counter-label" aria-hidden="true">Success Rate</div></div>
+          <div class="counter-box" role="group" aria-label="20 plus Freelancing Courses"><strong class="counter-value gradient-text" data-count="20" data-suffix="+" aria-hidden="true">20+</strong><div class="counter-label" aria-hidden="true">Freelancing Course</div></div>
+          <div class="counter-box" role="group" aria-label="10 plus Professional Mentors"><strong class="counter-value gradient-text" data-count="10" data-suffix="+" aria-hidden="true">10+</strong><div class="counter-label" aria-hidden="true">Professional Mentor</div></div>
+        </div>
+      </section>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="skills-marquee"></div></div>
+
+      <section id="home-courses">
+        <div class="container">
+          <div class="section-head"><span class="eyebrow">Our Courses</span><h2 class="bn">আপনার পছন্দের <span class="gradient-text">কোর্সটি বেছে নিন</span></h2><p>Industry Expert দের কাছ থেকে শিখুন এবং Real Project এ কাজ করে নিজেকে প্রস্তুত করুন।</p></div>
+          <div class="home-course-track" id="home-course-track" aria-live="polite"></div>
+          <div class="slider-controls"><button type="button" id="courses-previous" class="icon-button" aria-label="Previous courses"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button><div id="home-course-dots" class="slider-dots" role="group" aria-label="Choose course slide"></div><button type="button" id="courses-next" class="icon-button" aria-label="Next courses"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          <div class="actions center"><a href="#/courses" class="text-link">View all courses <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </section>
+      <section class="glow-section" id="home-why">
+        <div class="container"><div class="section-head"><span class="eyebrow">Why Choose Nexphic</span><h2 class="bn">শুধু কোর্স নয়, <span class="gradient-text">ক্যারিয়ারের প্রস্তুতি</span></h2><p>দক্ষতা, সাপোর্ট এবং অভিজ্ঞ মেন্টরশিপ একসাথে।</p></div><div class="grid-3" id="home-features"></div></div>
+      </section>
+      <section id="home-earnings">
+        <div class="container"><div class="section-head"><span class="eyebrow">Real Result</span><h2 class="bn">আমাদের Student রা <span class="gradient-text">অনলাইনে আয় করছে</span></h2><p>Marketplace এ তাদের প্রমাণিত সাফল্য, আপনিও পারবেন।</p></div><div class="grid-3" id="earners"></div></div>
+      </section>
+      <section class="admission-section" id="home-admission"><div class="container" data-home-admission></div></section>
+      <section class="glow-section" id="home-reviews">
+        <div class="container">
+          <div class="section-head"><span class="eyebrow">Our Student Review</span><h2 class="bn">শিক্ষার্থীদের <span class="gradient-text">সত্যিকারের অভিজ্ঞতা</span></h2><p>কোনো Script নয়, সরাসরি তাদের মুখ থেকে।</p></div>
+          <div class="review-shell" id="review-shell"><div class="panel review-panel" id="review-slides"></div><div class="slider-controls"><div class="slider-dots" id="review-dots" role="group" aria-label="Select a student review"></div><button class="icon-button" type="button" id="review-pause" aria-label="Pause automatic reviews" aria-pressed="false"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-pause"/></svg></button></div></div>
+        </div>
+      </section>
+      <section id="home-about">
+        <div class="container split">
+          <div class="photo-frame"><img src="./assets/about-meeting.jpg" width="1536" height="1024" loading="lazy" alt="Nexphic IT Institute টিম মিটিংয়ে আলোচনা করছে"></div>
+          <div><span class="eyebrow">About Nexphic</span><h2 class="body-heading bn">দক্ষতা শিখুন, আত্মবিশ্বাসের সাথে <span class="gradient-text">ক্যারিয়ার গড়ুন</span></h2><p class="body-copy bn">Nexphic IT Institute রংপুরভিত্তিক একটি Skill-based IT প্রশিক্ষণ প্রতিষ্ঠান। এখানে PC ও Mobile, দুই মাধ্যমেই Video Editing, Content Creation, Graphic Design, YouTube AI Automation, Freelancing এবং Web Development শেখানো হয়। আমাদের লক্ষ্য, প্রতিটি শিক্ষার্থী যেন শেখা দক্ষতা কাজে লাগিয়ে নিজের ক্যারিয়ার ও আয়ের পথ তৈরি করতে পারে।</p><ul class="check-list" style="margin:24px 0"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> PC ও Mobile মিলিয়ে ৮টি কোর্স</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> কোর্সভেদে ১৬ থেকে ২৪টি Class</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Freelancing ও Content Creation-এ বিশেষ গুরুত্ব</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> সহজ ৫ ধাপে ভর্তি প্রক্রিয়া</li></ul><a href="#/about" class="btn large">আমাদের সম্পর্কে জানুন <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </section>
+      <section class="glow-section" id="home-team"><div class="container"><div class="section-head"><span class="eyebrow">Nexphic IT Team</span><h2 class="bn">আমাদের লক্ষ্য একটাই, <span class="gradient-text">আপনার সাফল্য</span></h2></div><div class="grid-3 team-grid" id="home-team-grid" style="max-width:1100px;margin:auto"></div></div></section>
+      <section id="home-gallery"><div class="container"><div class="section-head"><span class="eyebrow">Institute Life</span><h2 class="bn">আমাদের <span class="gradient-text">ক্যাম্পাসের মুহূর্ত</span></h2></div><div class="gallery-masonry" id="home-gallery-grid"></div><div class="actions center"><a href="#/gallery" class="btn outline">View Gallery <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></section>
+      <section class="glow-section" id="home-certificates"><div class="container"><div class="section-head"><span class="eyebrow">Certification</span><h2 class="bn">Student দের অর্জিত <span class="gradient-text">সার্টিফিকেট</span></h2></div><figure class="certificate-showcase" data-certificate><button type="button" class="certificate-frame" data-certificate-open aria-label="Nexphic IT Institute-এর Certificate বড় করে দেখুন"><img id="certificate-image" src="./assets/nexphic-certificate.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Nexphic IT Institute Certificate of Completion"><span class="certificate-zoom" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-search"/></svg> বড় করে দেখুন</span></button><figcaption class="bn">কোর্স সফলভাবে শেষ করলে প্রত্যেক শিক্ষার্থী Nexphic IT Institute-এর এই Certificate পান।</figcaption></figure><div class="actions center"><p class="bn muted">৪৫০+ Certified Student এর দলে যোগ দিন</p><a href="#/admission" class="btn">Get Certified</a></div></div></section>
+      <section id="contact">
+        <div class="container"><div class="section-head"><span class="eyebrow">Need Help?</span><h2 class="bn">সাধারণ <span class="gradient-text">জিজ্ঞাসা</span></h2><p>আরও কিছু জানার থাকলে সরাসরি আমাদের কল করুন।</p></div>
+          <div class="contact-layout">
+            <div class="accordion" id="home-faq"></div>
+            <form id="counseling-form" class="panel form-panel">
+              <h3>ফ্রি কাউন্সিলিং বুক করুন</h3>
+              <label class="field bn">আপনার নাম<input name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="আপনার নাম"></label>
+              <label class="field bn">মোবাইল নম্বর<input name="phone" type="tel" autocomplete="tel" required maxlength="24" placeholder="+880 1XXXXXXXXX"></label>
+              <label class="field bn">কোর্স নির্বাচন করুন<select name="course" required data-course-options><option value="" disabled selected>একটি কোর্স বেছে নিন</option></select></label>
+              <label class="field bn">আপনার প্রশ্ন (ঐচ্ছিক)<textarea name="question" rows="3" maxlength="1000" placeholder="কী জানতে চান?"></textarea></label>
+              <p class="form-error bn" id="counseling-error" role="alert" hidden></p>
+              <button type="submit" class="btn full">Prepare Call Back Request</button>
+              <div id="counseling-ready" hidden><p class="bn lilac" role="status" style="font-size:.87rem;margin-bottom:12px">আপনার অনুরোধটি প্রস্তুত। পাঠাতে নিচের বাটনে ক্লিক করুন।</p><a class="btn full outline" id="counseling-send" href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer">Send on WhatsApp</a></div>
+              <p class="form-note bn">অনুরোধটি WhatsApp-এ পাঠিয়ে আমাদের Admission Team-এর সঙ্গে কথা বলুন।</p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="cta-section"><div class="container"><div class="cta-banner"><h2 class="bn">আপনার Freelancing যাত্রা শুরু করতে প্রস্তুত?</h2><p class="bn">আজই ভর্তি হোন। সীমিত আসন, প্রতি ব্যাচে মাত্র ২৫ জন।</p><div class="actions center"><a href="#/admission" class="btn white large">Enroll Now</a><a data-phone href="tel:+8801845629227" class="btn outline large"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg> Call Now</a></div></div></div></section>
+    </div>
+
+    <!-- COURSES PAGE -->
+    <div id="page-courses" data-page="courses" hidden>
+      <section class="page-hero course-hero" aria-labelledby="courses-title">
+        <div class="container split"><div><div class="breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Courses</span></div><h1 id="courses-title">Explore<br><span class="gradient-text">Our Courses</span></h1><p>Learn Video Editing, Content Creation, Graphic Design, YouTube AI Automation, Freelancing &amp; Web Development, on PC or Mobile.</p></div><div class="floating-tiles" aria-hidden="true"><div class="tile-position"><div class="creative-tile"><svg class="icon"><use href="#i-play"/></svg></div></div><div class="tile-position"><div class="creative-tile" style="animation-delay:.8s"><svg class="icon"><use href="#i-pen"/></svg></div></div><div class="tile-position"><div class="creative-tile" style="animation-delay:1.6s"><svg class="icon"><use href="#i-youtube"/></svg></div></div></div></div>
+      </section>
+      <section style="padding:0 0 40px">
+        <div class="container">
+          <div class="filter-tabs" id="course-filters" role="group" aria-label="Filter courses by device"><button type="button" data-course-filter="All Courses" aria-pressed="true">All Courses</button><button type="button" data-course-filter="PC" aria-pressed="false">PC Courses</button><button type="button" data-course-filter="Mobile" aria-pressed="false">Mobile Courses</button></div>
+          <p id="course-filter-result" class="filter-result" role="status">8 courses available</p>
+          <div class="grid-3" id="course-catalogue"></div>
+        </div>
+      </section>
+      <div id="course-details"></div>
+      <section><div class="container medium"><div class="section-head"><span class="eyebrow">At a Glance</span><h2>Compare <span class="gradient-text">Our Courses</span></h2><p>সব কোর্সের Device, Class, সময় ও Course Fee এক নজরে।</p></div><div class="table-scroll" role="region" aria-label="Course comparison table" tabindex="0"><table class="panel compare-table"><caption class="sr-only">Device, number of classes, duration, and course fee for every Nexphic course</caption><thead><tr><th scope="col">Course</th><th scope="col">Device</th><th scope="col">Classes</th><th scope="col">Duration</th><th scope="col">Course Fee</th><th scope="col"><span class="sr-only">Enroll</span></th></tr></thead><tbody id="comparison-rows"></tbody></table></div></div></section>
+      <section class="glow-section"><div class="container narrow"><div class="section-head"><span class="eyebrow">Syllabus</span><h2>Course <span class="gradient-text">Curriculum</span></h2><p>Step by step learning path designed for beginners</p></div><div id="curriculum" class="accordion"></div></div></section>
+      <section id="course-team"><div class="container medium split"><div class="team-feature" id="course-team-feature"></div><div><span class="eyebrow">Meet the Team</span><h2 class="body-heading">Muhammad Raj</h2><h3 class="gradient-text" style="font-size:1.1rem">HR &amp; Accounts, Nexphic IT Institute</h3><p class="body-copy bn" style="margin-top:15px">Muhammad Raj ও Nexphic টিম ভর্তি থেকে শুরু করে Class Group পর্যন্ত প্রতিটি ধাপে শিক্ষার্থীদের পাশে থাকে।</p><div class="grid-2" id="instructor-counters" style="margin-top:24px;gap:12px"></div><div class="actions"><a href="#/about?section=about-team" class="text-link">Meet the full team <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></div></section>
+      <section class="cta-section"><div class="container medium"><div class="cta-banner"><h2>Start Your Journey Today<br>Limited Seats Available!</h2><p>Complete your registration and take the next step toward your creative career.</p><div class="actions center"><a href="#/admission" class="btn white large">Enroll Now</a><a data-whatsapp href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="btn outline large"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Us</a></div></div></div></section>
+      <section style="padding-top:0"><div class="container narrow"><div class="section-head"><span class="eyebrow">FAQ</span><h2>Frequently Asked <span class="gradient-text">Questions</span></h2></div><div class="accordion" id="course-faq"></div></div></section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" data-page="about" hidden>
+      <section class="page-hero" aria-labelledby="about-title"><div class="container"><h1 id="about-title">About <span class="gradient-text">Nexphic IT Institute</span></h1><p>Empowering the Next Generation of Digital Creators in Bangladesh</p><div class="grid-3" id="about-counters" style="max-width:760px;margin:36px auto 0;gap:16px"></div></div></section>
+      <section><div class="container medium split"><div class="photo-frame"><img src="https://images.pexels.com/photos/5530484/pexels-photo-5530484.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" width="1200" height="627" loading="lazy" alt="Students focused on their computers during a class"></div><div><span class="eyebrow">Our Story</span><h2 class="body-heading bn">শেখা থেকে আয়ের পথে, <span class="gradient-text">প্রতিটি ধাপে পাশে</span></h2><p class="body-copy bn">Nexphic IT Institute-এর যাত্রা শুরু একটি লক্ষ্য নিয়ে: বাংলাদেশের তরুণদের হাতে এমন বাস্তব দক্ষতা তুলে দেওয়া, যা দিয়ে তারা নিজের ক্যারিয়ার ও আয়ের পথ তৈরি করতে পারে। তাই প্রতিটি কোর্স সাজানো হয়েছে নির্দিষ্ট Class কাঠামো, হাতে-কলমে অনুশীলন এবং Freelancing ও Content Creation-এর বাস্তব প্রয়োজন মাথায় রেখে।</p><div class="milestone-line"><div class="milestone"><span class="year">৮টি</span><small>Skill-based কোর্স</small></div><div class="milestone"><span class="year">PC + Mobile</span><small>শেখার দুই মাধ্যম</small></div><div class="milestone"><span class="year">৫ ধাপ</span><small>সহজ ভর্তি প্রক্রিয়া</small></div></div></div></div></section>
+      <section style="padding-top:0"><div class="container medium"><div class="section-head"><span class="eyebrow">Purpose</span><h2>Our Mission <span class="gradient-text">&amp; Vision</span></h2></div><div class="grid-2"><div class="panel hover-box feature-box" style="text-align:center;padding:34px"><span class="icon-box" style="width:74px;height:74px;border-radius:50%"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-target"/></svg></span><h3 style="font-size:1.2rem">Our Mission</h3><p style="font-family:var(--font);font-size:.92rem">To provide world-class digital skills training to Bangladeshi youth, enabling them to earn globally from home.</p></div><div class="panel hover-box feature-box" style="text-align:center;padding:34px"><span class="icon-box" style="width:74px;height:74px;border-radius:50%"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-eye"/></svg></span><h3 style="font-size:1.2rem">Our Vision</h3><p style="font-family:var(--font);font-size:.92rem">To become South Asia's most trusted online IT training institute by 2030.</p></div></div></div></section>
+      <section><div class="container"><div class="section-head"><span class="eyebrow">Values</span><h2>What We <span class="gradient-text">Stand For</span></h2></div><div class="grid-4" id="about-values"></div></div></section>
+      <section class="glow-section" id="about-team"><div class="container"><div class="section-head"><span class="eyebrow">Team</span><h2>The People Behind <span class="gradient-text">Nexphic</span></h2></div><div class="grid-3 team-grid" id="about-team-grid" style="max-width:1100px;margin:auto"></div></div></section>
+      <section><div class="container medium"><div class="section-head"><span class="eyebrow">Milestones</span><h2>Our <span class="gradient-text">Achievements</span></h2></div><div class="grid-3" id="achievements" style="gap:16px"></div></div></section>
+      <section><div class="container medium"><div class="section-head"><span class="eyebrow">Experience</span><h2>Our Learning <span class="gradient-text">Experience</span></h2></div><div class="grid-3" id="learning-experience"></div></div></section>
+      <section class="glow-section"><div class="container medium split"><div class="community-ring" id="community-ring"><div class="ring-center"><strong class="gradient-text">500+</strong><small>Happy Students</small></div></div><div><h2 class="body-heading">Join Our Growing <span class="gradient-text">Community</span></h2><p class="body-copy bn">আমাদের Student Community তে পাবেন Group Learning, Mentorship, Job Referral এবং Cultural Project, যা আপনাকে সাহায্য করবে দ্রুত grow করতে।</p><ul class="check-list" style="margin:24px 0"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Peer Learning</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Group Projects</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Job Referrals</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Alumni Network</li></ul><a data-whatsapp data-message="Hello Nexphic! I would like to join your student community." href="https://wa.me/8801845629227" class="btn large" target="_blank" rel="noopener noreferrer">Join Community <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></section>
+      <section class="glow-section"><div class="container narrow"><div class="section-head"><span class="eyebrow">Achievement</span><h2>Earn a Recognized <span class="gradient-text">Certificate</span></h2></div><div id="about-certificate" style="max-width:820px;margin:auto"></div><div class="actions center"><span class="chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg> Shareable on LinkedIn</span><span class="chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-shield"/></svg> Verified by Nexphic</span><span class="chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-award"/></svg> Industry Recognized</span></div></div></section>
+      <section class="cta-section"><div class="container medium"><div class="cta-banner"><h2>Have Questions About Nexphic?</h2><p>We're here to help you choose the right course</p><div class="actions center"><a data-phone href="tel:+8801845629227" class="btn white large">Contact Us Now</a><a data-whatsapp href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="btn outline large"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Us</a></div><div class="actions center" style="font-size:.85rem;color:#f3e8ff"><a data-phone href="tel:+8801845629227"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg> <span data-phone-text>+8801845629227</span></a><a href="mailto:nexphic@email.com"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg> nexphic@email.com</a><span><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map"/></svg> Rangpur, Bangladesh</span></div></div></div></section>
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="page-gallery" data-page="gallery" hidden>
+      <section class="page-hero" aria-labelledby="gallery-title"><div class="container"><h1 id="gallery-title">Our <span class="gradient-text">Gallery</span></h1><p>A Glimpse Into Life at Nexphic IT Institute</p></div></section>
+      <div class="container"><div class="filter-tabs" id="gallery-filters" role="group" aria-label="Filter gallery"><button type="button" data-gallery-filter="All" aria-pressed="true">All</button><button type="button" data-gallery-filter="Class Photos" aria-pressed="false">Class Photos</button><button type="button" data-gallery-filter="Student Work" aria-pressed="false">Student Work</button><button type="button" data-gallery-filter="Certificates" aria-pressed="false">Certificates</button><button type="button" data-gallery-filter="Events" aria-pressed="false">Events</button><button type="button" data-gallery-filter="Behind The Scenes" aria-pressed="false">Behind The Scenes</button></div><p id="gallery-filter-result" class="filter-result" role="status">Showing all gallery collections</p></div>
+      <section class="gallery-group" data-gallery-section="Class Photos" style="padding-top:14px"><div class="container"><span class="eyebrow" style="margin-bottom:20px">Class Photos</span><div class="gallery-masonry" id="class-photos"></div></div></section>
+      <section class="gallery-group" data-gallery-section="Student Work"><div class="container"><div class="section-head"><span class="eyebrow">Portfolio</span><h2>Student <span class="gradient-text">Work</span></h2></div><div class="grid-3" id="student-work"></div></div></section>
+      <section class="gallery-group glow-section" data-gallery-section="Certificates" style="overflow:hidden"><div class="container"><div class="section-head"><span class="eyebrow">Certified</span><h2>Certificates Earned by <span class="gradient-text">Our Students</span></h2></div><div id="gallery-certificate"></div><div class="actions center" style="flex-direction:column"><p class="muted">Join 450+ Certified Students</p><a href="#/admission" class="btn large">Get Certified</a></div></div></section>
+      <section class="gallery-group" data-gallery-section="Events"><div class="container"><div class="section-head"><span class="eyebrow">Moments</span><h2>Events <span class="gradient-text">&amp; Moments</span></h2><p>Special moments from our institute journey</p></div><div class="grid-3" id="events-photos" style="gap:14px"></div></div></section>
+      <section class="gallery-group glow-section" data-gallery-section="Behind The Scenes"><div class="container"><div class="section-head"><span class="eyebrow">Studio</span><h2>Behind The <span class="gradient-text">Scenes</span></h2><p>How we create world-class content for our students</p></div><div class="grid-3" id="behind-scenes" style="gap:14px"></div></div></section>
+      <section class="gallery-group" data-gallery-section="Success Stories"><div class="container"><div class="section-head"><span class="eyebrow">Proof</span><h2>Success Stories in <span class="gradient-text">Photos</span></h2><p>Real students, real results, <span class="red" style="font-weight:700">real income</span></p></div><div class="grid-3" id="success-photos"></div></div></section>
+      <section class="gallery-group" data-gallery-section="Videos"><div class="container"><div class="section-head"><span class="eyebrow">Watch</span><h2>Watch Our <span class="gradient-text">Videos</span></h2><p>Class previews, student testimonials and institute tours</p></div><div class="grid-3" id="gallery-videos"></div></div></section>
+      <section class="cta-section"><div class="container medium"><div class="cta-banner"><h2>Want to Be Part of Our Story?</h2><p>Join Nexphic IT Institute and create your own success story</p><div class="actions center"><a href="#/admission" class="btn white large">Enroll Now</a><a href="#/courses" class="btn outline large">See Our Courses</a></div><p style="font-size:.85rem;margin-top:25px">500+ students already joined</p></div></div></section>
+    </div>
+
+    <!-- ADMISSION PAGE: the original five steps, followed by a working registration handoff. -->
+    <div id="page-admission" data-page="admission" hidden>
+      <section class="admission-section standalone" aria-labelledby="admission-heading">
+        <div class="container" style="max-width:1180px">
+          <div class="admission-poster" id="admission-poster">
+            <svg class="hex-decoration" viewBox="0 0 240 390" fill="none" aria-hidden="true" data-hexagons></svg><svg class="hex-decoration right" viewBox="0 0 240 390" fill="none" aria-hidden="true" data-hexagons></svg>
+            <div class="admission-header">
+              <a href="#/" class="logo large" aria-label="Nexphic IT Institute home"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="248" height="75" alt="Nexphic IT Institute"></a>
+              <p class="admission-brand">NEXPHIC IT INSTITUTE</p>
+              <h1 class="admission-title" id="admission-heading"><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg> ভর্তি প্রক্রিয়া</h1>
+              <p class="admission-intro">Nexphic IT Institute-এ ভর্তি প্রক্রিয়াটি সহজভাবে সম্পন্ন করা যায়।</p>
+            </div>
+            <ol class="admission-timeline" aria-label="Five-step admission process">
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 01</span><span class="dash" aria-hidden="true"></span><span>REGISTRATION</span><svg class="icon" style="color:#dccbb1" aria-hidden="true"><use href="#i-clipboard"/></svg></h3><p><svg class="icon" style="color:#dccbb1" aria-hidden="true"><use href="#i-clipboard"/></svg>সঠিক তথ্য দিয়ে <a href="#/admission?form=1">Admission Form</a> পূরণ করুন।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 02</span><span class="dash" aria-hidden="true"></span><span>PAYMENT</span><svg class="icon" style="color:#e4c36f" aria-hidden="true"><use href="#i-credit"/></svg></h3><p><svg class="icon" style="color:#e4c36f" aria-hidden="true"><use href="#i-credit"/></svg>নির্ধারিত Course Fee বিকাশ/নগদ/রকেটের মাধ্যমে প্রদান করুন।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 03</span><span class="dash" aria-hidden="true"></span><span>PAYMENT CONFIRMATION</span></h3><p><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>Payment-এর Screenshot এবং প্রয়োজনীয় তথ্য আমাদের <a data-messenger href="https://m.me/nexphicit" target="_blank" rel="noopener noreferrer">Page/Messenger</a>-এ পাঠান।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 04</span><span class="dash" aria-hidden="true"></span><span>ADMISSION CONFIRMATION</span></h3><p><svg class="icon" style="color:#5ed491" aria-hidden="true"><use href="#i-check"/></svg>Payment যাচাই হওয়ার পর আপনার Admission Confirmation এবং Student ID প্রদান করা হবে।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 05</span><span class="dash" aria-hidden="true"></span><span>CLASS GROUP</span><svg class="icon" style="color:#e0dbe9" aria-hidden="true"><use href="#i-messages"/></svg></h3><p><svg class="icon" style="color:#e0dbe9" aria-hidden="true"><use href="#i-messages"/></svg>Student ID ব্যবহার করে সংশ্লিষ্ট Class Group-এ যুক্ত হয়ে ক্লাসের সময়সূচি ও প্রয়োজনীয় নির্দেশনা পাবেন।</p></div></li>
+            </ol>
+            <div class="admission-footer"><a data-whatsapp data-message="Hello Nexphic! I would like to know about the admission process." href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="admission-whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp: <span data-phone-text>+8801845629227</span></span></a><p class="admission-tagline"><svg class="icon" style="fill:#af7fe5;color:#b995ee;margin-right:6px" aria-hidden="true"><use href="#i-heart"/></svg> Nexphic IT Institute &nbsp;|&nbsp; আপনার ডিজিটাল ক্যারিয়ারের বিশ্বস্ত সঙ্গী</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="registration" id="admission-form" aria-labelledby="admission-form-heading">
+        <div class="container">
+          <div class="registration-intro"><span class="eyebrow">Step 01 / Admission Form</span><h2 id="admission-form-heading" class="bn">অনলাইনে <span class="gradient-text">ভর্তি ফর্ম</span></h2><p class="body-copy bn">সঠিক তথ্য দিয়ে ফর্মটি পূরণ করে জমা দিন। জমা দেওয়ার সাথে সাথেই আপনার নিজস্ব <b class="lilac">Student ID</b> ও Admission Slip তৈরি হবে।</p></div>
+          <form class="panel admission-form-panel" id="admission-form-element">
+            <h3 class="form-section-title bn">শিক্ষার্থীর তথ্য</h3>
+            <div class="form-grid">
+              <label class="field bn">শিক্ষার্থীর পূর্ণ নাম <span class="required" aria-hidden="true">*</span><input name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="যেমন: Md. Rahim Uddin"></label>
+              <label class="field bn">পিতা/অভিভাবকের নাম <span class="required" aria-hidden="true">*</span><input name="guardian" required minlength="2" maxlength="100" placeholder="পিতা বা অভিভাবকের নাম"></label>
+              <label class="field bn">মোবাইল নম্বর <span class="required" aria-hidden="true">*</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="24" placeholder="01XXXXXXXXX"></label>
+              <label class="field bn">WhatsApp নম্বর <span class="optional">(ঐচ্ছিক)</span><input name="whatsapp" type="tel" inputmode="tel" maxlength="24" placeholder="মোবাইল নম্বর থেকে ভিন্ন হলে"></label>
+              <label class="field bn">ইমেইল <span class="optional">(ঐচ্ছিক)</span><input name="email" type="email" autocomplete="email" maxlength="180" placeholder="you@example.com"></label>
+              <label class="field bn">জন্ম তারিখ <span class="optional">(ঐচ্ছিক)</span><input name="dob" type="date" autocomplete="bday"></label>
+              <label class="field bn">লিঙ্গ <span class="optional">(ঐচ্ছিক)</span><select name="gender"><option value="">নির্বাচন করুন</option><option>পুরুষ</option><option>নারী</option><option>অন্যান্য</option></select></label>
+              <label class="field bn">শিক্ষাগত যোগ্যতা <span class="optional">(ঐচ্ছিক)</span><select name="education"><option value="">নির্বাচন করুন</option><option>SSC / সমমান</option><option>HSC / সমমান</option><option>Diploma</option><option>Honours / Degree</option><option>Masters</option><option>অন্যান্য</option></select></label>
+              <label class="field bn span-2">বর্তমান ঠিকানা <span class="required" aria-hidden="true">*</span><input name="address" autocomplete="street-address" required minlength="4" maxlength="200" placeholder="গ্রাম/রোড, থানা, জেলা"></label>
+            </div>
+            <h3 class="form-section-title bn">কোর্সের তথ্য</h3>
+            <div class="form-grid">
+              <label class="field bn span-2">কোর্স নির্বাচন করুন <span class="required" aria-hidden="true">*</span><select name="course" id="admission-course" required data-course-options><option value="" disabled selected>একটি কোর্স বেছে নিন</option></select><span class="course-summary" id="admission-course-summary" hidden></span></label>
+              <label class="field bn">পছন্দের ব্যাচ সময় <span class="optional">(ঐচ্ছিক)</span><select name="batch"><option value="">যেকোনো সময়</option><option>সকাল</option><option>দুপুর</option><option>বিকেল</option><option>সন্ধ্যা</option></select></label>
+              <label class="field bn">Payment মাধ্যম <span class="required" aria-hidden="true">*</span><select name="payment" required><option value="" disabled selected>নির্বাচন করুন</option><option>বিকাশ (bKash)</option><option>নগদ (Nagad)</option><option>রকেট (Rocket)</option></select></label>
+              <label class="field bn span-2">কোনো প্রশ্ন বা মন্তব্য <span class="optional">(ঐচ্ছিক)</span><textarea name="note" rows="3" maxlength="600" placeholder="আপনার শেখার লক্ষ্য বা কোনো প্রশ্ন লিখুন"></textarea></label>
+            </div>
+            <label class="check-field bn"><input type="checkbox" name="agree" required> আমি নিশ্চিত করছি যে ফর্মে দেওয়া সব তথ্য সঠিক।</label>
+            <p id="admission-error" role="alert" class="form-error bn" hidden></p>
+            <div class="actions" style="margin-top:0"><button type="submit" class="btn large" id="admission-submit"><span id="admission-submit-label">ভর্তি ফর্ম জমা দিন</span> <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button><p class="form-note bn" style="max-width:300px">জমা দিলেই একটি ইউনিক Student ID তৈরি হবে।</p></div>
+          </form>
+          <div class="admission-slip" id="admission-slip" hidden>
+            <p id="slip-sync" class="slip-sync info" role="status"></p>
+            <article class="slip-card" id="slip-card" aria-labelledby="slip-heading">
+              <header class="slip-head"><span class="logo"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="160" height="48" alt="Nexphic IT Institute"></span><div class="slip-title"><h3 id="slip-heading" tabindex="-1">ADMISSION SLIP</h3><span class="bn">ভর্তি স্লিপ</span></div></header>
+              <div class="slip-id-block"><small class="bn">আপনার Student ID</small><strong class="slip-id" id="slip-student-id"></strong><span class="status-badge"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg> Payment Pending</span></div>
+              <dl class="slip-details" id="slip-details"></dl>
+              <div class="slip-steps">
+                <h4 class="bn">পরবর্তী ধাপ</h4>
+                <ol>
+                  <li><b>STEP 02</b><span>নির্ধারিত Course Fee বিকাশ/নগদ/রকেটের মাধ্যমে প্রদান করুন। Payment নম্বর Admission Team-এর কাছ থেকে নিশ্চিত করে নিন।</span></li>
+                  <li><b>STEP 03</b><span>আপনার Student ID সহ Payment-এর Screenshot আমাদের Page/Messenger-এ পাঠান।</span></li>
+                  <li><b>STEP 04</b><span>Payment যাচাই হওয়ার পর আপনার Admission Confirm করা হবে।</span></li>
+                  <li><b>STEP 05</b><span>Student ID ব্যবহার করে Class Group-এ যুক্ত হয়ে ক্লাসের সময়সূচি ও নির্দেশনা পাবেন।</span></li>
+                </ol>
+              </div>
+              <footer class="slip-foot"><span>Nexphic IT Institute · Rangpur, Bangladesh</span><span>WhatsApp: <span data-phone-text>+8801845629227</span></span></footer>
+            </article>
+            <div class="actions" style="margin-top:0">
+              <a class="btn" id="slip-whatsapp" href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp-এ পাঠান</a>
+              <button type="button" class="btn outline" id="slip-copy"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-copy"/></svg> Student ID কপি করুন</button>
+              <button type="button" class="btn outline" id="slip-print"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clipboard"/></svg> প্রিন্ট / PDF সেভ</button>
+              <a class="btn outline" data-messenger href="https://m.me/nexphicit" target="_blank" rel="noopener noreferrer"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-messages"/></svg> Messenger</a>
+            </div>
+            <p id="slip-copy-status" class="form-note bn" role="status"></p>
+            <button type="button" class="text-link bn" id="slip-new" style="justify-self:start;border:0;background:none;padding:0;font-size:.9rem">+ নতুন ভর্তি ফর্ম</button>
+          </div>
+          <p class="safety-note bn"><svg class="icon lilac" aria-hidden="true"><use href="#i-shield"/></svg>Payment করার আগে Admission Team-এর কাছ থেকে Course Fee ও Payment নম্বর নিশ্চিত করুন। এই ওয়েবসাইটে কোনো Payment নেওয়া হয় না। কাউকে আপনার PIN বা OTP দেবেন না।</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" style="width:186px" href="#/" aria-label="Nexphic IT Institute home"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="186" height="56" alt="Nexphic IT Institute"></a>
+          <p class="bn">স্কিল শেখানোর পাশাপাশি আমরা তৈরি করি আত্মবিশ্বাসী Freelancer, যারা নিজের যোগ্যতায় আন্তর্জাতিক বাজারে কাজ করে।</p>
+          <div class="footer-social">
+            <a data-facebook href="https://www.facebook.com/nexphicit" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Nexphic Facebook page" style="font-weight:800">f</a>
+            <a data-messenger href="https://m.me/nexphicit" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Nexphic Messenger"><svg class="icon" aria-hidden="true"><use href="#i-messages"/></svg></a>
+            <a data-whatsapp href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Nexphic WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Quick Links</h4><ul><li><a href="#/">Home</a></li><li><a href="#/courses">Courses</a></li><li><a href="#/about">About</a></li><li><a href="#/gallery">Gallery</a></li><li><a href="#/admission">Admission Process</a></li><li><a href="#/?section=contact">Contact</a></li></ul></div>
+        <div><h4>Our Courses</h4><ul id="footer-course-list"></ul></div>
+        <div><h4>Contact Us</h4><ul><li><svg class="icon icon-sm lilac" aria-hidden="true"><use href="#i-map"/></svg> Rangpur, Bangladesh</li><li><a data-phone href="tel:+8801845629227"><svg class="icon icon-sm lilac" aria-hidden="true"><use href="#i-phone"/></svg> <span data-phone-text>+8801845629227</span></a></li><li><a href="mailto:nexphic@email.com"><svg class="icon icon-sm lilac" aria-hidden="true"><use href="#i-mail"/></svg> nexphic@email.com</a></li></ul><p class="bn" style="color:#cab0e7">শনি-বৃহস্পতি: সকাল ১০টা থেকে রাত ৮টা</p></div>
+      </div>
+      <details class="project-files">
+        <summary>Embedded project files</summary>
+        <p style="max-width:640px;line-height:1.8;margin-bottom:13px">The package and build configuration, plus the optional Google Sheet admission script, are preserved inside this page as plain text. Select a filename to download it.</p>
+        <div id="project-file-links" class="chips"></div>
+      </details>
+      <div class="footer-bottom"><span>&copy; <span data-year>2026</span> Nexphic IT Institute. All Rights Reserved.</span><span class="gradient-text">Designed for Bangladeshi Freelancers</span></div>
+    </div>
+  </footer>
+  <button class="back-top" id="back-top" type="button" aria-label="Back to top" hidden><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+  <dialog class="dialog" id="media-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><h2 id="dialog-title" style="font-size:1.2rem">Nexphic Gallery</h2><button type="button" class="icon-button" data-dialog-close aria-label="Close preview"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+    <img id="dialog-image" class="dialog-image" alt="">
+    <p id="dialog-description" class="preview-message"></p>
+    <div class="dialog-navigation" id="dialog-gallery-controls"><button type="button" id="gallery-previous" class="icon-button" aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button><span id="dialog-position" class="muted" aria-live="polite"></span><button type="button" id="gallery-next" class="icon-button" aria-label="Next photo"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    <a id="dialog-request" href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="btn" style="margin-top:20px" hidden>Request this preview <svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+  </dialog>
+  <div id="print-root" aria-hidden="true"></div>
+  <noscript><div class="container" style="padding:28px 20px;color:#d8c4ec">নেভিগেশন, কোর্স ফিল্টার ও ভর্তি ফর্ম ব্যবহার করতে ব্রাউজারে JavaScript চালু করুন। ভর্তি সংক্রান্ত তথ্যের জন্য <a href="https://wa.me/8801845629227" style="text-decoration:underline">WhatsApp-এ যোগাযোগ করুন</a>।</div></noscript>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Edit these settings to update the single-file website's contact details.
+      const SITE = {
+        logo: 'https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png',
+        phone: '+8801845629227',
+        whatsapp: 'https://wa.me/8801845629227',
+        messenger: 'https://m.me/nexphicit',
+        // Optional: paste your Google Apps Script Web App URL (ends with /exec) to save every admission
+        // to a Google Sheet automatically. Setup steps are in the embedded file "admission-google-sheet.gs".
+        admissionEndpoint: '',
+        facebook: 'https://www.facebook.com/nexphicit'
+      };
+      const $ = (selector, root = document) => root.querySelector(selector);
+      const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const photo = (id, width = 800) => 'https://images.unsplash.com/photo-' + id + '?auto=format&fit=crop&q=80&w=' + width;
+      const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
+      const icon = (name, className = '') => '<svg class="icon ' + className + '" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
+      const put = (id, markup) => { document.getElementById(id).innerHTML = markup; };
+      const pexels = id => 'https://images.pexels.com/photos/' + id + '/pexels-photo-' + id + '.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200';
+      const admissionURL = course => '#/admission?form=1' + (course ? '&course=' + encodeURIComponent(course) : '');
+      const whatsappURL = text => SITE.whatsapp + (text ? '?text=' + encodeURIComponent(text) : '');
+
+      const images = {
+        editing: photo('1574717024653-61fd2cf4d44d'),
+        design: photo('1626785774573-4b799315345d'),
+        youtube: photo('1611162616475-46b635cb6868'),
+        studio: photo('1598488035139-bdbb2231ce04'),
+        graphics: photo('1561070791-2526d30994b5')
+      };
+      const avatars = [
+        '1500648767791-00dcc994a43e', '1438761681033-6461ffad8d80',
+        '1507003211169-0a1dd7228f2d', '1544005313-94ddf0286df2',
+        '1506794778202-cad84cf45f1d', '1534528741775-53994a69daeb',
+        '1519085360753-af0119f7cbe7', '1573496359142-b8d87734a5a2'
+      ].map(id => photo(id, 180));
+
+      // Course list: edit names, devices, classes, durations, and fees here. Every course section reads this list.
+      const courses = [
+        { name: 'Video Editing With Content Creation', device: 'PC', classes: 24, duration: '3 Months', fee: '3,999', off: 65, icon: 'film', summary: 'Video Editing-এর সাথে Content Planning ও Creation শিখে নিজের ও Client-এর জন্য আকর্ষণীয় কনটেন্ট তৈরি করুন।' },
+        { name: 'Video Editing With Freelancing', device: 'PC', classes: 16, duration: '2 Months', fee: '999', off: 90, icon: 'scissors', summary: 'Professional Video Editing শিখে Freelancing Marketplace-এ কাজ শুরু করার পূর্ণ প্রস্তুতি নিন।' },
+        { name: 'YouTube AI Automation', device: 'PC', classes: 16, duration: '2 Months', fee: '799', off: 90, icon: 'youtube', summary: 'AI Tools ব্যবহার করে YouTube Channel-এর কাজ সহজ ও Automated করার কৌশল শিখুন।' },
+        { name: 'Graphic Design With Freelancing', device: 'PC', classes: 24, duration: '3 Months', fee: '3,999', off: 65, icon: 'pen', summary: 'Graphic Design-এর মৌলিক থেকে Professional কাজ, সাথে Freelancing Marketplace-এর গাইডলাইন।' },
+        { name: 'Freelancing Master Course', device: 'PC', classes: 16, duration: '2 Months', fee: '1,499', off: 85, icon: 'briefcase', summary: 'Marketplace Profile, Client Communication ও কাজ পাওয়ার কৌশল নিয়ে পূর্ণাঙ্গ Freelancing প্রশিক্ষণ।' },
+        { name: 'Web Development With AI', device: 'PC', classes: 16, duration: '2 Months', fee: '3,999', off: 85, icon: 'code', summary: 'AI Tools-এর সহায়তায় Website তৈরির বাস্তব ধারণা ও কাজের পদ্ধতি শিখুন।' },
+        { name: 'Mobile Video Editing', device: 'Mobile', classes: 16, duration: '2 Months', fee: '699', off: 85, icon: 'smartphone', summary: 'শুধু Smartphone দিয়েই আকর্ষণীয় ও Professional মানের Video Editing শিখুন।' },
+        { name: 'AI With Content Creation', device: 'Mobile', classes: 16, duration: '2 Months', fee: '999', off: 90, icon: 'spark', summary: 'Smartphone ও AI Tools ব্যবহার করে নিয়মিত আকর্ষণীয় Content তৈরি করুন।' }
+      ];
+      const courseImages = {
+        'Video Editing With Content Creation': './assets/course-video-editing-content-creation.jpg',
+        'Video Editing With Freelancing': './assets/course-video-editing-freelancing.jpg',
+        'YouTube AI Automation': './assets/course-youtube-ai-automation.jpg',
+        'Graphic Design With Freelancing': './assets/course-graphic-design-freelancing.jpg',
+        'Freelancing Master Course': './assets/course-freelancing-master.jpg',
+        'Web Development With AI': './assets/course-web-development-ai.jpg',
+        'Mobile Video Editing': './assets/course-mobile-video-editing.jpg',
+        'AI With Content Creation': './assets/course-ai-content-creation.jpg'
+      };
+      const registrationOptions = courses.map(course => course.name);
+      const findCourse = name => courses.find(course => course.name === name);
+      const courseFee = course => '৳' + course.fee + '/-';
+      const deviceIcon = course => course.device === 'Mobile' ? 'smartphone' : 'monitor';
+      const details = [
+        { name: 'Video Editing With Content Creation', description: 'Video Editing-এর মৌলিক ধারণা থেকে শুরু করে Content Planning, Shooting ও Editing পর্যন্ত, নিজের ও Client-এর জন্য আকর্ষণীয় Content তৈরি করা শিখুন।', learn: ['Video Editing-এর মৌলিক ধারণা', 'Content Planning ও Script', 'Cutting, Transition ও Effects', 'Color ও Audio উন্নত করা', 'Social Media-র জন্য Content', 'Export ও Publishing'] },
+        { name: 'YouTube AI Automation', description: 'AI Tools ব্যবহার করে YouTube Channel-এর Content Idea, Script, Voice ও Visual তৈরি এবং কাজের ধাপগুলো Automated করার কৌশল শিখুন।', learn: ['YouTube Channel Setup', 'AI দিয়ে Content Idea ও Script', 'AI Voice ও Visual তৈরি', 'Thumbnail ও YouTube SEO', 'Workflow Automation', 'Channel Growth-এর কৌশল'] },
+        { name: 'Graphic Design With Freelancing', description: 'Design-এর মৌলিক নীতি থেকে Logo, Branding ও Social Media Design, সাথে Freelancing Marketplace-এ কাজ শুরু করার গাইডলাইন।', learn: ['Design-এর মৌলিক নীতি', 'Logo ও Brand Identity', 'Social Media Post ও Banner', 'Typography ও Color', 'Portfolio তৈরি', 'Freelancing Marketplace গাইডলাইন'] }
+      ];
+      const features = [
+        ['monitor', 'Expert Live Class', 'Industry Expert দের সাথে Real-time Live Class, প্রতিটি ক্লাসে সরাসরি Feedback ও Q&A সেশন।'],
+        ['award', 'Recognized Certificate', 'কোর্স শেষে Verified Certificate, যা Marketplace ও Local Job উভয় জায়গায় গ্রহণযোগ্য।'],
+        ['briefcase', 'Job & Marketplace Support', 'Fiverr, Upwork Profile তৈরি থেকে শুরু করে Client Hunting পর্যন্ত সম্পূর্ণ Guideline।'],
+        ['headphones', 'Lifetime Mentorship', 'কোর্স শেষ হলেও Support শেষ নয়। আজীবন Mentor Support ও Private Community Access।'],
+        ['target', 'Real Client Project', 'শেখার সময়ই Real Project এ কাজ, Portfolio তৈরি হবে কোর্স চলাকালীনই।'],
+        ['video', 'Class Recording', 'প্রতিটি Live Class এর Recording, যেকোনো সময় আবার দেখে নিতে পারবেন।']
+      ];
+      const homeFAQs = [
+        ['কোর্স করতে কি আগে থেকে কোনো অভিজ্ঞতা লাগবে?', 'না। আমাদের প্রতিটি কোর্স একদম Zero Level থেকে শুরু হয়। PC কোর্সের জন্য একটি Computer/Laptop, Mobile কোর্সের জন্য একটি Smartphone, আর শেখার ইচ্ছা থাকলেই যথেষ্ট।'],
+        ['প্রতিটি কোর্সে কতগুলো Class হয়?', 'কোর্সভেদে ১৬ থেকে ২৪টি Class হয়। যেমন Video Editing With Content Creation কোর্সে ৩ মাসে ২৪টি Class। ভর্তি নিশ্চিত হওয়ার পর Class Group-এ ক্লাসের সময়সূচি জানানো হয়।'],
+        ['কোর্স শেষে কি Certificate দেওয়া হয়?', 'হ্যাঁ, Final Project জমা দেওয়ার পর Verified Digital ও Printed Certificate দেওয়া হয়।'],
+        ['কীভাবে ভর্তি হবো এবং Student ID পাবো?', 'ওয়েবসাইটের Admission পেইজে ভর্তি ফর্মটি পূরণ করে জমা দিন। জমা দেওয়ার সাথে সাথেই আপনার ইউনিক Student ID ও Admission Slip তৈরি হবে, যা প্রিন্ট বা PDF হিসেবে সংরক্ষণ করতে পারবেন।'],
+        ['Payment কিভাবে করতে পারি?', 'নির্ধারিত Course Fee বিকাশ, নগদ অথবা রকেটের মাধ্যমে দিতে পারবেন। পেমেন্টের আগে আমাদের Admission Team-এর কাছ থেকে সঠিক Fee ও Payment Number নিশ্চিত করুন। এরপর Student ID সহ Payment Screenshot আমাদের Page/Messenger-এ পাঠান। যাচাই শেষে আপনার Admission Confirm করা হবে।'],
+        ['কোর্স শেষে ইনকামের গ্যারান্টি আছে কি?', 'আমরা Income Guarantee দিই না। Marketplace Support, Client Hunting Guideline ও Lifetime Mentorship দিয়ে আপনাকে প্রস্তুত করি। আপনার ফলাফল দক্ষতা, অনুশীলন এবং কাজের সুযোগের ওপর নির্ভর করে।']
+      ];
+      const courseFAQs = [
+        ['কোর্সের সমস্যা হলে কীভাবে সাহায্য পাবো?', 'প্রতিটি Student এর জন্য Dedicated Mentor Support আছে। WhatsApp Group ও Live Q&A Session এ সরাসরি প্রশ্ন করতে পারবেন।'],
+        ['Enrollment এর পর কী কী পাবো?', 'ভর্তি ফর্ম জমা দিলেই সাথে সাথে Student ID ও Admission Slip পাবেন। এরপর নির্ধারিত Course Fee প্রদান করে Student ID সহ Payment Screenshot আমাদের Page/Messenger-এ পাঠান। Payment যাচাই হলে Admission Confirm হবে এবং সংশ্লিষ্ট Class Group-এ যুক্ত হয়ে ক্লাসের সময়সূচি ও প্রয়োজনীয় নির্দেশনা পাবেন।'],
+        ['মোবাইল দিয়ে কি কোর্স করা যাবে?', 'হ্যাঁ। Mobile Video Editing এবং AI With Content Creation কোর্স দুটি সম্পূর্ণ Smartphone দিয়েই করা যায়। বাকি ৬টি PC কোর্সের জন্য Computer বা Laptop প্রয়োজন।'],
+        ['Certificate কীভাবে পাবো?', 'কোর্স শেষে Final Project জমা দিলে Verification এর মাধ্যমে Digital ও Printed Certificate পাঠানো হয়।']
+      ];
+      const reviews = [
+        { name: 'Tanvir Hasan', role: 'Video Editor / Fiverr', image: avatars[4], quote: 'Nexphic এর Video Editing কোর্স আমার ক্যারিয়ার পুরোপুরি বদলে দিয়েছে। কোর্স শেষ হওয়ার ২ মাসের মধ্যেই Fiverr এ প্রথম $500 ইনকাম করি।' },
+        { name: 'Sumaiya Akter', role: 'Graphic Designer / Upwork', image: avatars[3], quote: 'Mentor রা এত যত্ন নিয়ে শেখান যে না বুঝে থাকার উপায় নেই। Live Class আর Lifetime Support, এটাই Nexphic এর সবচেয়ে বড় শক্তি।' },
+        { name: 'Rakibul Islam', role: 'YouTuber / 120K Subs', image: avatars[2], quote: 'YouTube AI Automation কোর্সটা করে নিজের Channel Monetize করেছি। এখন প্রতি মাসে AdSense থেকে নিয়মিত আয় আসছে, আলহামদুলিল্লাহ।' },
+        { name: 'Mst. Nusrat Jahan', role: 'Thumbnail Designer', image: avatars[5], quote: 'আমি একজন হাউজওয়াইফ, ঘরে বসেই শিখে এখন মাসে ৩০ হাজার টাকা আয় করছি। Nexphic টিমের কাছে কৃতজ্ঞ।' }
+      ];
+      // Team: add a photo URL to replace an initials avatar.
+      const team = [
+        { name: 'Md. Samir Hossen', role: 'Managing Director', photo: 'https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-6/792192164_122173614572679812_7146521441304352251_n.jpg?stp=dst-jpg_tt6&cstp=mx1086x1086&ctp=s1086x1086&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGw1qum6zuG_urolXvW72YQULkBJ4blpWlQuQEnhuWladRaChi9a4A9G5u1KEf6stAQZk_ytpJ-WtG_zlF1zjXm&_nc_ohc=KzMUR-24WjUQ7kNvwHEePHD&_nc_oc=Adrd-NGaUC6To828tBCBq7HogXoiGwHHDlzmt217qX2YYj98VAkxuBR6m1czwrKeD80&_nc_zt=23&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=GuVG_CttHCO80n6jfzo34w&_nc_ss=7b2a8&oh=00_AQPtAUSSq2vm5JZPRTgP3P_NGk3UC1UCsm9Ni-_eyfBmmA&oe=6ADAA44B', featured: true },
+        { name: 'Muhammad Raj', role: 'HR & Accounts', photo: './assets/muhammad-raj.jpg' },
+        { name: 'MD. Robiul Islam', role: 'DC', photo: 'https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a99ea74cc14e4229035333b_Rob-p-500.png' },
+        { name: 'MD. Shamim', role: 'CRO', photo: 'https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-6/839740051_122173520090805564_3117658480960593602_n.jpg?stp=dst-jpg_tt6&cstp=mx1312x1199&ctp=s1312x1199&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Yib5SMMjkKoQ7kNvwGGGDuN&_nc_oc=Adq2CQnezdHum70yNtvrQyP2y8vgKBzaqtGvIPj7qKI8kuVqLiw--TgpF54dg32iuO4&_nc_zt=23&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=jhQ93YkxWVMLVxdsc_HRoA&_nc_ss=7b2a8&oh=00_AQMrDhDXXpoXKC5qPy9Nl7GorxB4NFQ6EXeKhhKdDZzu0A&oe=6ADAA27B' },
+        { name: 'Miss Proma', role: 'CRO', photo: '' },
+        { name: 'Miss Shiuli', role: 'CRO', photo: '' }
+      ];
+      const classPhotos = [
+        ['Live video editing class', './assets/video-editing-class.jpg'],
+        ['Learning with our mentor', './assets/instructor-guiding.jpg'],
+        ['Interactive training session', './assets/training-session.jpg'],
+        ['Modern Nexphic classroom', './assets/modern-classroom.jpg'],
+        ['Seminar at Nexphic', './assets/workshop-seminar.jpg'],
+        ['Team learning session', './assets/workshop-team.jpg'],
+        ['One-on-one mentoring', './assets/mentoring-session.jpg']
+      ];
+      const studentWork = [
+        ['YouTube Thumbnail', 'Thumbnail Design', photo('1611162617213-7d7a39e9b1d7')],
+        ['Logo Design', 'Brand Identity', images.design],
+        ['Video Editing', 'DaVinci Resolve', images.editing],
+        ['Creative Post Design', 'Social Media', images.graphics],
+        ['Premium Banner', 'Professional Banner', photo('1558655146-9f40138edfeb')],
+        ['Channel Art', 'YouTube Design', images.youtube]
+      ];
+      const events = [
+        ['Batch Completion Ceremony', './assets/workshop-seminar.jpg'],
+        ['Certificate Distribution', './assets/hero-presentation.jpg'],
+        ['Online Batch Launch', './assets/modern-classroom.jpg'],
+        ['Workshop Day', './assets/workshop-team.jpg'],
+        ['Students Meetup', './assets/training-session.jpg'],
+        ['Team Moment', './assets/cro-room.jpg']
+      ];
+      const behindScenes = [
+        ['Admission & counseling desk', './assets/cro-room-2.jpg'],
+        ['Our CRO room', './assets/cro-room.jpg'],
+        ['HR department', './assets/dc-room.jpg'],
+        ['Inside the Nexphic classroom', './assets/video-editing-class.jpg']
+      ];
+      const successPhotos = [
+        ['John Doe', '$1,215.58', photo('1551288049-bebda4e38f71')],
+        ['Content Creator', '$3,520.10', photo('1460925895917-afdab827c52f')],
+        ['Sirah Snas', '$2,150.00', avatars[2]],
+        ['Sarah J.', '$1,875.00', photo('1551288049-bebda4e38f71')],
+        ['Digital Marketer', '$4,310.25', photo('1460925895917-afdab827c52f')],
+        ['Mike R.', '$5,005.00', photo('1498050108023-c5249f4df085')]
+      ];
+      // No unprovided video URL is invented. Preview buttons open details and a request link.
+      const videos = [
+        ['Class Preview', '3:45', photo('1492691527719-9d1e07e534b4')],
+        ['Studio Tour', '2:30', photo('1478720568477-152d9b164e26')],
+        ['Student Success Story', '5:12', avatars[2]],
+        ['Video Editing Course Preview', '4:05', images.editing],
+        ['Nexphic Institute Tour', '6:20', photo('1497366216548-37526070297c')],
+        ['Free Class Preview', '1:58', photo('1505373877841-8d25f7d46678')]
+      ];
+
+      const mediaItems = [];
+      function mediaButton(title, image, group, className = '', type = 'image', duration = '') {
+        const id = mediaItems.push({ title, image, group, type }) - 1;
+        return '<button type="button" class="photo-button ' + className + '" data-media="' + id + '" aria-label="' + escapeHTML((type === 'preview' ? 'View preview details: ' : 'View image: ') + title) + '">' +
+          '<img src="' + escapeHTML(image) + '" alt="' + escapeHTML(title) + '" loading="lazy">' +
+          (type === 'preview' ? '<span class="play-button" aria-hidden="true">' + icon('play') + '</span>' : '') +
+          '<span class="caption">' + escapeHTML(title) + '</span>' +
+          (duration ? '<span class="video-duration">' + escapeHTML(duration) + '</span>' : '') + '</button>';
+      }
+      function counterMarkup(iconName, value, label, sub = '') {
+        const countMatch = String(value).match(/^(\d+)([+%]?)$/);
+        const countAttrs = countMatch ? ' data-count="' + countMatch[1] + '" data-suffix="' + countMatch[2] + '"' : '';
+        return '<div class="counter-box" role="group" aria-label="' + escapeHTML(value + ' ' + label) + '">' + icon(iconName, 'icon-lg lilac') +
+          '<strong class="counter-value gradient-text" style="margin-top:10px"' + countAttrs + ' aria-hidden="true">' + escapeHTML(value) + '</strong><div class="counter-label" aria-hidden="true">' + escapeHTML(label) + '</div>' +
+          (sub ? '<small style="display:block;color:var(--dim);font-size:.68rem;margin-top:4px">' + escapeHTML(sub) + '</small>' : '') + '</div>';
+      }
+      const checkList = list => '<ul class="check-list">' + list.map(text => '<li>' + icon('check') + '<span>' + escapeHTML(text) + '</span></li>').join('') + '</ul>';
+      const chips = list => '<div class="chips">' + list.map(text => '<span class="chip">' + escapeHTML(text) + '</span>').join('') + '</div>';
+      const faqMarkup = (items, openIndex = 0) => items.map((item, index) => '<details' + (index === openIndex ? ' open' : '') + '><summary class="bn">' + escapeHTML(item[0]) + '</summary><div class="answer">' + escapeHTML(item[1]) + '</div></details>').join('');
+
+      function courseCardMarkup(course, index, catalogueCard) {
+        return '<article class="panel hover-box course-card" ' + (catalogueCard ? 'data-course-category="' + course.device + '"' : 'data-home-course="' + index + '"') + '>' +
+          '<div class="course-media">' + (courseImages[course.name] ? '<img src="' + courseImages[course.name] + '" width="1000" height="563" loading="lazy" alt="' + escapeHTML(course.name) + ' course banner">' : '<div class="course-icon" aria-hidden="true"><span class="glyph">' + icon(course.icon) + '</span></div>') + '<span class="device-badge">' + icon(deviceIcon(course), 'icon-sm') + course.device + ' Course</span></div>' +
+          '<div class="course-body"><h3>' + escapeHTML(course.name) + '</h3><p class="bn">' + escapeHTML(course.summary) + '</p>' +
+          '<div class="course-meta"><span class="chip">' + icon('book', 'icon-sm') + course.classes + ' Classes</span><span class="chip">' + icon('clock', 'icon-sm') + escapeHTML(course.duration) + '</span></div>' +
+          '<div class="course-bottom"><div class="price-row"><span class="muted" style="font-size:.78rem">Course Fee<span class="off-badge">' + course.off + '% OFF</span></span><strong class="price">' + courseFee(course) + '</strong></div>' +
+          (catalogueCard ? '<a class="btn full" href="' + escapeHTML(admissionURL(course.name)) + '">Enroll Now</a>' : '<a class="btn full" href="#/courses">Course Details ' + icon('arrow', 'icon-sm') + '</a>') +
+          '</div></div></article>';
+      }
+      put('home-course-track', courses.map((course, index) => courseCardMarkup(course, index, false)).join(''));
+      put('home-course-dots', courses.map((course, i) => '<button type="button" data-course-slide="' + i + '" aria-label="Show ' + escapeHTML(course.name) + '" aria-pressed="' + (i === 0) + '"></button>').join(''));
+      put('home-features', features.map(feature => '<div class="panel hover-box feature-box"><span class="icon-box">' + icon(feature[0], 'icon-lg') + '</span><h3>' + escapeHTML(feature[1]) + '</h3><p>' + escapeHTML(feature[2]) + '</p></div>').join(''));
+      put('earners', [
+        ['Rakib Hasan', 'Video Editor', '$14,500+', 'Fiverr', '#22c55e', './assets/student-2.jpg'],
+        ['Sumaiya Akter', 'Graphic Designer', '$21,000+', 'YouTube Partner', '#ef4444', './assets/student-1.jpg'],
+        ['Tanvir Ahmed', 'Motion Designer', '$19,750+', 'Upwork', '#3b82f6', './assets/student-4.jpg']
+      ].map(person => '<article class="panel hover-box earner" style="--accent:' + person[4] + '"><div class="browser-strip"><div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="earnings-display"><small>TOTAL EARNINGS / ' + escapeHTML(person[3].toUpperCase()) + '</small><strong>' + escapeHTML(person[2]) + '</strong><div class="earnings-bars" aria-hidden="true">' + [35, 52, 44, 68, 60, 82, 74, 96].map((height, index) => '<i style="height:' + height + '%;' + (index > 5 ? 'background:' + person[4] : '') + '"></i>').join('') + '</div></div></div><div class="earner-profile"><img src="' + person[5] + '" width="64" height="64" loading="lazy" alt="' + escapeHTML(person[0]) + '"><strong>' + escapeHTML(person[0]) + '</strong><small>' + escapeHTML(person[1]) + '</small><p class="amount">' + escapeHTML(person[2]) + '</p><span class="chip">' + escapeHTML(person[3]) + '</span></div></article>').join(''));
+      put('review-slides', reviews.map((review, i) => '<div data-review="' + i + '"' + (i ? ' hidden' : '') + '><p class="review-quote">&ldquo;' + escapeHTML(review.quote) + '&rdquo;</p><span class="stars" data-stars aria-label="5 stars"></span><img class="avatar" src="' + review.image + '" alt="' + escapeHTML(review.name) + '" loading="lazy" width="64" height="64"><strong>' + escapeHTML(review.name) + '</strong><small>' + escapeHTML(review.role) + '</small></div>').join(''));
+      put('review-dots', reviews.map((review, i) => '<button type="button" data-review-slide="' + i + '" aria-label="Read review by ' + escapeHTML(review.name) + '" aria-pressed="' + (i === 0) + '"></button>').join(''));
+      const initials = name => name.replace(/^(md|mr|mrs|miss)\.?\s+/i, '').split(/\s+/).filter(Boolean).slice(0, 2).map(word => word.charAt(0).toUpperCase()).join('');
+      function teamCard(person, large) {
+        const portrait = person.photo
+          ? '<img src="' + escapeHTML(person.photo) + '" alt="' + escapeHTML(person.name) + '" loading="lazy">'
+          : '<span class="team-initials" aria-hidden="true">' + escapeHTML(initials(person.name)) + '</span>';
+        return '<article class="panel hover-box team-card' + (person.featured ? ' featured' : '') + (large ? ' large' : '') + '"><div class="team-photo">' + portrait + '</div><div class="team-info"><h3>' + escapeHTML(person.name) + '</h3><small>' + escapeHTML(person.role) + '</small></div></article>';
+      }
+      put('home-team-grid', team.map(person => teamCard(person, false)).join(''));
+      put('about-team-grid', team.map(person => teamCard(person, false)).join(''));
+      put('course-team-feature', teamCard(team.find(person => person.name === 'Muhammad Raj') || team[0], true));
+      put('home-gallery-grid', classPhotos.slice(0, 6).map((item, index) => mediaButton(item[0], item[1], 'home-gallery', index === 0 || index === 5 ? 'wide' : '')).join(''));
+      // One certificate image is shown on Home, About and Gallery. To use your own design,
+      // replace assets/nexphic-certificate.jpg with your JPG (keep the same file name) and rebuild.
+      const certificateImage = $('#certificate-image');
+      const certificateFigure = certificateImage.closest('[data-certificate]');
+      ['about-certificate', 'gallery-certificate'].forEach(id => {
+        const copy = certificateFigure.cloneNode(true);
+        $$('[id]', copy).forEach(element => element.removeAttribute('id'));
+        document.getElementById(id).append(copy);
+      });
+      const certificateMedia = mediaItems.push({ title: 'Nexphic IT Institute Certificate of Completion', image: certificateImage.src, group: 'certificate', type: 'image', description: 'কোর্স সফলভাবে শেষ করলে প্রত্যেক শিক্ষার্থী এই Certificate পান।' }) - 1;
+      $$('[data-certificate-open]').forEach(button => { button.dataset.media = String(certificateMedia); });
+      put('home-faq', faqMarkup(homeFAQs));
+
+      put('course-catalogue', courses.map((course, index) => courseCardMarkup(course, index, true)).join(''));
+      $('#course-filter-result').textContent = courses.length + ' courses available';
+      $$('[data-course-options]').forEach(select => select.insertAdjacentHTML('beforeend', courses.map(course => '<option>' + escapeHTML(course.name) + '</option>').join('')));
+      put('footer-course-list', courses.map(course => '<li><a href="#/courses">' + escapeHTML(course.name) + '</a></li>').join(''));
+      put('course-details', details.map(detail => {
+        const course = findCourse(detail.name);
+        const meta = [['clock', 'Duration', course.duration], ['book', 'Classes', course.classes + ' Classes'], [deviceIcon(course), 'Device', course.device], ['credit', 'Course Fee', courseFee(course)]];
+        return '<section class="detail-course"><div class="container medium split"><div class="detail-visual">' + (courseImages[course.name] ? '<img class="detail-banner" src="' + courseImages[course.name] + '" width="1000" height="563" loading="lazy" alt="' + escapeHTML(course.name) + ' course banner">' : '<div class="course-icon detail-icon" role="img" aria-label="' + escapeHTML(course.name) + '"><span class="glyph">' + icon(course.icon) + '</span></div>') +
+          '<div class="panel detail-meta">' + meta.map(item => '<div>' + icon(item[0]) + '<small>' + item[1] + '</small><strong>' + escapeHTML(item[2]) + '</strong></div>').join('') + '</div></div>' +
+          '<div><h2 class="body-heading">' + escapeHTML(course.name) + '</h2><div style="height:3px;width:120px;background:linear-gradient(90deg,#a855f7,transparent);margin:14px 0 16px"></div>' +
+          '<p class="body-copy bn">' + escapeHTML(detail.description) + '</p><h3 style="font-size:.95rem;margin:20px 0 12px">What You Will Learn</h3>' + checkList(detail.learn) +
+          '<div class="actions"><div class="panel detail-price"><span class="muted" style="font-size:.72rem">Course Fee</span><div><strong class="lilac">' + courseFee(course) + '</strong><span class="off-badge">' + course.off + '% OFF</span></div><small style="color:var(--muted)">' + course.device + ' · ' + course.classes + ' Classes · ' + escapeHTML(course.duration) + '</small></div>' +
+          '<a class="btn large" href="' + escapeHTML(admissionURL(course.name)) + '">Enroll Now</a></div></div></div></section>';
+      }).join(''));
+      put('comparison-rows', courses.map(course => '<tr><th scope="row">' + escapeHTML(course.name) + '</th><td><span class="chip">' + icon(deviceIcon(course), 'icon-sm') + course.device + '</span></td><td>' + course.classes + '</td><td>' + escapeHTML(course.duration) + '</td><td class="fee">' + courseFee(course) + '<span class="off-badge">' + course.off + '% OFF</span></td><td><a class="btn outline small" href="' + escapeHTML(admissionURL(course.name)) + '" aria-label="Enroll in ' + escapeHTML(course.name) + '">Enroll</a></td></tr>').join(''));
+      const curriculum = [
+        ['Introduction & Setup', 4, ['Welcome and course overview', 'Installing the editing tools', 'Workspace and project settings', 'Organizing your source files']],
+        ['Cutting & Timeline Basics', 5, ['Importing your footage', 'Working with the timeline', 'Essential cuts and transitions', 'Keyboard shortcuts', 'Editing a short sequence']],
+        ['Color Grading & Correction', 6, ['Understanding Color Science', 'Scopes & Color Wheels', 'Cinematic Look Development', 'Skin Tone Correction', 'Matching your shots', 'Color grading project']],
+        ['Motion Graphics & Effects', 5, ['Keyframes and animation', 'Animated titles', 'Working with effects', 'Compositing basics', 'Motion graphics project']],
+        ['Sound Design & Mixing', 4, ['Cleaning up dialogue', 'Music and sound effects', 'Mixing and levels', 'Final audio review']],
+        ['Export, Delivery & Freelancing', 6, ['Export settings', 'File delivery', 'Building your portfolio', 'Marketplace profile setup', 'Client communication', 'Final project']]
+      ];
+      put('curriculum', curriculum.map((module, index) => '<details' + (index === 2 ? ' open' : '') + '><summary><span class="module-number">' + String(index + 1).padStart(2, '0') + '</span><span>Module ' + (index + 1) + ': ' + escapeHTML(module[0]) + '</span><span class="chip lesson-count" style="margin-left:auto">Lessons ' + module[1] + '</span></summary><ol class="lesson-list">' + module[2].map((lesson, i) => '<li><span>Lesson ' + (i + 1) + ': ' + escapeHTML(lesson) + '</span>' + icon('play', 'icon-sm lilac') + '</li>').join('') + '</ol></details>').join(''));
+      put('instructor-counters', [['book', String(courses.length), 'Skill Courses'], ['monitor', 'PC + Mobile', 'Learning Options'], ['clock', '2–3', 'Months per Course'], ['users', String(team.length), 'Team Members']].map(item => counterMarkup(...item)).join(''));
+      put('course-faq', faqMarkup(courseFAQs, 1));
+
+      put('about-counters', counterMarkup('grad', '500+', 'Students') + counterMarkup('book', String(courses.length), 'Skill Courses', 'PC + Mobile') + counterMarkup('trend', '98%', 'Success Rate', 'Placement'));
+      put('about-values', [
+        ['shield', 'QUALITY', 'Quality First', 'আমরা কোয়ালিটি থেকে কখনো আপোস করি না। প্রতিটি ব্যাচে সেরাটাই ডেলিভার করি।'],
+        ['bulb', 'INNOVATION', 'Always Innovating', 'নতুন AI Tools ও Industry Trend অনুযায়ী কারিকুলাম সবসময় আপডেট থাকে।'],
+        ['users', 'COMMUNITY', 'Student Community', 'শিক্ষার্থীদের জন্য একটি Active Community যেখানে সবসময় সাহায্য পাবেন।'],
+        ['trophy', 'RESULTS', 'Result Driven', 'শেখা শেষ নয়। ইনকাম ও ক্যারিয়ার রেজাল্টই আমাদের প্রকৃত পরিমাপ।']
+      ].map(value => '<div class="panel hover-box feature-box" style="text-align:center"><span class="icon-box">' + icon(value[0], 'icon-lg') + '</span><span class="eyebrow" style="font-size:.61rem;letter-spacing:2px;margin:18px 0 5px;color:var(--dim)">' + value[1] + '</span><h3 style="margin-top:0">' + value[2] + '</h3><p>' + value[3] + '</p></div>').join(''));
+      put('achievements', [['grad', '500+', 'Students Trained'], ['star', '4.9/5', 'Average Rating'], ['award', '450+', 'Certificates Issued'], ['trend', '200+', 'Freelancers Created'], ['play', String(courses.length), 'Skill Courses'], ['trophy', '98%', 'Success Rate']].map(item => counterMarkup(...item)).join(''));
+      put('learning-experience', [
+        ['video', 'LIVE CLASSES', 'Live Interactive Classes', 'Live Interactive classes with real-time Q&A and a hands-on learning experience.', ['Zoom Classes', 'Q&A Sessions', 'Recorded Backup']],
+        ['briefcase', 'PROJECTS', 'Real World Projects', 'Real client projects দিয়ে Portfolio তৈরি করুন কোর্স চলাকালীনই।', ['Client Projects', 'Portfolio Building', 'Feedback Sessions']],
+        ['headphones', 'SUPPORT', '24/7 Student Support', 'যেকোনো প্রশ্নে Community ও Mentor Support সবসময় পাশে।', ['WhatsApp Group', 'Mentor Support', 'Lifetime Access']]
+      ].map(item => '<div class="panel hover-box feature-box"><span class="eyebrow" style="font-size:.62rem;color:var(--dim)">' + item[1] + '</span><span class="icon-box">' + icon(item[0], 'icon-lg') + '</span><h3>' + item[2] + '</h3><p style="margin-bottom:18px">' + escapeHTML(item[3]) + '</p>' + chips(item[4]) + '</div>').join(''));
+      $('#community-ring').insertAdjacentHTML('afterbegin', avatars.map((src, index) => '<img class="orbit-avatar" src="' + src + '" style="--angle:' + (index * 45) + 'deg" loading="lazy" width="60" height="60" alt="">').join(''));
+
+      put('class-photos', classPhotos.map((item, index) => mediaButton(item[0], item[1], 'classes', index === 6 ? 'wide' : '')).join(''));
+      put('student-work', studentWork.map(work => '<article class="panel hover-box portfolio-item">' + mediaButton(work[0], work[2], 'student-work') + '<div class="portfolio-meta"><span>' + escapeHTML(work[0]) + '</span><span class="chip">' + escapeHTML(work[1]) + '</span></div></article>').join(''));
+      put('events-photos', events.map((item, index) => mediaButton(item[0], item[1], 'events', index === 0 ? 'wide-banner' : 'gallery-item')).join(''));
+      put('behind-scenes', behindScenes.map((item, index) => mediaButton(item[0], item[1], 'studio', index === 3 ? 'wide-banner' : 'gallery-item')).join(''));
+      put('success-photos', successPhotos.map(item => '<article class="panel hover-box portfolio-item">' + mediaButton(item[0], item[2], 'success') + '<div class="portfolio-meta"><span>' + escapeHTML(item[0]) + '</span><span class="chip" style="color:#b7f3c6;border-color:#22c55e66">' + escapeHTML(item[1]) + '</span></div></article>').join(''));
+      put('gallery-videos', videos.map(item => mediaButton(item[0], item[2], 'videos', 'video-item', 'preview', item[1])).join(''));
+
+      $$('[data-hexagons]').forEach(svg => {
+        for (let i = 0; i < 15; i++) {
+          const x = (i % 3) * 59;
+          const y = Math.floor(i / 3) * 69 + (i % 3 === 1 ? 34 : 0);
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', 'M' + (x + 28) + ' ' + y + 'l26 15v30l-26 15-26-15V' + (y + 15) + 'Z');
+          path.setAttribute('stroke', 'currentColor');
+          path.setAttribute('stroke-width', '1.2');
+          svg.appendChild(path);
+        }
+      });
+      const homePoster = $('#admission-poster').cloneNode(true);
+      homePoster.removeAttribute('id');
+      $$('[id]', homePoster).forEach(element => element.removeAttribute('id'));
+      const originalHeading = $('h1', homePoster);
+      const homeHeading = document.createElement('h2');
+      homeHeading.className = originalHeading.className;
+      homeHeading.id = 'home-admission-heading';
+      homeHeading.innerHTML = originalHeading.innerHTML;
+      originalHeading.replaceWith(homeHeading);
+      $('[data-home-admission]').appendChild(homePoster);
+      $('#home-admission').setAttribute('aria-labelledby', homeHeading.id);
+
+      const skills = ['Video Editing', 'Content Creation', 'YouTube AI Automation', 'Graphic Design', 'Freelancing', 'Web Development', 'Mobile Video Editing', 'AI Content Creation'];
+      put('skills-marquee', [...skills, ...skills].map(skill => '<span>' + skill + icon('spark') + '</span>').join(''));
+      put('hero-timeline', Array.from({ length: 34 }, (_, i) => '<span style="height:' + (20 + Math.abs(Math.sin(i * 1.3)) * 80) + '%;animation-delay:' + (i * 45) + 'ms"></span>').join(''));
+      $$('[data-stars]').forEach(element => { element.innerHTML = icon('star').repeat(5); });
+      $$('[data-year]').forEach(element => { element.textContent = new Date().getFullYear(); });
+      $$('[data-phone-text]').forEach(element => { element.textContent = SITE.phone; });
+      $$('[data-phone]').forEach(link => { link.href = 'tel:' + SITE.phone; });
+      $$('[data-whatsapp]').forEach(link => { link.href = whatsappURL(link.dataset.message || ''); });
+      $$('[data-messenger]').forEach(link => { link.href = SITE.messenger; });
+      $$('[data-facebook]').forEach(link => { link.href = SITE.facebook; });
+
+      const mobileMenu = $('#mobile-nav');
+      const menuToggle = $('#menu-toggle');
+      function setMenu(open) {
+        mobileMenu.hidden = !open;
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        $('use', menuToggle).setAttribute('href', open ? '#i-close' : '#i-menu');
+      }
+      menuToggle.addEventListener('click', () => setMenu(mobileMenu.hidden));
+      document.addEventListener('click', event => {
+        if (!mobileMenu.hidden && !$('#site-header').contains(event.target)) setMenu(false);
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !mobileMenu.hidden) { setMenu(false); menuToggle.focus(); }
+      });
+      window.matchMedia('(min-width: 900px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
+      function updateScrollControls() {
+        $('#site-header').classList.toggle('scrolled', window.scrollY > 40);
+        $('#back-top').hidden = window.scrollY < 600;
+      }
+      window.addEventListener('scroll', updateScrollControls, { passive: true });
+      $('#back-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' }));
+      $('[data-skip]').addEventListener('click', event => { event.preventDefault(); $('#main').focus(); });
+
+      let homeCourseIndex = 0;
+      const smallScreen = window.matchMedia('(max-width: 599px)');
+      const tabletScreen = window.matchMedia('(max-width: 1099px)');
+      function showHomeCourses() {
+        const perView = smallScreen.matches ? 1 : tabletScreen.matches ? 2 : 3;
+        $$('[data-home-course]').forEach((card, index) => {
+          const position = (index - homeCourseIndex + courses.length) % courses.length;
+          card.hidden = position >= perView;
+          card.style.order = String(position);
+        });
+        $$('[data-course-slide]').forEach((button, index) => button.setAttribute('aria-pressed', String(index === homeCourseIndex)));
+      }
+      $('#courses-previous').addEventListener('click', () => { homeCourseIndex = (homeCourseIndex - 1 + courses.length) % courses.length; showHomeCourses(); });
+      $('#courses-next').addEventListener('click', () => { homeCourseIndex = (homeCourseIndex + 1) % courses.length; showHomeCourses(); });
+      $$('[data-course-slide]').forEach(button => button.addEventListener('click', () => { homeCourseIndex = Number(button.dataset.courseSlide); showHomeCourses(); }));
+      smallScreen.addEventListener('change', showHomeCourses);
+      tabletScreen.addEventListener('change', showHomeCourses);
+      showHomeCourses();
+
+      $$('[data-course-filter]').forEach(button => button.addEventListener('click', () => {
+        const category = button.dataset.courseFilter;
+        let visible = 0;
+        $$('[data-course-category]').forEach(card => {
+          card.hidden = category !== 'All Courses' && card.dataset.courseCategory !== category;
+          if (!card.hidden) visible++;
+        });
+        $$('[data-course-filter]').forEach(tab => tab.setAttribute('aria-pressed', String(tab === button)));
+        const grid = $('#course-catalogue');
+        grid.style.maxWidth = visible === 1 ? '420px' : '';
+        grid.style.margin = visible === 1 ? '0 auto' : '';
+        grid.style.gridTemplateColumns = visible === 1 ? '1fr' : '';
+        $('#course-filter-result').textContent = visible + (visible === 1 ? ' course' : ' courses') + ' available';
+      }));
+      $$('[data-gallery-filter]').forEach(button => button.addEventListener('click', () => {
+        const category = button.dataset.galleryFilter;
+        $$('[data-gallery-section]').forEach(section => { section.hidden = category !== 'All' && section.dataset.gallerySection !== category; });
+        $$('[data-gallery-filter]').forEach(tab => tab.setAttribute('aria-pressed', String(tab === button)));
+        $('#gallery-filter-result').textContent = category === 'All' ? 'Showing all gallery collections' : 'Showing ' + category;
+      }));
+      $$('.accordion details').forEach(detailsElement => detailsElement.addEventListener('toggle', () => {
+        if (detailsElement.open) $$('details', detailsElement.parentElement).forEach(other => { if (other !== detailsElement) other.open = false; });
+      }));
+
+      let reviewIndex = 0;
+      let reviewsPaused = reducedMotion.matches;
+      let reviewHover = false;
+      let reviewFocus = false;
+      function showReview(index) {
+        reviewIndex = (index + reviews.length) % reviews.length;
+        $$('[data-review]').forEach((review, i) => { review.hidden = i !== reviewIndex; });
+        $$('[data-review-slide]').forEach((button, i) => button.setAttribute('aria-pressed', String(i === reviewIndex)));
+      }
+      function updateReviewButton() {
+        $('#review-pause').setAttribute('aria-label', reviewsPaused ? 'Play automatic reviews' : 'Pause automatic reviews');
+        $('#review-pause').setAttribute('aria-pressed', String(reviewsPaused));
+        $('use', $('#review-pause')).setAttribute('href', reviewsPaused ? '#i-play' : '#i-pause');
+      }
+      $$('[data-review-slide]').forEach(button => button.addEventListener('click', () => showReview(Number(button.dataset.reviewSlide))));
+      $('#review-pause').addEventListener('click', () => { reviewsPaused = !reviewsPaused; updateReviewButton(); });
+      $('#review-shell').addEventListener('pointerenter', () => { reviewHover = true; });
+      $('#review-shell').addEventListener('pointerleave', () => { reviewHover = false; });
+      $('#review-shell').addEventListener('focusin', () => { reviewFocus = true; });
+      $('#review-shell').addEventListener('focusout', event => { reviewFocus = $('#review-shell').contains(event.relatedTarget); });
+      window.setInterval(() => {
+        if (!reviewsPaused && !reviewHover && !reviewFocus && !document.hidden && !$('#page-home').hidden && !$('#media-dialog').open) showReview(reviewIndex + 1);
+      }, 5200);
+      updateReviewButton();
+      reducedMotion.addEventListener('change', event => { if (event.matches) { reviewsPaused = true; updateReviewButton(); } });
+
+      function finishCount(element) {
+        element.textContent = Number(element.dataset.count).toLocaleString('en-US') + (element.dataset.suffix || '');
+      }
+      function animateCount(element) {
+        if (element.dataset.counted) return;
+        element.dataset.counted = 'true';
+        if (reducedMotion.matches) { finishCount(element); return; }
+        const target = Number(element.dataset.count);
+        const suffix = element.dataset.suffix || '';
+        const start = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - start) / 1500, 1);
+          const value = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+          element.textContent = value.toLocaleString('en-US') + suffix;
+          if (progress < 1 && !reducedMotion.matches) requestAnimationFrame(tick);
+          else finishCount(element);
+        }
+        requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) { animateCount(entry.target); counterObserver.unobserve(entry.target); }
+          });
+        }, { threshold: .25 });
+        $$('[data-count]').forEach(element => counterObserver.observe(element));
+      }
+
+      // Native dialog provides Escape handling, a focus trap, and focus restoration.
+      const dialog = $('#media-dialog');
+      let currentMedia = null;
+      let lastMediaTrigger = null;
+      let galleryGroup = [];
+      let galleryPosition = 0;
+      function displayMedia(item) {
+        currentMedia = item;
+        $('#dialog-title').textContent = item.title;
+        $('#dialog-image').src = item.image;
+        $('#dialog-image').alt = item.title;
+        const isPreview = item.type === 'preview';
+        $('#dialog-gallery-controls').hidden = isPreview || galleryGroup.length < 2;
+        $('#dialog-request').hidden = !isPreview;
+        $('#dialog-description').textContent = item.description || (isPreview ? 'A playable video link has not been added for this preview. Request it directly from the Nexphic admission team.' : 'A glimpse into the Nexphic learning experience.');
+        $('#dialog-request').href = whatsappURL('Hello Nexphic! Could you share the ' + item.title + ' with me?');
+        $('#dialog-position').textContent = (galleryPosition + 1) + ' / ' + galleryGroup.length;
+      }
+      function openMedia(id, trigger) {
+        const item = mediaItems[id];
+        if (!item) return;
+        if (typeof dialog.showModal !== 'function') {
+          window.open(item.type === 'preview' ? whatsappURL('Please share the ' + item.title + ' with me.') : item.image, '_blank', 'noopener,noreferrer');
+          return;
+        }
+        lastMediaTrigger = trigger;
+        galleryGroup = mediaItems.filter(media => media.group === item.group && media.type === item.type);
+        galleryPosition = galleryGroup.indexOf(item);
+        displayMedia(item);
+        dialog.showModal();
+        document.body.style.overflow = 'hidden';
+      }
+      function moveGallery(direction) {
+        if (!currentMedia || currentMedia.type === 'preview' || galleryGroup.length < 2) return;
+        galleryPosition = (galleryPosition + direction + galleryGroup.length) % galleryGroup.length;
+        displayMedia(galleryGroup[galleryPosition]);
+      }
+      $$('[data-media]').forEach(button => button.addEventListener('click', () => openMedia(Number(button.dataset.media), button)));
+      $('[data-dialog-close]').addEventListener('click', () => dialog.close());
+      $('#gallery-previous').addEventListener('click', () => moveGallery(-1));
+      $('#gallery-next').addEventListener('click', () => moveGallery(1));
+      dialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); moveGallery(event.key === 'ArrowLeft' ? -1 : 1); }
+      });
+      dialog.addEventListener('click', event => {
+        if (event.target === dialog) {
+          const rect = dialog.getBoundingClientRect();
+          if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+        }
+      });
+      dialog.addEventListener('close', () => {
+        document.body.style.overflow = '';
+        if (lastMediaTrigger && !lastMediaTrigger.closest('[hidden]')) lastMediaTrigger.focus({ preventScroll: true });
+      });
+
+      // ---------- Admission form: issues a unique Student ID and an admission slip ----------
+      const admissionForm = $('#admission-form-element');
+      const admissionSlip = $('#admission-slip');
+      const admissionStorageKey = 'nexphic-admission';
+      const idAlphabet = '23456789'; // 8 symbols without 0, O, 1 or I
+      let currentAdmission = null;
+      let pendingCourse = '';
+      let admissionBusy = false;
+      function validPhone(value) {
+        const digits = value.replace(/\D/g, '');
+        return /^\+?[\d\s()-]+$/.test(value) && digits.length >= 7 && digits.length <= 15;
+      }
+      function showError(id, message) {
+        const element = document.getElementById(id);
+        element.textContent = message;
+        element.hidden = !message;
+      }
+      function randomBytes(length) {
+        const bytes = new Uint8Array(length);
+        if (window.crypto && window.crypto.getRandomValues) window.crypto.getRandomValues(bytes);
+        else for (let i = 0; i < length; i++) bytes[i] = Math.floor(Math.random() * 256);
+        return bytes;
+      }
+      // Format NXP-26-K7Q4XM: over one billion possible IDs per year.
+      function generateStudentId() {
+        const code = Array.from(randomBytes(6), byte => idAlphabet[byte % 32]).join('');
+        return 'NXP-' + String(new Date().getFullYear()).slice(-2) + '-' + code;
+      }
+      const submissionToken = () => Array.from(randomBytes(16), byte => byte.toString(16).padStart(2, '0')).join('');
+      function updateCourseSummary() {
+        const course = findCourse($('#admission-course').value);
+        const summary = $('#admission-course-summary');
+        summary.hidden = !course;
+        summary.innerHTML = course ? '<span class="chip">' + icon(deviceIcon(course), 'icon-sm') + course.device + '</span><span class="chip">' + icon('book', 'icon-sm') + course.classes + ' Classes</span><span class="chip">' + icon('clock', 'icon-sm') + escapeHTML(course.duration) + '</span><span class="chip fee-chip">Course Fee ' + courseFee(course) + ' · ' + course.off + '% OFF</span>' : '';
+      }
+      function applyPendingCourse() {
+        if (!pendingCourse) return;
+        $('#admission-course').value = pendingCourse;
+        updateCourseSummary();
+      }
+      function admissionMessage(admission) {
+        return [
+          'Hello Nexphic IT Institute! I have submitted the admission form on your website.',
+          'Student ID: ' + admission.studentId,
+          'Name: ' + admission.name,
+          'Father / Guardian: ' + admission.guardian,
+          'Mobile: ' + admission.phone,
+          admission.whatsapp && 'WhatsApp: ' + admission.whatsapp,
+          admission.email && 'Email: ' + admission.email,
+          admission.dob && 'Date of Birth: ' + admission.dob,
+          admission.gender && 'Gender: ' + admission.gender,
+          admission.education && 'Education: ' + admission.education,
+          'Address: ' + admission.address,
+          'Course: ' + admission.course + ' (' + admission.device + ', ' + admission.classes + ' Classes, ' + admission.duration + ')',
+          'Course Fee: ' + admission.fee,
+          admission.batch && 'Preferred Batch: ' + admission.batch,
+          'Payment Method: ' + admission.payment,
+          admission.note && 'Note: ' + admission.note,
+          'Please share the official payment number so I can complete my admission. Thank you!'
+        ].filter(Boolean).join('\n');
+      }
+      // Saves to the optional Google Sheet endpoint. Returns 'saved', 'failed' or 'local'.
+      async function saveAdmission(admission) {
+        if (!SITE.admissionEndpoint) return 'local';
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 15000);
+        try {
+          // A plain-text body avoids a CORS preflight request, which Apps Script cannot answer.
+          const response = await fetch(SITE.admissionEndpoint, { method: 'POST', body: JSON.stringify(admission), signal: controller.signal });
+          const result = await response.json();
+          if (!result || !result.ok) return 'failed';
+          if (result.studentId) admission.studentId = String(result.studentId);
+          return 'saved';
+        } catch {
+          return 'failed';
+        } finally {
+          clearTimeout(timer);
+        }
+      }
+      const formatDate = iso => new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+      function showSlip(admission, focus = true) {
+        currentAdmission = admission;
+        $('#slip-student-id').textContent = admission.studentId;
+        const rows = [
+          ['শিক্ষার্থীর নাম', admission.name], ['পিতা/অভিভাবক', admission.guardian],
+          ['মোবাইল', admission.phone], ['WhatsApp', admission.whatsapp], ['ইমেইল', admission.email],
+          ['জন্ম তারিখ', admission.dob], ['লিঙ্গ', admission.gender], ['শিক্ষাগত যোগ্যতা', admission.education],
+          ['ঠিকানা', admission.address, true], ['কোর্স', admission.course, true],
+          ['Device / Class / সময়', admission.device + ' · ' + admission.classes + ' Classes · ' + admission.duration],
+          ['Course Fee', admission.fee], ['পছন্দের ব্যাচ', admission.batch], ['Payment মাধ্যম', admission.payment],
+          ['ভর্তির তারিখ', formatDate(admission.submittedAt)], ['মন্তব্য', admission.note, true]
+        ];
+        const details = $('#slip-details');
+        details.replaceChildren();
+        // Student-entered values are written as text, never as HTML.
+        rows.filter(row => row[1]).forEach(([label, value, wide]) => {
+          const item = document.createElement('div');
+          const term = document.createElement('dt');
+          const description = document.createElement('dd');
+          if (wide) item.className = 'wide';
+          term.textContent = label;
+          description.textContent = value;
+          item.append(term, description);
+          details.append(item);
+        });
+        const notices = {
+          saved: ['ok', '✓ আপনার ভর্তি ফর্ম সফলভাবে জমা হয়েছে। Student ID সংরক্ষণ করুন এবং নিচের পরবর্তী ধাপগুলো অনুসরণ করুন।'],
+          failed: ['warn', 'Student ID তৈরি হয়েছে, কিন্তু অনলাইনে ফর্ম জমা দেওয়া যায়নি। ভর্তি নিশ্চিত করতে নিচের "WhatsApp-এ পাঠান" বাটনে চাপ দিন।'],
+          local: ['info', 'আপনার Student ID তৈরি হয়েছে। ভর্তি নিশ্চিত করতে নিচের "WhatsApp-এ পাঠান" বাটনে চাপ দিয়ে তথ্যটি Admission Team-কে পাঠান।']
+        };
+        const [tone, text] = notices[admission.sync] || notices.local;
+        const sync = $('#slip-sync');
+        sync.className = 'slip-sync ' + tone;
+        sync.textContent = text;
+        $('#slip-whatsapp').href = whatsappURL(admissionMessage(admission));
+        $('#slip-copy-status').textContent = '';
+        admissionForm.hidden = true;
+        admissionSlip.hidden = false;
+        try { sessionStorage.setItem(admissionStorageKey, JSON.stringify(admission)); } catch { /* Storage can be disabled. */ }
+        if (focus) {
+          $('#slip-heading').focus({ preventScroll: true });
+          admissionSlip.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
+        }
+      }
+      function setAdmissionBusy(busy) {
+        admissionBusy = busy;
+        const button = $('#admission-submit');
+        button.disabled = busy;
+        button.setAttribute('aria-busy', String(busy));
+        $('#admission-submit-label').textContent = busy ? 'জমা হচ্ছে…' : 'ভর্তি ফর্ম জমা দিন';
+      }
+      admissionForm.addEventListener('submit', async event => {
+        event.preventDefault();
+        if (admissionBusy) return;
+        const data = new FormData(admissionForm);
+        const value = key => String(data.get(key) || '').trim();
+        const admission = {
+          studentId: generateStudentId(), submissionId: submissionToken(), submittedAt: new Date().toISOString(),
+          name: value('name'), guardian: value('guardian'), phone: value('phone'), whatsapp: value('whatsapp'),
+          email: value('email'), dob: value('dob'), gender: value('gender'), education: value('education'),
+          address: value('address'), course: value('course'), batch: value('batch'), payment: value('payment'), note: value('note')
+        };
+        const fail = (message, field) => {
+          showError('admission-error', message);
+          const element = admissionForm.elements.namedItem(field);
+          if (element && element.focus) element.focus();
+        };
+        if (admission.name.length < 2) return fail('শিক্ষার্থীর পূর্ণ নাম লিখুন।', 'name');
+        if (admission.guardian.length < 2) return fail('পিতা/অভিভাবকের নাম লিখুন।', 'guardian');
+        if (!validPhone(admission.phone)) return fail('সঠিক মোবাইল নম্বর লিখুন (৭ থেকে ১৫ সংখ্যা)।', 'phone');
+        if (admission.whatsapp && !validPhone(admission.whatsapp)) return fail('সঠিক WhatsApp নম্বর লিখুন অথবা ঘরটি খালি রাখুন।', 'whatsapp');
+        if (admission.address.length < 4) return fail('বর্তমান ঠিকানা লিখুন।', 'address');
+        const course = findCourse(admission.course);
+        if (!course) return fail('একটি কোর্স নির্বাচন করুন।', 'course');
+        if (!admission.payment) return fail('Payment মাধ্যম নির্বাচন করুন।', 'payment');
+        if (!data.get('agree')) return fail('তথ্য সঠিক কিনা নিশ্চিত করে চেকবক্সে টিক দিন।', 'agree');
+        showError('admission-error', '');
+        Object.assign(admission, { device: course.device, classes: course.classes, duration: course.duration, fee: courseFee(course) + ' (' + course.off + '% OFF)' });
+        setAdmissionBusy(true);
+        admission.sync = await saveAdmission(admission);
+        setAdmissionBusy(false);
+        showSlip(admission);
+      });
+      async function copyText(text) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return true; }
+        } catch { /* Use the fallback below. */ }
+        const field = document.createElement('textarea');
+        field.value = text;
+        field.setAttribute('readonly', '');
+        field.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+        document.body.append(field);
+        field.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch { copied = false; }
+        field.remove();
+        return copied;
+      }
+      $('#slip-copy').addEventListener('click', async () => {
+        if (!currentAdmission) return;
+        const copied = await copyText(currentAdmission.studentId);
+        $('#slip-copy-status').textContent = copied ? 'Student ID কপি হয়েছে: ' + currentAdmission.studentId : 'কপি করা যায়নি। Student ID টি লিখে রাখুন: ' + currentAdmission.studentId;
+      });
+      // Printing uses a copy of the slip so only the slip appears on paper or in the PDF.
+      $('#slip-print').addEventListener('click', () => {
+        const copy = $('#slip-card').cloneNode(true);
+        copy.removeAttribute('id');
+        $$('[id]', copy).forEach(element => element.removeAttribute('id'));
+        $('#print-root').replaceChildren(copy);
+        document.body.classList.add('print-slip');
+        window.print();
+      });
+      window.addEventListener('afterprint', () => {
+        document.body.classList.remove('print-slip');
+        $('#print-root').replaceChildren();
+      });
+      $('#slip-new').addEventListener('click', () => {
+        admissionForm.reset();
+        currentAdmission = null;
+        try { sessionStorage.removeItem(admissionStorageKey); } catch { /* Storage can be disabled. */ }
+        updateCourseSummary();
+        applyPendingCourse();
+        showError('admission-error', '');
+        admissionSlip.hidden = true;
+        admissionForm.hidden = false;
+        $('#admission-form').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
+        admissionForm.elements.namedItem('name').focus({ preventScroll: true });
+      });
+      $('#admission-course').addEventListener('change', updateCourseSummary);
+      admissionForm.addEventListener('input', () => showError('admission-error', ''));
+      // Keep a just-issued slip visible after a page refresh in the same tab.
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(admissionStorageKey) || 'null');
+        if (saved && saved.studentId && findCourse(saved.course)) showSlip(saved, false);
+      } catch { /* Ignore unreadable saved data. */ }
+
+      const counselingForm = $('#counseling-form');
+      counselingForm.addEventListener('input', () => { $('#counseling-ready').hidden = true; showError('counseling-error', ''); });
+      counselingForm.addEventListener('change', () => { $('#counseling-ready').hidden = true; });
+      counselingForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const data = new FormData(counselingForm);
+        const name = String(data.get('name') || '').trim();
+        const phone = String(data.get('phone') || '').trim();
+        if (name.length < 2 || !validPhone(phone)) { showError('counseling-error', 'সঠিক নাম ও মোবাইল নম্বর দিন।'); return; }
+        const message = ['Hello Nexphic! I would like to request free course counseling.', 'Name: ' + name, 'Phone: ' + phone, 'Course: ' + data.get('course'), 'Question: ' + (String(data.get('question') || '').trim() || 'Please help me choose the right course.')].join('\n');
+        showError('counseling-error', '');
+        $('#counseling-send').href = whatsappURL(message);
+        $('#counseling-ready').hidden = false;
+      });
+
+      // Hash navigation stays inside this one file and supports browser back/forward.
+      const pageNames = { home: 'Home', courses: 'Courses', about: 'About', gallery: 'Gallery', admission: 'Admission Process' };
+      let activePage = 'home';
+      let navigationFrame = 0;
+      function route(focusHeading = false) {
+        if (dialog.open) dialog.close();
+        setMenu(false);
+        const hash = window.location.hash.replace(/^#/, '') || '/';
+        const queryIndex = hash.indexOf('?');
+        const path = (queryIndex === -1 ? hash : hash.slice(0, queryIndex)).replace(/^\/+|\/+$/g, '');
+        const params = new URLSearchParams(queryIndex === -1 ? '' : hash.slice(queryIndex + 1));
+        const aliases = { 'All-Course': 'courses', 'home': 'home', 'contact': 'home' };
+        const key = Object.prototype.hasOwnProperty.call(pageNames, path) ? path : (Object.prototype.hasOwnProperty.call(aliases, path) ? aliases[path] : 'home');
+        const page = document.getElementById('page-' + key);
+        const changedPage = activePage !== key;
+        activePage = key;
+        $$('[data-page]').forEach(element => { element.hidden = element !== page; element.classList.remove('page-enter'); });
+        if (changedPage) page.classList.add('page-enter');
+        document.title = pageNames[key] + ' | Nexphic IT Institute';
+        $$('[data-nav]').forEach(link => {
+          if (link.dataset.nav === key) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        });
+        const selectedCourse = params.get('course');
+        if (key === 'admission' && selectedCourse && registrationOptions.includes(selectedCourse)) {
+          pendingCourse = selectedCourse;
+          // Keep a just-issued slip visible; "নতুন ভর্তি ফর্ম" will use this course.
+          if (admissionSlip.hidden) applyPendingCourse();
+        }
+        cancelAnimationFrame(navigationFrame);
+        navigationFrame = requestAnimationFrame(() => {
+          let target = null;
+          if (key === 'admission' && params.get('form') === '1') target = $('#admission-form');
+          else if (key === 'home' && (params.get('section') === 'contact' || path === 'contact')) target = $('#contact');
+          else if (params.get('section')) {
+            const candidate = document.getElementById(params.get('section'));
+            if (candidate && page.contains(candidate)) target = candidate;
+          }
+          if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+          else window.scrollTo({ top: 0, behavior: 'instant' });
+          if (focusHeading) {
+            const heading = target ? $('h2,h1,h3', target) : $('h1', page);
+            if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }); }
+          }
+          updateScrollControls();
+        });
+      }
+      window.addEventListener('hashchange', () => route(true));
+      document.addEventListener('click', event => {
+        if (!(event.target instanceof Element) || event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+        const link = event.target.closest('a[href^="#/"]');
+        if (link && link.getAttribute('href') === window.location.hash) { event.preventDefault(); route(true); }
+      });
+
+      // Project files are kept as non-executing text; package-lock.json is embedded by the build. Restore any file here.
+      $$('[data-filename]').sort((a, b) => Number(a.dataset.order || 0) - Number(b.dataset.order || 0)).forEach(source => {
+        const name = source.dataset.filename;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'chip';
+        button.textContent = name;
+        button.addEventListener('click', () => {
+          const linked = source.tagName === 'LINK';
+          const url = linked ? source.href : URL.createObjectURL(new Blob([source.textContent], { type: 'text/plain;charset=utf-8' }));
+          const anchor = document.createElement('a');
+          anchor.href = url;
+          anchor.download = name;
+          document.body.append(anchor);
+          anchor.click();
+          anchor.remove();
+          if (!linked) setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
+        $('#project-file-links').append(button);
+      });
+
+      function prepareLogo() {
+        const image = new Image();
+        image.crossOrigin = 'anonymous';
+        image.onload = () => {
+          try {
+            // Remove only the original PNG's empty margins; do not redraw the brand.
+            const canvas = document.createElement('canvas');
+            canvas.width = image.naturalWidth;
+            canvas.height = image.naturalHeight;
+            const context = canvas.getContext('2d');
+            if (!context) return;
+            context.drawImage(image, 0, 0);
+            const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+            let left = canvas.width, top = canvas.height, right = 0, bottom = 0;
+            for (let y = 0; y < canvas.height; y++) {
+              for (let x = 0; x < canvas.width; x++) {
+                const p = (y * canvas.width + x) * 4;
+                if (pixels[p + 3] > 32 && Math.max(pixels[p], pixels[p + 1], pixels[p + 2]) > 60) {
+                  left = Math.min(left, x); right = Math.max(right, x);
+                  top = Math.min(top, y); bottom = Math.max(bottom, y);
+                }
+              }
+            }
+            if (right <= left || bottom <= top) return;
+            const cropped = document.createElement('canvas');
+            cropped.width = right - left + 5;
+            cropped.height = bottom - top + 5;
+            const cropContext = cropped.getContext('2d');
+            if (!cropContext) return;
+            cropContext.drawImage(canvas, 2 - left, 2 - top);
+            const dataURL = cropped.toDataURL('image/png');
+            $$('[data-logo]').forEach(logo => { logo.src = dataURL; });
+          } catch {
+            // If a host blocks canvas access, the original image remains visible.
+          }
+        };
+        image.src = SITE.logo;
+      }
+      prepareLogo();
+      route();
+    }());
+  </script>
+
+  <!-- PROJECT SOURCES: package and build configuration preserved as non-executing plain text, so this page stays one self-contained file.
+       package-lock.json (about 88 KB) is linked in the head; the build embeds it into dist/index.html automatically. -->
+  <script type="text/plain" data-filename="package.json" data-order="1">{
+  "name": "react-vite-tailwind",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "lucide-react": "^1.46.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "^7.18.4",
+    "tailwind-merge": "3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.17",
+    "@types/node": "22.19.17",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vite": "7.3.2",
+    "vite-plugin-singlefile": "2.3.0"
+  }
+}
+</script>
+  <script type="text/plain" data-filename="tsconfig.json" data-order="3">{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "types": ["node"],
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src", "vite.config.ts"]
+}
+</script>
+  <script type="text/plain" data-filename="vite.config.ts" data-order="4">import path from "path";
+import { fileURLToPath } from "url";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import { viteSingleFile } from "vite-plugin-singlefile";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss(), viteSingleFile()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+});
+</script>
+  <script type="text/plain" data-filename="admission-google-sheet.gs" data-order="5">/**
+ * Nexphic IT Institute: website admission form -> Google Sheet
+ *
+ * Optional setup (about 5 minutes). Without it, students send their admission by WhatsApp.
+ *  1. Create a Google Sheet, then open Extensions > Apps Script.
+ *  2. Delete any existing code, paste this whole file, and click Save.
+ *  3. Click Deploy > New deployment and choose "Web app".
+ *     Execute as: Me. Who has access: Anyone. Click Deploy and allow access.
+ *  4. Copy the Web app URL (it ends with /exec).
+ *  5. In index.html, paste the URL into SITE.admissionEndpoint, then rebuild and publish the site.
+ *
+ * Every admission is added to the "Admissions" sheet with a unique Student ID.
+ * After verifying a payment, change that row's Status to "Confirmed".
+ */
+const SHEET_NAME = 'Admissions';
+const COLUMNS = [
+  ['submittedAt', 'Submitted At'], ['studentId', 'Student ID'], ['status', 'Status'],
+  ['name', 'Student Name'], ['guardian', 'Father / Guardian'], ['phone', 'Mobile'], ['whatsapp', 'WhatsApp'],
+  ['email', 'Email'], ['dob', 'Date of Birth'], ['gender', 'Gender'], ['education', 'Education'], ['address', 'Address'],
+  ['course', 'Course'], ['device', 'Device'], ['classes', 'Classes'], ['duration', 'Duration'], ['fee', 'Course Fee'],
+  ['batch', 'Preferred Batch'], ['payment', 'Payment Method'], ['note', 'Note'], ['submissionId', 'Submission ID']
+];
+const ID_ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+const ID_PATTERN = /^NXP-\d{2}-[2-9A-HJ-NP-Z]{6}$/;
+
+function doPost(e) {
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(20000);
+    const data = JSON.parse(e.postData.contents);
+    if (!data.name || !data.phone || !data.course) return respond_({ ok: false, error: 'Missing required fields' });
+    const sheet = getSheet_();
+    const keys = COLUMNS.map(column => column[0]);
+    const idIndex = keys.indexOf('studentId');
+    const submissionIndex = keys.indexOf('submissionId');
+    const rows = sheet.getLastRow() > 1 ? sheet.getRange(2, 1, sheet.getLastRow() - 1, keys.length).getValues() : [];
+    // A repeated request (for example after a slow network) returns the ID that was already issued.
+    const repeat = data.submissionId && rows.find(row => row[submissionIndex] === data.submissionId);
+    if (repeat) return respond_({ ok: true, studentId: repeat[idIndex] });
+    // The sheet is the final authority: a duplicate ID is replaced with a new unique one.
+    const usedIds = new Set(rows.map(row => row[idIndex]));
+    let studentId = ID_PATTERN.test(data.studentId) ? data.studentId : newStudentId_();
+    while (usedIds.has(studentId)) studentId = newStudentId_();
+    data.studentId = studentId;
+    data.status = 'Payment Pending';
+    data.submittedAt = new Date();
+    sheet.appendRow(keys.map(key => clean_(data[key])));
+    return respond_({ ok: true, studentId: studentId });
+  } catch (error) {
+    return respond_({ ok: false, error: String(error) });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function doGet() {
+  return respond_({ ok: true, service: 'Nexphic admissions' });
+}
+
+function getSheet_() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(COLUMNS.map(column => column[1]));
+    sheet.getRange(1, 1, 1, COLUMNS.length).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
+}
+
+function newStudentId_() {
+  const year = Utilities.formatDate(new Date(), 'Asia/Dhaka', 'yy');
+  let code = '';
+  for (let i = 0; i < 6; i++) code += ID_ALPHABET.charAt(Math.floor(Math.random() * ID_ALPHABET.length));
+  return 'NXP-' + year + '-' + code;
+}
+
+// A leading apostrophe stores values as plain text: it keeps phone numbers' leading zeros and blocks formulas.
+function clean_(value) {
+  if (value instanceof Date) return value;
+  if (value === undefined || value === null || value === '') return '';
+  return "'" + String(value).slice(0, 1000);
+}
+
+function respond_(payload) {
+  return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(ContentService.MimeType.JSON);
+}
+</script>
+</body>
+</html>
