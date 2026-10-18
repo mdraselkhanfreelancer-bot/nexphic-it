@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexphic IT Institute: Video Editing, Content Creation, Graphic Design, YouTube AI Automation, Freelancing ও Web Development। PC ও Mobile মিলিয়ে ৮টি কোর্স এবং ৫ ধাপে ভর্তি প্রক্রিয়া।">
+  <meta name="theme-color" content="#09070e">
+  <!-- package-lock.json is too large to keep as readable text here; the build embeds this file into dist/index.html. -->
+  <link rel="alternate" type="application/json" href="./package-lock.json" data-filename="package-lock.json" data-order="2">
+  <title>Nexphic IT Institute</title>
+  <!-- Single-file edition: open this file directly in a browser. No build, React, or server is required.
+       All site CSS, SVG icons, and JavaScript are embedded. Original photos, logo, and font files use online URLs.
+       Contact settings, the course list and the optional admission endpoint are in the script at the end.
+       Admission details are sent only to that endpoint (if set) or by WhatsApp when the student chooses.
+       The certificate image is assets/nexphic-certificate.jpg; the build inlines it into dist/index.html. -->
+  <link rel="stylesheet" href="./src/site.css">
+
+</head>
+<body>
+  <a href="#main" class="skip-link" data-skip>Skip to content</a>
+  <svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="m16 10 6-4v12l-6-4"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3Zm6-6-1.5-7.5L2 2l3.5 14.5L13 18l5-5ZM2 2l7.5 7.5"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path d="m2 9 10-6 10 6-10 6L2 9Zm4 3v6c4 3 8 3 12 0v-6m4-3v8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-3a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v3m1-18a4 4 0 0 1 0 8m2 3a4 4 0 0 1 3 4v3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.4 7.1 1-5.1 5 1.2 7.1-6.3-3.3-6.3 3.3 1.2-7.1-5.1-5 7.1-1Z"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="m8 13-1 9 5-3 5 3-1-9"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 3h10v9a5 5 0 0 1-10 0V3Zm0 2H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Zm-4 10 3 3 5-6"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6m-5 4h4m-6-8a7 7 0 1 1 8 0l-1 4H9l-1-4Z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m12 12 9-9M17 3h4v4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-7-2-10-1v15c4-1 7-1 10 1m0-15c3-2 7-2 10-1v15c-4-1-7-1-10 1V5Z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m2 18 7-7 4 4 9-10m-6 0h6v6"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V3h8v4M2 12a24 24 0 0 0 20 0m-10-1v4"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14v-3a9 9 0 0 1 18 0v8a3 3 0 0 1-3 3h-4"/><rect x="3" y="11" width="4" height="8" rx="2"/><rect x="17" y="11" width="4" height="8" rx="2"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 11h6m-6 4h6m-6 4h4"/></symbol>
+    <symbol id="i-credit" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 15h5"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M8 5 9 2h6l1 3h4a2 2 0 0 1 2 2v13H2V7a2 2 0 0 1 2-2h4Z"/><circle cx="12" cy="12" r="4"/></symbol>
+    <symbol id="i-messages" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H5l-4 3 2-7a8 8 0 1 1 18-4Z"/><path d="M7 11h.01M12 11h.01M17 11h.01" stroke-width="3"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m7 2 3 5-3 3a18 18 0 0 0 7 7l3-3 5 3v3a2 2 0 0 1-2 2A20 20 0 0 1 2 4a2 2 0 0 1 2-2h3Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 5 10 8L22 5"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 6 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="4"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/><path d="m8 7 2 3-1 1a9 9 0 0 0 4 4l1-1 3 1c-1 4-6 1-8-1S5 8 8 7Z"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+      <a href="#/" aria-label="Nexphic IT Institute home" class="logo"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="172" height="52" alt="Nexphic IT Institute"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#/" data-nav="home" aria-current="page">Home</a><a href="#/courses" data-nav="courses">Courses</a><a href="#/about" data-nav="about">About</a><a href="#/gallery" data-nav="gallery">Gallery</a><a href="#/admission" data-nav="admission">Admission</a><a href="#/?section=contact">Contact</a>
+      </nav>
+      <a href="#/admission" class="btn desktop-enroll">Enroll Now <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button type="button" class="icon-button menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#/" data-nav="home">Home</a><a href="#/courses" data-nav="courses">Courses</a><a href="#/about" data-nav="about">About</a><a href="#/gallery" data-nav="gallery">Gallery</a><a href="#/admission" data-nav="admission">Admission</a><a href="#/?section=contact">Contact</a><a href="#/admission" class="btn">Enroll Now</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HOME PAGE -->
+    <div id="page-home" data-page="home">
+      <section class="hero" aria-labelledby="home-title">
+        <div class="container hero-grid">
+          <div>
+            <span class="hero-eyebrow"><span class="live-dot" aria-hidden="true"></span> Bangladesh's Trusted IT Institute</span>
+            <h1 id="home-title">স্বপ্নের <span class="gradient-text">Freelancing Career</span><br>শুরু হোক আজ থেকেই</h1>
+            <p class="subtitle">PC ও Mobile মিলিয়ে <b>৮টি Skill-based Course</b>: <b>Video Editing</b>, <b>Graphic Design</b>, <b>YouTube AI Automation</b>, <b>Freelancing</b> ও <b>Web Development</b>, যা আপনার জীবন বদলে দেবে।</p>
+            <div class="actions"><a href="#/courses" class="btn large">Courses দেখুন <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="#/?section=contact" class="btn large outline"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg> ফ্রি কাউন্সিলিং</a></div>
+            <div class="trust-row">
+              <div class="avatar-stack" aria-hidden="true"><img src="./assets/student-1.jpg" width="38" height="38" alt=""><img src="./assets/student-2.jpg" width="38" height="38" alt=""><img src="./assets/student-3.jpg" width="38" height="38" alt=""><img src="./assets/student-4.jpg" width="38" height="38" alt=""></div>
+              <div><span class="stars" data-stars aria-label="5 stars"></span><span class="bn">১২,০০০+ শিক্ষার্থীর আস্থা</span></div>
+            </div>
+          </div>
+          <div class="hero-art">
+            <div class="monitor-shell"><div class="monitor-screen"><img src="./assets/hero-presentation.jpg" width="1400" height="1044" alt="Nexphic IT Institute-এর ইনস্ট্রাক্টর ক্লাসে শিক্ষার্থীদের সামনে কথা বলছেন"><span class="live-tag"><span class="live-dot" style="background:white" aria-hidden="true"></span> LIVE CLASS</span><div class="timeline-bars" id="hero-timeline" aria-hidden="true"></div></div></div>
+            <div class="floating-badge first"><b>12,000+</b><small>Happy Students</small></div><div class="floating-badge second"><b>98%</b><small>Success Rate</small></div>
+          </div>
+        </div>
+        <div class="container counter-grid" aria-label="Nexphic in numbers">
+          <div class="counter-box" role="group" aria-label="12,000 plus Successful Students"><strong class="counter-value gradient-text" data-count="12000" data-suffix="+" aria-hidden="true">12,000+</strong><div class="counter-label" aria-hidden="true">Successful Students</div></div>
+          <div class="counter-box" role="group" aria-label="98 percent Success Rate"><strong class="counter-value gradient-text" data-count="98" data-suffix="%" aria-hidden="true">98%</strong><div class="counter-label" aria-hidden="true">Success Rate</div></div>
+          <div class="counter-box" role="group" aria-label="20 plus Freelancing Courses"><strong class="counter-value gradient-text" data-count="20" data-suffix="+" aria-hidden="true">20+</strong><div class="counter-label" aria-hidden="true">Freelancing Course</div></div>
+          <div class="counter-box" role="group" aria-label="10 plus Professional Mentors"><strong class="counter-value gradient-text" data-count="10" data-suffix="+" aria-hidden="true">10+</strong><div class="counter-label" aria-hidden="true">Professional Mentor</div></div>
+        </div>
+      </section>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="skills-marquee"></div></div>
+
+      <section id="home-courses">
+        <div class="container">
+          <div class="section-head"><span class="eyebrow">Our Courses</span><h2 class="bn">আপনার পছন্দের <span class="gradient-text">কোর্সটি বেছে নিন</span></h2><p>Industry Expert দের কাছ থেকে শিখুন এবং Real Project এ কাজ করে নিজেকে প্রস্তুত করুন।</p></div>
+          <div class="home-course-track" id="home-course-track" aria-live="polite"></div>
+          <div class="slider-controls"><button type="button" id="courses-previous" class="icon-button" aria-label="Previous courses"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button><div id="home-course-dots" class="slider-dots" role="group" aria-label="Choose course slide"></div><button type="button" id="courses-next" class="icon-button" aria-label="Next courses"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          <div class="actions center"><a href="#/courses" class="text-link">View all courses <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </section>
+      <section class="glow-section" id="home-why">
+        <div class="container"><div class="section-head"><span class="eyebrow">Why Choose Nexphic</span><h2 class="bn">শুধু কোর্স নয়, <span class="gradient-text">ক্যারিয়ারের প্রস্তুতি</span></h2><p>দক্ষতা, সাপোর্ট এবং অভিজ্ঞ মেন্টরশিপ একসাথে।</p></div><div class="grid-3" id="home-features"></div></div>
+      </section>
+      <section id="home-earnings">
+        <div class="container"><div class="section-head"><span class="eyebrow">Real Result</span><h2 class="bn">আমাদের Student রা <span class="gradient-text">অনলাইনে আয় করছে</span></h2><p>Marketplace এ তাদের প্রমাণিত সাফল্য, আপনিও পারবেন।</p></div><div class="grid-3" id="earners"></div></div>
+      </section>
+      <section class="admission-section" id="home-admission"><div class="container" data-home-admission></div></section>
+      <section class="glow-section" id="home-reviews">
+        <div class="container">
+          <div class="section-head"><span class="eyebrow">Our Student Review</span><h2 class="bn">শিক্ষার্থীদের <span class="gradient-text">সত্যিকারের অভিজ্ঞতা</span></h2><p>কোনো Script নয়, সরাসরি তাদের মুখ থেকে।</p></div>
+          <div class="review-shell" id="review-shell"><div class="panel review-panel" id="review-slides"></div><div class="slider-controls"><div class="slider-dots" id="review-dots" role="group" aria-label="Select a student review"></div><button class="icon-button" type="button" id="review-pause" aria-label="Pause automatic reviews" aria-pressed="false"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-pause"/></svg></button></div></div>
+        </div>
+      </section>
+      <section id="home-about">
+        <div class="container split">
+          <div class="photo-frame"><img src="./assets/about-meeting.jpg" width="1536" height="1024" loading="lazy" alt="Nexphic IT Institute টিম মিটিংয়ে আলোচনা করছে"></div>
+          <div><span class="eyebrow">About Nexphic</span><h2 class="body-heading bn">দক্ষতা শিখুন, আত্মবিশ্বাসের সাথে <span class="gradient-text">ক্যারিয়ার গড়ুন</span></h2><p class="body-copy bn">Nexphic IT Institute রংপুরভিত্তিক একটি Skill-based IT প্রশিক্ষণ প্রতিষ্ঠান। এখানে PC ও Mobile, দুই মাধ্যমেই Video Editing, Content Creation, Graphic Design, YouTube AI Automation, Freelancing এবং Web Development শেখানো হয়। আমাদের লক্ষ্য, প্রতিটি শিক্ষার্থী যেন শেখা দক্ষতা কাজে লাগিয়ে নিজের ক্যারিয়ার ও আয়ের পথ তৈরি করতে পারে।</p><ul class="check-list" style="margin:24px 0"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> PC ও Mobile মিলিয়ে ৮টি কোর্স</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> কোর্সভেদে ১৬ থেকে ২৪টি Class</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Freelancing ও Content Creation-এ বিশেষ গুরুত্ব</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> সহজ ৫ ধাপে ভর্তি প্রক্রিয়া</li></ul><a href="#/about" class="btn large">আমাদের সম্পর্কে জানুন <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </section>
+      <section class="glow-section" id="home-team"><div class="container"><div class="section-head"><span class="eyebrow">Nexphic IT Team</span><h2 class="bn">আমাদের লক্ষ্য একটাই, <span class="gradient-text">আপনার সাফল্য</span></h2></div><div class="grid-3 team-grid" id="home-team-grid" style="max-width:1100px;margin:auto"></div></div></section>
+      <section id="home-gallery"><div class="container"><div class="section-head"><span class="eyebrow">Institute Life</span><h2 class="bn">আমাদের <span class="gradient-text">ক্যাম্পাসের মুহূর্ত</span></h2></div><div class="gallery-masonry" id="home-gallery-grid"></div><div class="actions center"><a href="#/gallery" class="btn outline">View Gallery <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></section>
+      <section class="glow-section" id="home-certificates"><div class="container"><div class="section-head"><span class="eyebrow">Certification</span><h2 class="bn">Student দের অর্জিত <span class="gradient-text">সার্টিফিকেট</span></h2></div><figure class="certificate-showcase" data-certificate><button type="button" class="certificate-frame" data-certificate-open aria-label="Nexphic IT Institute-এর Certificate বড় করে দেখুন"><img id="certificate-image" src="./assets/nexphic-certificate.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Nexphic IT Institute Certificate of Completion"><span class="certificate-zoom" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-search"/></svg> বড় করে দেখুন</span></button><figcaption class="bn">কোর্স সফলভাবে শেষ করলে প্রত্যেক শিক্ষার্থী Nexphic IT Institute-এর এই Certificate পান।</figcaption></figure><div class="actions center"><p class="bn muted">৪৫০+ Certified Student এর দলে যোগ দিন</p><a href="#/admission" class="btn">Get Certified</a></div></div></section>
+      <section id="contact">
+        <div class="container"><div class="section-head"><span class="eyebrow">Need Help?</span><h2 class="bn">সাধারণ <span class="gradient-text">জিজ্ঞাসা</span></h2><p>আরও কিছু জানার থাকলে সরাসরি আমাদের কল করুন।</p></div>
+          <div class="contact-layout">
+            <div class="accordion" id="home-faq"></div>
+            <form id="counseling-form" class="panel form-panel">
+              <h3>ফ্রি কাউন্সিলিং বুক করুন</h3>
+              <label class="field bn">আপনার নাম<input name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="আপনার নাম"></label>
+              <label class="field bn">মোবাইল নম্বর<input name="phone" type="tel" autocomplete="tel" required maxlength="24" placeholder="+880 1XXXXXXXXX"></label>
+              <label class="field bn">কোর্স নির্বাচন করুন<select name="course" required data-course-options><option value="" disabled selected>একটি কোর্স বেছে নিন</option></select></label>
+              <label class="field bn">আপনার প্রশ্ন (ঐচ্ছিক)<textarea name="question" rows="3" maxlength="1000" placeholder="কী জানতে চান?"></textarea></label>
+              <p class="form-error bn" id="counseling-error" role="alert" hidden></p>
+              <button type="submit" class="btn full">Prepare Call Back Request</button>
+              <div id="counseling-ready" hidden><p class="bn lilac" role="status" style="font-size:.87rem;margin-bottom:12px">আপনার অনুরোধটি প্রস্তুত। পাঠাতে নিচের বাটনে ক্লিক করুন।</p><a class="btn full outline" id="counseling-send" href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer">Send on WhatsApp</a></div>
+              <p class="form-note bn">অনুরোধটি WhatsApp-এ পাঠিয়ে আমাদের Admission Team-এর সঙ্গে কথা বলুন।</p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="cta-section"><div class="container"><div class="cta-banner"><h2 class="bn">আপনার Freelancing যাত্রা শুরু করতে প্রস্তুত?</h2><p class="bn">আজই ভর্তি হোন। সীমিত আসন, প্রতি ব্যাচে মাত্র ২৫ জন।</p><div class="actions center"><a href="#/admission" class="btn white large">Enroll Now</a><a data-phone href="tel:+8801845629227" class="btn outline large"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg> Call Now</a></div></div></div></section>
+    </div>
+
+    <!-- COURSES PAGE -->
+    <div id="page-courses" data-page="courses" hidden>
+      <section class="page-hero course-hero" aria-labelledby="courses-title">
+        <div class="container split"><div><div class="breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Courses</span></div><h1 id="courses-title">Explore<br><span class="gradient-text">Our Courses</span></h1><p>Learn Video Editing, Content Creation, Graphic Design, YouTube AI Automation, Freelancing &amp; Web Development, on PC or Mobile.</p></div><div class="floating-tiles" aria-hidden="true"><div class="tile-position"><div class="creative-tile"><svg class="icon"><use href="#i-play"/></svg></div></div><div class="tile-position"><div class="creative-tile" style="animation-delay:.8s"><svg class="icon"><use href="#i-pen"/></svg></div></div><div class="tile-position"><div class="creative-tile" style="animation-delay:1.6s"><svg class="icon"><use href="#i-youtube"/></svg></div></div></div></div>
+      </section>
+      <section style="padding:0 0 40px">
+        <div class="container">
+          <div class="filter-tabs" id="course-filters" role="group" aria-label="Filter courses by device"><button type="button" data-course-filter="All Courses" aria-pressed="true">All Courses</button><button type="button" data-course-filter="PC" aria-pressed="false">PC Courses</button><button type="button" data-course-filter="Mobile" aria-pressed="false">Mobile Courses</button></div>
+          <p id="course-filter-result" class="filter-result" role="status">8 courses available</p>
+          <div class="grid-3" id="course-catalogue"></div>
+        </div>
+      </section>
+      <div id="course-details"></div>
+      <section><div class="container medium"><div class="section-head"><span class="eyebrow">At a Glance</span><h2>Compare <span class="gradient-text">Our Courses</span></h2><p>সব কোর্সের Device, Class, সময় ও Course Fee এক নজরে।</p></div><div class="table-scroll" role="region" aria-label="Course comparison table" tabindex="0"><table class="panel compare-table"><caption class="sr-only">Device, number of classes, duration, and course fee for every Nexphic course</caption><thead><tr><th scope="col">Course</th><th scope="col">Device</th><th scope="col">Classes</th><th scope="col">Duration</th><th scope="col">Course Fee</th><th scope="col"><span class="sr-only">Enroll</span></th></tr></thead><tbody id="comparison-rows"></tbody></table></div></div></section>
+      <section class="glow-section"><div class="container narrow"><div class="section-head"><span class="eyebrow">Syllabus</span><h2>Course <span class="gradient-text">Curriculum</span></h2><p>Step by step learning path designed for beginners</p></div><div id="curriculum" class="accordion"></div></div></section>
+      <section id="course-team"><div class="container medium split"><div class="team-feature" id="course-team-feature"></div><div><span class="eyebrow">Meet the Team</span><h2 class="body-heading">Muhammad Raj</h2><h3 class="gradient-text" style="font-size:1.1rem">HR &amp; Accounts, Nexphic IT Institute</h3><p class="body-copy bn" style="margin-top:15px">Muhammad Raj ও Nexphic টিম ভর্তি থেকে শুরু করে Class Group পর্যন্ত প্রতিটি ধাপে শিক্ষার্থীদের পাশে থাকে।</p><div class="grid-2" id="instructor-counters" style="margin-top:24px;gap:12px"></div><div class="actions"><a href="#/about?section=about-team" class="text-link">Meet the full team <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></div></section>
+      <section class="cta-section"><div class="container medium"><div class="cta-banner"><h2>Start Your Journey Today<br>Limited Seats Available!</h2><p>Complete your registration and take the next step toward your creative career.</p><div class="actions center"><a href="#/admission" class="btn white large">Enroll Now</a><a data-whatsapp href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="btn outline large"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Us</a></div></div></div></section>
+      <section style="padding-top:0"><div class="container narrow"><div class="section-head"><span class="eyebrow">FAQ</span><h2>Frequently Asked <span class="gradient-text">Questions</span></h2></div><div class="accordion" id="course-faq"></div></div></section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" data-page="about" hidden>
+      <section class="page-hero" aria-labelledby="about-title"><div class="container"><h1 id="about-title">About <span class="gradient-text">Nexphic IT Institute</span></h1><p>Empowering the Next Generation of Digital Creators in Bangladesh</p><div class="grid-3" id="about-counters" style="max-width:760px;margin:36px auto 0;gap:16px"></div></div></section>
+      <section><div class="container medium split"><div class="photo-frame"><img src="https://images.pexels.com/photos/5530484/pexels-photo-5530484.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" width="1200" height="627" loading="lazy" alt="Students focused on their computers during a class"></div><div><span class="eyebrow">Our Story</span><h2 class="body-heading bn">শেখা থেকে আয়ের পথে, <span class="gradient-text">প্রতিটি ধাপে পাশে</span></h2><p class="body-copy bn">Nexphic IT Institute-এর যাত্রা শুরু একটি লক্ষ্য নিয়ে: বাংলাদেশের তরুণদের হাতে এমন বাস্তব দক্ষতা তুলে দেওয়া, যা দিয়ে তারা নিজের ক্যারিয়ার ও আয়ের পথ তৈরি করতে পারে। তাই প্রতিটি কোর্স সাজানো হয়েছে নির্দিষ্ট Class কাঠামো, হাতে-কলমে অনুশীলন এবং Freelancing ও Content Creation-এর বাস্তব প্রয়োজন মাথায় রেখে।</p><div class="milestone-line"><div class="milestone"><span class="year">৮টি</span><small>Skill-based কোর্স</small></div><div class="milestone"><span class="year">PC + Mobile</span><small>শেখার দুই মাধ্যম</small></div><div class="milestone"><span class="year">৫ ধাপ</span><small>সহজ ভর্তি প্রক্রিয়া</small></div></div></div></div></section>
+      <section style="padding-top:0"><div class="container medium"><div class="section-head"><span class="eyebrow">Purpose</span><h2>Our Mission <span class="gradient-text">&amp; Vision</span></h2></div><div class="grid-2"><div class="panel hover-box feature-box" style="text-align:center;padding:34px"><span class="icon-box" style="width:74px;height:74px;border-radius:50%"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-target"/></svg></span><h3 style="font-size:1.2rem">Our Mission</h3><p style="font-family:var(--font);font-size:.92rem">To provide world-class digital skills training to Bangladeshi youth, enabling them to earn globally from home.</p></div><div class="panel hover-box feature-box" style="text-align:center;padding:34px"><span class="icon-box" style="width:74px;height:74px;border-radius:50%"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-eye"/></svg></span><h3 style="font-size:1.2rem">Our Vision</h3><p style="font-family:var(--font);font-size:.92rem">To become South Asia's most trusted online IT training institute by 2030.</p></div></div></div></section>
+      <section><div class="container"><div class="section-head"><span class="eyebrow">Values</span><h2>What We <span class="gradient-text">Stand For</span></h2></div><div class="grid-4" id="about-values"></div></div></section>
+      <section class="glow-section" id="about-team"><div class="container"><div class="section-head"><span class="eyebrow">Team</span><h2>The People Behind <span class="gradient-text">Nexphic</span></h2></div><div class="grid-3 team-grid" id="about-team-grid" style="max-width:1100px;margin:auto"></div></div></section>
+      <section><div class="container medium"><div class="section-head"><span class="eyebrow">Milestones</span><h2>Our <span class="gradient-text">Achievements</span></h2></div><div class="grid-3" id="achievements" style="gap:16px"></div></div></section>
+      <section><div class="container medium"><div class="section-head"><span class="eyebrow">Experience</span><h2>Our Learning <span class="gradient-text">Experience</span></h2></div><div class="grid-3" id="learning-experience"></div></div></section>
+      <section class="glow-section"><div class="container medium split"><div class="community-ring" id="community-ring"><div class="ring-center"><strong class="gradient-text">500+</strong><small>Happy Students</small></div></div><div><h2 class="body-heading">Join Our Growing <span class="gradient-text">Community</span></h2><p class="body-copy bn">আমাদের Student Community তে পাবেন Group Learning, Mentorship, Job Referral এবং Cultural Project, যা আপনাকে সাহায্য করবে দ্রুত grow করতে।</p><ul class="check-list" style="margin:24px 0"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Peer Learning</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Group Projects</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Job Referrals</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Alumni Network</li></ul><a data-whatsapp data-message="Hello Nexphic! I would like to join your student community." href="https://wa.me/8801845629227" class="btn large" target="_blank" rel="noopener noreferrer">Join Community <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></section>
+      <section class="glow-section"><div class="container narrow"><div class="section-head"><span class="eyebrow">Achievement</span><h2>Earn a Recognized <span class="gradient-text">Certificate</span></h2></div><div id="about-certificate" style="max-width:820px;margin:auto"></div><div class="actions center"><span class="chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg> Shareable on LinkedIn</span><span class="chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-shield"/></svg> Verified by Nexphic</span><span class="chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-award"/></svg> Industry Recognized</span></div></div></section>
+      <section class="cta-section"><div class="container medium"><div class="cta-banner"><h2>Have Questions About Nexphic?</h2><p>We're here to help you choose the right course</p><div class="actions center"><a data-phone href="tel:+8801845629227" class="btn white large">Contact Us Now</a><a data-whatsapp href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="btn outline large"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Us</a></div><div class="actions center" style="font-size:.85rem;color:#f3e8ff"><a data-phone href="tel:+8801845629227"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg> <span data-phone-text>+8801845629227</span></a><a href="mailto:nexphic@email.com"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg> nexphic@email.com</a><span><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map"/></svg> Rangpur, Bangladesh</span></div></div></div></section>
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="page-gallery" data-page="gallery" hidden>
+      <section class="page-hero" aria-labelledby="gallery-title"><div class="container"><h1 id="gallery-title">Our <span class="gradient-text">Gallery</span></h1><p>A Glimpse Into Life at Nexphic IT Institute</p></div></section>
+      <div class="container"><div class="filter-tabs" id="gallery-filters" role="group" aria-label="Filter gallery"><button type="button" data-gallery-filter="All" aria-pressed="true">All</button><button type="button" data-gallery-filter="Class Photos" aria-pressed="false">Class Photos</button><button type="button" data-gallery-filter="Student Work" aria-pressed="false">Student Work</button><button type="button" data-gallery-filter="Certificates" aria-pressed="false">Certificates</button><button type="button" data-gallery-filter="Events" aria-pressed="false">Events</button><button type="button" data-gallery-filter="Behind The Scenes" aria-pressed="false">Behind The Scenes</button></div><p id="gallery-filter-result" class="filter-result" role="status">Showing all gallery collections</p></div>
+      <section class="gallery-group" data-gallery-section="Class Photos" style="padding-top:14px"><div class="container"><span class="eyebrow" style="margin-bottom:20px">Class Photos</span><div class="gallery-masonry" id="class-photos"></div></div></section>
+      <section class="gallery-group" data-gallery-section="Student Work"><div class="container"><div class="section-head"><span class="eyebrow">Portfolio</span><h2>Student <span class="gradient-text">Work</span></h2></div><div class="grid-3" id="student-work"></div></div></section>
+      <section class="gallery-group glow-section" data-gallery-section="Certificates" style="overflow:hidden"><div class="container"><div class="section-head"><span class="eyebrow">Certified</span><h2>Certificates Earned by <span class="gradient-text">Our Students</span></h2></div><div id="gallery-certificate"></div><div class="actions center" style="flex-direction:column"><p class="muted">Join 450+ Certified Students</p><a href="#/admission" class="btn large">Get Certified</a></div></div></section>
+      <section class="gallery-group" data-gallery-section="Events"><div class="container"><div class="section-head"><span class="eyebrow">Moments</span><h2>Events <span class="gradient-text">&amp; Moments</span></h2><p>Special moments from our institute journey</p></div><div class="grid-3" id="events-photos" style="gap:14px"></div></div></section>
+      <section class="gallery-group glow-section" data-gallery-section="Behind The Scenes"><div class="container"><div class="section-head"><span class="eyebrow">Studio</span><h2>Behind The <span class="gradient-text">Scenes</span></h2><p>How we create world-class content for our students</p></div><div class="grid-3" id="behind-scenes" style="gap:14px"></div></div></section>
+      <section class="gallery-group" data-gallery-section="Success Stories"><div class="container"><div class="section-head"><span class="eyebrow">Proof</span><h2>Success Stories in <span class="gradient-text">Photos</span></h2><p>Real students, real results, <span class="red" style="font-weight:700">real income</span></p></div><div class="grid-3" id="success-photos"></div></div></section>
+      <section class="gallery-group" data-gallery-section="Videos"><div class="container"><div class="section-head"><span class="eyebrow">Watch</span><h2>Watch Our <span class="gradient-text">Videos</span></h2><p>Class previews, student testimonials and institute tours</p></div><div class="grid-3" id="gallery-videos"></div></div></section>
+      <section class="cta-section"><div class="container medium"><div class="cta-banner"><h2>Want to Be Part of Our Story?</h2><p>Join Nexphic IT Institute and create your own success story</p><div class="actions center"><a href="#/admission" class="btn white large">Enroll Now</a><a href="#/courses" class="btn outline large">See Our Courses</a></div><p style="font-size:.85rem;margin-top:25px">500+ students already joined</p></div></div></section>
+    </div>
+
+    <!-- ADMISSION PAGE: the original five steps, followed by a working registration handoff. -->
+    <div id="page-admission" data-page="admission" hidden>
+      <section class="admission-section standalone" aria-labelledby="admission-heading">
+        <div class="container" style="max-width:1180px">
+          <div class="admission-poster" id="admission-poster">
+            <svg class="hex-decoration" viewBox="0 0 240 390" fill="none" aria-hidden="true" data-hexagons></svg><svg class="hex-decoration right" viewBox="0 0 240 390" fill="none" aria-hidden="true" data-hexagons></svg>
+            <div class="admission-header">
+              <a href="#/" class="logo large" aria-label="Nexphic IT Institute home"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="248" height="75" alt="Nexphic IT Institute"></a>
+              <p class="admission-brand">NEXPHIC IT INSTITUTE</p>
+              <h1 class="admission-title" id="admission-heading"><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg> ভর্তি প্রক্রিয়া</h1>
+              <p class="admission-intro">Nexphic IT Institute-এ ভর্তি প্রক্রিয়াটি সহজভাবে সম্পন্ন করা যায়।</p>
+            </div>
+            <ol class="admission-timeline" aria-label="Five-step admission process">
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 01</span><span class="dash" aria-hidden="true"></span><span>REGISTRATION</span><svg class="icon" style="color:#dccbb1" aria-hidden="true"><use href="#i-clipboard"/></svg></h3><p><svg class="icon" style="color:#dccbb1" aria-hidden="true"><use href="#i-clipboard"/></svg>সঠিক তথ্য দিয়ে <a href="#/admission?form=1">Admission Form</a> পূরণ করুন।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 02</span><span class="dash" aria-hidden="true"></span><span>PAYMENT</span><svg class="icon" style="color:#e4c36f" aria-hidden="true"><use href="#i-credit"/></svg></h3><p><svg class="icon" style="color:#e4c36f" aria-hidden="true"><use href="#i-credit"/></svg>নির্ধারিত Course Fee বিকাশ/নগদ/রকেটের মাধ্যমে প্রদান করুন।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 03</span><span class="dash" aria-hidden="true"></span><span>PAYMENT CONFIRMATION</span></h3><p><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>Payment-এর Screenshot এবং প্রয়োজনীয় তথ্য আমাদের <a data-messenger href="https://m.me/nexphicit" target="_blank" rel="noopener noreferrer">Page/Messenger</a>-এ পাঠান।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 04</span><span class="dash" aria-hidden="true"></span><span>ADMISSION CONFIRMATION</span></h3><p><svg class="icon" style="color:#5ed491" aria-hidden="true"><use href="#i-check"/></svg>Payment যাচাই হওয়ার পর আপনার Admission Confirmation এবং Student ID প্রদান করা হবে।</p></div></li>
+              <li class="admission-step"><span class="admission-dot" aria-hidden="true"></span><div class="admission-step-box"><h3><span>STEP 05</span><span class="dash" aria-hidden="true"></span><span>CLASS GROUP</span><svg class="icon" style="color:#e0dbe9" aria-hidden="true"><use href="#i-messages"/></svg></h3><p><svg class="icon" style="color:#e0dbe9" aria-hidden="true"><use href="#i-messages"/></svg>Student ID ব্যবহার করে সংশ্লিষ্ট Class Group-এ যুক্ত হয়ে ক্লাসের সময়সূচি ও প্রয়োজনীয় নির্দেশনা পাবেন।</p></div></li>
+            </ol>
+            <div class="admission-footer"><a data-whatsapp data-message="Hello Nexphic! I would like to know about the admission process." href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="admission-whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp: <span data-phone-text>+8801845629227</span></span></a><p class="admission-tagline"><svg class="icon" style="fill:#af7fe5;color:#b995ee;margin-right:6px" aria-hidden="true"><use href="#i-heart"/></svg> Nexphic IT Institute &nbsp;|&nbsp; আপনার ডিজিটাল ক্যারিয়ারের বিশ্বস্ত সঙ্গী</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="registration" id="admission-form" aria-labelledby="admission-form-heading">
+        <div class="container">
+          <div class="registration-intro"><span class="eyebrow">Step 01 / Admission Form</span><h2 id="admission-form-heading" class="bn">অনলাইনে <span class="gradient-text">ভর্তি ফর্ম</span></h2><p class="body-copy bn">সঠিক তথ্য দিয়ে ফর্মটি পূরণ করে জমা দিন। জমা দেওয়ার সাথে সাথেই আপনার নিজস্ব <b class="lilac">Student ID</b> ও Admission Slip তৈরি হবে।</p></div>
+          <form class="panel admission-form-panel" id="admission-form-element">
+            <h3 class="form-section-title bn">শিক্ষার্থীর তথ্য</h3>
+            <div class="form-grid">
+              <label class="field bn">শিক্ষার্থীর পূর্ণ নাম <span class="required" aria-hidden="true">*</span><input name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="যেমন: Md. Rahim Uddin"></label>
+              <label class="field bn">পিতা/অভিভাবকের নাম <span class="required" aria-hidden="true">*</span><input name="guardian" required minlength="2" maxlength="100" placeholder="পিতা বা অভিভাবকের নাম"></label>
+              <label class="field bn">মোবাইল নম্বর <span class="required" aria-hidden="true">*</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="24" placeholder="01XXXXXXXXX"></label>
+              <label class="field bn">WhatsApp নম্বর <span class="optional">(ঐচ্ছিক)</span><input name="whatsapp" type="tel" inputmode="tel" maxlength="24" placeholder="মোবাইল নম্বর থেকে ভিন্ন হলে"></label>
+              <label class="field bn">ইমেইল <span class="optional">(ঐচ্ছিক)</span><input name="email" type="email" autocomplete="email" maxlength="180" placeholder="you@example.com"></label>
+              <label class="field bn">জন্ম তারিখ <span class="optional">(ঐচ্ছিক)</span><input name="dob" type="date" autocomplete="bday"></label>
+              <label class="field bn">লিঙ্গ <span class="optional">(ঐচ্ছিক)</span><select name="gender"><option value="">নির্বাচন করুন</option><option>পুরুষ</option><option>নারী</option><option>অন্যান্য</option></select></label>
+              <label class="field bn">শিক্ষাগত যোগ্যতা <span class="optional">(ঐচ্ছিক)</span><select name="education"><option value="">নির্বাচন করুন</option><option>SSC / সমমান</option><option>HSC / সমমান</option><option>Diploma</option><option>Honours / Degree</option><option>Masters</option><option>অন্যান্য</option></select></label>
+              <label class="field bn span-2">বর্তমান ঠিকানা <span class="required" aria-hidden="true">*</span><input name="address" autocomplete="street-address" required minlength="4" maxlength="200" placeholder="গ্রাম/রোড, থানা, জেলা"></label>
+            </div>
+            <h3 class="form-section-title bn">কোর্সের তথ্য</h3>
+            <div class="form-grid">
+              <label class="field bn span-2">কোর্স নির্বাচন করুন <span class="required" aria-hidden="true">*</span><select name="course" id="admission-course" required data-course-options><option value="" disabled selected>একটি কোর্স বেছে নিন</option></select><span class="course-summary" id="admission-course-summary" hidden></span></label>
+              <label class="field bn">পছন্দের ব্যাচ সময় <span class="optional">(ঐচ্ছিক)</span><select name="batch"><option value="">যেকোনো সময়</option><option>সকাল</option><option>দুপুর</option><option>বিকেল</option><option>সন্ধ্যা</option></select></label>
+              <label class="field bn">Payment মাধ্যম <span class="required" aria-hidden="true">*</span><select name="payment" required><option value="" disabled selected>নির্বাচন করুন</option><option>বিকাশ (bKash)</option><option>নগদ (Nagad)</option><option>রকেট (Rocket)</option></select></label>
+              <label class="field bn span-2">কোনো প্রশ্ন বা মন্তব্য <span class="optional">(ঐচ্ছিক)</span><textarea name="note" rows="3" maxlength="600" placeholder="আপনার শেখার লক্ষ্য বা কোনো প্রশ্ন লিখুন"></textarea></label>
+            </div>
+            <label class="check-field bn"><input type="checkbox" name="agree" required> আমি নিশ্চিত করছি যে ফর্মে দেওয়া সব তথ্য সঠিক।</label>
+            <p id="admission-error" role="alert" class="form-error bn" hidden></p>
+            <div class="actions" style="margin-top:0"><button type="submit" class="btn large" id="admission-submit"><span id="admission-submit-label">ভর্তি ফর্ম জমা দিন</span> <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></button><p class="form-note bn" style="max-width:300px">জমা দিলেই একটি ইউনিক Student ID তৈরি হবে।</p></div>
+          </form>
+          <div class="admission-slip" id="admission-slip" hidden>
+            <p id="slip-sync" class="slip-sync info" role="status"></p>
+            <article class="slip-card" id="slip-card" aria-labelledby="slip-heading">
+              <header class="slip-head"><span class="logo"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="160" height="48" alt="Nexphic IT Institute"></span><div class="slip-title"><h3 id="slip-heading" tabindex="-1">ADMISSION SLIP</h3><span class="bn">ভর্তি স্লিপ</span></div></header>
+              <div class="slip-id-block"><small class="bn">আপনার Student ID</small><strong class="slip-id" id="slip-student-id"></strong><span class="status-badge"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg> Payment Pending</span></div>
+              <dl class="slip-details" id="slip-details"></dl>
+              <div class="slip-steps">
+                <h4 class="bn">পরবর্তী ধাপ</h4>
+                <ol>
+                  <li><b>STEP 02</b><span>নির্ধারিত Course Fee বিকাশ/নগদ/রকেটের মাধ্যমে প্রদান করুন। Payment নম্বর Admission Team-এর কাছ থেকে নিশ্চিত করে নিন।</span></li>
+                  <li><b>STEP 03</b><span>আপনার Student ID সহ Payment-এর Screenshot আমাদের Page/Messenger-এ পাঠান।</span></li>
+                  <li><b>STEP 04</b><span>Payment যাচাই হওয়ার পর আপনার Admission Confirm করা হবে।</span></li>
+                  <li><b>STEP 05</b><span>Student ID ব্যবহার করে Class Group-এ যুক্ত হয়ে ক্লাসের সময়সূচি ও নির্দেশনা পাবেন।</span></li>
+                </ol>
+              </div>
+              <footer class="slip-foot"><span>Nexphic IT Institute · Rangpur, Bangladesh</span><span>WhatsApp: <span data-phone-text>+8801845629227</span></span></footer>
+            </article>
+            <div class="actions" style="margin-top:0">
+              <a class="btn" id="slip-whatsapp" href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp-এ পাঠান</a>
+              <button type="button" class="btn outline" id="slip-copy"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-copy"/></svg> Student ID কপি করুন</button>
+              <button type="button" class="btn outline" id="slip-print"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clipboard"/></svg> প্রিন্ট / PDF সেভ</button>
+              <a class="btn outline" data-messenger href="https://m.me/nexphicit" target="_blank" rel="noopener noreferrer"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-messages"/></svg> Messenger</a>
+            </div>
+            <p id="slip-copy-status" class="form-note bn" role="status"></p>
+            <button type="button" class="text-link bn" id="slip-new" style="justify-self:start;border:0;background:none;padding:0;font-size:.9rem">+ নতুন ভর্তি ফর্ম</button>
+          </div>
+          <p class="safety-note bn"><svg class="icon lilac" aria-hidden="true"><use href="#i-shield"/></svg>Payment করার আগে Admission Team-এর কাছ থেকে Course Fee ও Payment নম্বর নিশ্চিত করুন। এই ওয়েবসাইটে কোনো Payment নেওয়া হয় না। কাউকে আপনার PIN বা OTP দেবেন না।</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" style="width:186px" href="#/" aria-label="Nexphic IT Institute home"><img data-logo src="https://cdn.prod.website-files.com/6a047b7b8f6206b58cebd272/6a047bebd2e3540d406212e2_Nexphic%202-p-800.png" width="186" height="56" alt="Nexphic IT Institute"></a>
+          <p class="bn">স্কিল শেখানোর পাশাপাশি আমরা তৈরি করি আত্মবিশ্বাসী Freelancer, যারা নিজের যোগ্যতায় আন্তর্জাতিক বাজারে কাজ করে।</p>
+          <div class="footer-social">
+            <a data-facebook href="https://www.facebook.com/nexphicit" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Nexphic Facebook page" style="font-weight:800">f</a>
+            <a data-messenger href="https://m.me/nexphicit" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Nexphic Messenger"><svg class="icon" aria-hidden="true"><use href="#i-messages"/></svg></a>
+            <a data-whatsapp href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="Nexphic WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Quick Links</h4><ul><li><a href="#/">Home</a></li><li><a href="#/courses">Courses</a></li><li><a href="#/about">About</a></li><li><a href="#/gallery">Gallery</a></li><li><a href="#/admission">Admission Process</a></li><li><a href="#/?section=contact">Contact</a></li></ul></div>
+        <div><h4>Our Courses</h4><ul id="footer-course-list"></ul></div>
+        <div><h4>Contact Us</h4><ul><li><svg class="icon icon-sm lilac" aria-hidden="true"><use href="#i-map"/></svg> Rangpur, Bangladesh</li><li><a data-phone href="tel:+8801845629227"><svg class="icon icon-sm lilac" aria-hidden="true"><use href="#i-phone"/></svg> <span data-phone-text>+8801845629227</span></a></li><li><a href="mailto:nexphic@email.com"><svg class="icon icon-sm lilac" aria-hidden="true"><use href="#i-mail"/></svg> nexphic@email.com</a></li></ul><p class="bn" style="color:#cab0e7">শনি-বৃহস্পতি: সকাল ১০টা থেকে রাত ৮টা</p></div>
+      </div>
+      <details class="project-files">
+        <summary>Embedded project files</summary>
+        <p style="max-width:640px;line-height:1.8;margin-bottom:13px">The package and build configuration, plus the optional Google Sheet admission script, are preserved inside this page as plain text. Select a filename to download it.</p>
+        <div id="project-file-links" class="chips"></div>
+      </details>
+      <div class="footer-bottom"><span>&copy; <span data-year>2026</span> Nexphic IT Institute. All Rights Reserved.</span><span class="gradient-text">Designed for Bangladeshi Freelancers</span></div>
+    </div>
+  </footer>
+  <button class="back-top" id="back-top" type="button" aria-label="Back to top" hidden><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+  <dialog class="dialog" id="media-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><h2 id="dialog-title" style="font-size:1.2rem">Nexphic Gallery</h2><button type="button" class="icon-button" data-dialog-close aria-label="Close preview"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+    <img id="dialog-image" class="dialog-image" alt="">
+    <p id="dialog-description" class="preview-message"></p>
+    <div class="dialog-navigation" id="dialog-gallery-controls"><button type="button" id="gallery-previous" class="icon-button" aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button><span id="dialog-position" class="muted" aria-live="polite"></span><button type="button" id="gallery-next" class="icon-button" aria-label="Next photo"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    <a id="dialog-request" href="https://wa.me/8801845629227" target="_blank" rel="noopener noreferrer" class="btn" style="margin-top:20px" hidden>Request this preview <svg class="icon icon-sm" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+  </dialog>
+  <div id="print-root" aria-hidden="true"></div>
+  <noscript><div class="container" style="padding:28px 20px;color:#d8c4ec">নেভিগেশন, কোর্স ফিল্টার ও ভর্তি ফর্ম ব্যবহার করতে ব্রাউজারে JavaScript চালু করুন। ভর্তি সংক্রান্ত তথ্যের জন্য <a href="https://wa.me/8801845629227" style="text-decoration:underline">WhatsApp-এ যোগাযোগ করুন</a>।</div></noscript>
+  <script type="module" src="./src/site.js"></script>
+
+
+  <!-- PROJECT SOURCES: package and build configuration preserved as non-executing plain text, so this page stays one self-contained file.
+       package-lock.json (about 88 KB) is linked in the head; the build embeds it into dist/index.html automatically. -->
+  <script type="text/plain" data-filename="package.json" data-order="1">{
+  "name": "react-vite-tailwind",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "lucide-react": "^1.46.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "^7.18.4",
+    "tailwind-merge": "3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.17",
+    "@types/node": "22.19.17",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vite": "7.3.2",
+    "vite-plugin-singlefile": "2.3.0"
+  }
+}
+</script>
+  <script type="text/plain" data-filename="tsconfig.json" data-order="3">{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "types": ["node"],
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src", "vite.config.ts"]
+}
+</script>
+  <script type="text/plain" data-filename="vite.config.ts" data-order="4">import path from "path";
+import { fileURLToPath } from "url";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import { viteSingleFile } from "vite-plugin-singlefile";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss(), viteSingleFile()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+});
+</script>
+  <script type="text/plain" data-filename="admission-google-sheet.gs" data-order="5">/**
+ * Nexphic IT Institute: website admission form -> Google Sheet
+ *
+ * Optional setup (about 5 minutes). Without it, students send their admission by WhatsApp.
+ *  1. Create a Google Sheet, then open Extensions > Apps Script.
+ *  2. Delete any existing code, paste this whole file, and click Save.
+ *  3. Click Deploy > New deployment and choose "Web app".
+ *     Execute as: Me. Who has access: Anyone. Click Deploy and allow access.
+ *  4. Copy the Web app URL (it ends with /exec).
+ *  5. In index.html, paste the URL into SITE.admissionEndpoint, then rebuild and publish the site.
+ *
+ * Every admission is added to the "Admissions" sheet with a unique Student ID.
+ * After verifying a payment, change that row's Status to "Confirmed".
+ */
+const SHEET_NAME = 'Admissions';
+const COLUMNS = [
+  ['submittedAt', 'Submitted At'], ['studentId', 'Student ID'], ['status', 'Status'],
+  ['name', 'Student Name'], ['guardian', 'Father / Guardian'], ['phone', 'Mobile'], ['whatsapp', 'WhatsApp'],
+  ['email', 'Email'], ['dob', 'Date of Birth'], ['gender', 'Gender'], ['education', 'Education'], ['address', 'Address'],
+  ['course', 'Course'], ['device', 'Device'], ['classes', 'Classes'], ['duration', 'Duration'], ['fee', 'Course Fee'],
+  ['batch', 'Preferred Batch'], ['payment', 'Payment Method'], ['note', 'Note'], ['submissionId', 'Submission ID']
+];
+const ID_ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+const ID_PATTERN = /^NXP-\d{2}-[2-9A-HJ-NP-Z]{6}$/;
+
+function doPost(e) {
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(20000);
+    const data = JSON.parse(e.postData.contents);
+    if (!data.name || !data.phone || !data.course) return respond_({ ok: false, error: 'Missing required fields' });
+    const sheet = getSheet_();
+    const keys = COLUMNS.map(column => column[0]);
+    const idIndex = keys.indexOf('studentId');
+    const submissionIndex = keys.indexOf('submissionId');
+    const rows = sheet.getLastRow() > 1 ? sheet.getRange(2, 1, sheet.getLastRow() - 1, keys.length).getValues() : [];
+    // A repeated request (for example after a slow network) returns the ID that was already issued.
+    const repeat = data.submissionId && rows.find(row => row[submissionIndex] === data.submissionId);
+    if (repeat) return respond_({ ok: true, studentId: repeat[idIndex] });
+    // The sheet is the final authority: a duplicate ID is replaced with a new unique one.
+    const usedIds = new Set(rows.map(row => row[idIndex]));
+    let studentId = ID_PATTERN.test(data.studentId) ? data.studentId : newStudentId_();
+    while (usedIds.has(studentId)) studentId = newStudentId_();
+    data.studentId = studentId;
+    data.status = 'Payment Pending';
+    data.submittedAt = new Date();
+    sheet.appendRow(keys.map(key => clean_(data[key])));
+    return respond_({ ok: true, studentId: studentId });
+  } catch (error) {
+    return respond_({ ok: false, error: String(error) });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function doGet() {
+  return respond_({ ok: true, service: 'Nexphic admissions' });
+}
+
+function getSheet_() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(COLUMNS.map(column => column[1]));
+    sheet.getRange(1, 1, 1, COLUMNS.length).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
+}
+
+function newStudentId_() {
+  const year = Utilities.formatDate(new Date(), 'Asia/Dhaka', 'yy');
+  let code = '';
+  for (let i = 0; i < 6; i++) code += ID_ALPHABET.charAt(Math.floor(Math.random() * ID_ALPHABET.length));
+  return 'NXP-' + year + '-' + code;
+}
+
+// A leading apostrophe stores values as plain text: it keeps phone numbers' leading zeros and blocks formulas.
+function clean_(value) {
+  if (value instanceof Date) return value;
+  if (value === undefined || value === null || value === '') return '';
+  return "'" + String(value).slice(0, 1000);
+}
+
+function respond_(payload) {
+  return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(ContentService.MimeType.JSON);
+}
+</script>
+</body>
+</html>
